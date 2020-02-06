@@ -91,15 +91,6 @@
   Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
   Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
   Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
-/posts/the-origins-of-social-stationery-lettering
-  Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
-  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
-  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
-  Link: </netlify-identity-widget-8e6f024872c0d48ae324.js>; rel=preload; as=script
-  Link: </app-ee7b7b4072d19dc93096.js>; rel=preload; as=script
-  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
-  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
-  Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
 /posts/a-brief-history-of-typography
   Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
   Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
@@ -118,25 +109,7 @@
   Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
   Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
   Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
-/pages/contacts/
-  Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
-  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
-  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
-  Link: </netlify-identity-widget-8e6f024872c0d48ae324.js>; rel=preload; as=script
-  Link: </app-ee7b7b4072d19dc93096.js>; rel=preload; as=script
-  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
-  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
-  Link: </component---src-templates-page-template-js-30c9f68011554c8c6d0c.js>; rel=preload; as=script
-/posts/the-birth-of-movable-type
-  Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
-  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
-  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
-  Link: </netlify-identity-widget-8e6f024872c0d48ae324.js>; rel=preload; as=script
-  Link: </app-ee7b7b4072d19dc93096.js>; rel=preload; as=script
-  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
-  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
-  Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
-/posts/git-command-list-post
+/posts/the-origins-of-social-stationery-lettering
   Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
   Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
   Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
@@ -146,6 +119,33 @@
   Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
   Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
 /pages/about/
+  Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
+  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
+  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
+  Link: </netlify-identity-widget-8e6f024872c0d48ae324.js>; rel=preload; as=script
+  Link: </app-ee7b7b4072d19dc93096.js>; rel=preload; as=script
+  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
+  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
+  Link: </component---src-templates-page-template-js-30c9f68011554c8c6d0c.js>; rel=preload; as=script
+/posts/git-command-list-post
+  Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
+  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
+  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
+  Link: </netlify-identity-widget-8e6f024872c0d48ae324.js>; rel=preload; as=script
+  Link: </app-ee7b7b4072d19dc93096.js>; rel=preload; as=script
+  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
+  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
+  Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
+/posts/the-birth-of-movable-type
+  Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
+  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
+  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
+  Link: </netlify-identity-widget-8e6f024872c0d48ae324.js>; rel=preload; as=script
+  Link: </app-ee7b7b4072d19dc93096.js>; rel=preload; as=script
+  Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
+  Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
+  Link: </component---src-templates-post-template-js-5f449cae0bb2fa9985ef.js>; rel=preload; as=script
+/pages/contacts/
   Link: </webpack-runtime-944c45a84cb1f62b4cf0.js>; rel=preload; as=script
   Link: </styles-117479406f6e61ad4793.js>; rel=preload; as=script
   Link: </commons-25c948561348ee887319.js>; rel=preload; as=script
