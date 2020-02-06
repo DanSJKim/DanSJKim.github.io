@@ -46,10 +46,10 @@ origin	https://github.com/DanSJKim/DanSJKim.github.io.git (fetch)
 origin	https://github.com/DanSJKim/DanSJKim.github.io.git (push)
 ```
 
-## git remote add <단축이름> <url>
+## git remote add <단축이름> <원격 서버 주소>
 기존에 있던 원격 저장소를 복제한 것이 아니라면 원격 서버의 주소를 git에게 알려줘야 한다.
 ```
-$ git remote add origin <원격 서버 주소>
+$ git remote add origin https://github.com/DanSJKim/DanSJKim.github.io.git
 ```
 
 ![branch](/media/branch.png)
