@@ -3,12 +3,13 @@
 <url> <loc>https://dansjkim.github.io/tags</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/categories</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/posts/perfecting-the-art-of-perfection</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dansjkim.github.io/posts/the-birth-of-movable-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dansjkim.github.io/posts/humane-typography-in-the-digital-age</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/posts/the-origins-of-social-stationery-lettering</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/posts/a-brief-history-of-typography</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
-<url> <loc>https://dansjkim.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dansjkim.github.io/posts/git-command-list</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/pages/contacts/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dansjkim.github.io/posts/the-birth-of-movable-type</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dansjkim.github.io/posts/git-command-list-post</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dansjkim.github.io/pages/about/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/tag/design</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/tag/gatsby</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/tag/handwriting</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
@@ -22,6 +23,7 @@
 <url> <loc>https://dansjkim.github.io/tag/web-development</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/category/design-culture</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/category/design-inspiration</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
+<url> <loc>https://dansjkim.github.io/category/git</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/category/typography</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
 <url> <loc>https://dansjkim.github.io/page/1</loc> <changefreq>daily</changefreq> <priority>0.7</priority> </url>
