@@ -1,10 +1,10 @@
 ---
-title: Humane Typography in the Digital Age
-date: "2017-08-19T22:40:32.169Z"
+title: "Git 명령어 종류"
+date: "	2020-02-24T17:40:32.169Z"
 template: "post"
 draft: false
-slug: "humane-typography-in-the-digital-age"
-category: "Typography"
+slug: "git-command-list"
+category: "Git"
 tags:
   - "Design"
   - "Typography"
@@ -12,6 +12,16 @@ tags:
 description: "An Essay on Typography by Eric Gill takes the reader back to the year 1930. The year when a conflict between two worlds came to its term. The machines of the industrial world finally took over the handicrafts."
 socialImage: "/media/42-line-bible.jpg"
 ---
+
+git branch 생략
+git checkout 생략
+git add 생략
+git commit 생략
+git push 생략
+git remote -v
+git add remote  생략
+git init
+git clone
 
 - [The first transition](#the-first-transition)
 - [The digital age](#the-digital-age)
