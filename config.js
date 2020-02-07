@@ -3,7 +3,7 @@
 module.exports = {
   url: 'https://dansjkim.github.io/',
   pathPrefix: '/',
-  title: 'Blog by John Doe',
+  title: 'Blog by Seungjune Kim',
   subtitle: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
   copyright: '© All rights reserved.',
   disqusShortname: '',
@@ -25,9 +25,9 @@ module.exports = {
     }
   ],
   author: {
-    name: 'John Doe',
-    photo: '/photo.jpg',
-    bio: 'Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.',
+    name: 'C.Elegans',
+    photo: '/celegans.jpg',
+    bio: '안녕하세요',
     contacts: {
       email: '',
       facebook: '#',

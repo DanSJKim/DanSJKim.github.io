@@ -10,7 +10,7 @@ tags:
   - "Browser"
   - "Wecode"
 description: "브라우저에 www.wecode.co.kr을 치면 어떤 일이 일어날까?"
-socialImage: "/media/image-3.jpg"
+socialImage: "/media/browser-dns-host.jpg"
 ---
 ## 주요 키워드
 + Hosting
