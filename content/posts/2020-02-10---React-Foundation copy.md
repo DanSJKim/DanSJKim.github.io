@@ -7,12 +7,11 @@ slug: "react-foundation"
 category: "React"
 tags:
   - "React"
+  - "Wecode"
   - "Session"
-  - "TIL"
 description: "React에 대해 알아보자"
 socialImage: "/media/react-logo.png"
 ---
-
 ![workflow](/media/react-logo.png)
 #React란?
 **React**는 페이스북에서 제공하는 UI를 만들기 위한 자바스크립트 라이브러리다.
@@ -54,7 +53,6 @@ DOM은 웹의 핵심으로써, `브라우저가 화면을 그리기 위한 정�
   `Virtual DOM`은 그 작업을 미리 최적화시켜줄 뿐만 아니라, 컴포넌트 단위로 묶어서 관리할 수 있게 해준다.
 
 **Virtual DOM은 단순한 DOM 조작 도구가 아니라 컴포넌트 단위로 움직이는 Declarative한 개발을 구현하기 위해 도입된 것이다.**
-
 
 4. ### One Way Data flow
 리액트는 데이터의 흐름이 `한 방향`이다.   
