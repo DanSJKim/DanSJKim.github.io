@@ -1,29 +1,366 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 15 Feb 2020 12:30:08 GMT</lastBuildDate><item><title><![CDATA[[Wecode] TIL_Day2 CodeKata | React To-Do List]]></title><description><![CDATA[React Native 입문, HTTP 세션]]></description><link>https://dansjkim.github.io//posts/til-200214</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200214</guid><pubDate>Fri, 14 Feb 2020 22:40:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
-&lt;h1 id=&quot;til-2일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-2%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 2일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 2일차&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 15 Feb 2020 14:10:57 GMT</lastBuildDate><item><title><![CDATA[[Wecode] TIL_Day3 React Native | HTTP]]></title><description><![CDATA[React Native 입문, HTTP 세션]]></description><link>https://dansjkim.github.io//posts/til-200214</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200214</guid><pubDate>Fri, 14 Feb 2020 22:40:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-3일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-3%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 3일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 3일차&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;13:30 | React Portfolio, Native&lt;/li&gt;
-&lt;li&gt;15:00 | HTTP, REST API&lt;/li&gt;
+&lt;li&gt;15:00 | HTTP, HTTP 통신 실습&lt;/li&gt;
 &lt;li&gt;18:00 | React Native install&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h1 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/media/code-kata-day3.png&quot; alt=&quot;codekata&quot;&gt;
-&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/day4.js&quot; title=&quot;Github&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;내 코드&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;react-to-do-list-tutorial&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-to-do-list-tutorial&quot; aria-label=&quot;react to do list tutorial permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React To-Do-List Tutorial&lt;/h1&gt;
+&lt;h1 id=&quot;react-native&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-native&quot; aria-label=&quot;react native permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React Native&lt;/h1&gt;
 &lt;h3 id=&quot;배운-내용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%EC%9A%B4-%EB%82%B4%EC%9A%A9&quot; aria-label=&quot;배운 내용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배운 내용&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;React Native&lt;/li&gt;
-&lt;li&gt;HTTP&lt;/li&gt;
+&lt;li&gt;React Native install&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;react-native&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-native&quot; aria-label=&quot;react native permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React Native&lt;/h3&gt;
-&lt;h3 id=&quot;http&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http&quot; aria-label=&quot;http permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP&lt;/h3&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day2 CodeKata | React To-Do List]]></title><description><![CDATA[React 각종 팁, Git Session]]></description><link>https://dansjkim.github.io//posts/til-200213</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200213</guid><pubDate>Thu, 13 Feb 2020 22:40:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h2 id=&quot;react-native-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-native-1&quot; aria-label=&quot;react native 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React Native&lt;/h2&gt;
+&lt;p&gt;React Native Crash Course 2020 유튜브 강의 듣기&lt;/p&gt;
+&lt;h2 id=&quot;http&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http&quot; aria-label=&quot;http permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP&lt;/h2&gt;
+&lt;h3 id=&quot;hypertext-transfer-protocol&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#hypertext-transfer-protocol&quot; aria-label=&quot;hypertext transfer protocol permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HyperText Transfer Protocol&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;하이퍼텍스트(HTML)&lt;/code&gt; 문서를 교환하기 위해 만들어진 Protocol(통신 규약).&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;웹 상에서 네트워크로 서버끼리 통신을 할 때 어떠한 형식으로 서로 통신을 하자고 규정해 놓은 “통신 형식 또는 구조”를 말한다.&lt;/li&gt;
+&lt;li&gt;프론트엔드 서버와 클라이언트간 통신에 사용된다.&lt;/li&gt;
+&lt;li&gt;백엔드와 프론트엔드 서버간의 통신에도 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP&lt;/code&gt;는 TCP/IP 기반이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;http-통신-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http-%ED%86%B5%EC%8B%A0-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;http 통신 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP 통신 방식&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;기본적으로 request/response 구조로 되어있다.&lt;/li&gt;
+&lt;li&gt;클라이언트가 HTTP request를 서버로 보내면 서버는 HTTP response를 보낸다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.researchgate.net/profile/Kereshmeh_Afsari/publication/311571526/figure/fig3/AS:438170157359106@1481479314691/HTTP-request-response-model.png&quot; alt=&quot;httprequestresponse&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP는 &lt;code class=&quot;language-text&quot;&gt;Stateless&lt;/code&gt; 이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Stateless는 말 그대로 state(상태)를 저장하지 않는다는 뜻이다.&lt;/li&gt;
+&lt;li&gt;각각의 요청/응답은 독립적이다.&lt;/li&gt;
+&lt;li&gt;그래서 만일 요청과 응답의 진행 과정에 데이터가 필요할 땐 쿠키나 세션을 사용한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://miro.medium.com/max/765/1*Hg1gUTXN5E3Nrku0jWCRow.png&quot; alt=&quot;stateless&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;http의-세가지-속성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http%EC%9D%98-%EC%84%B8%EA%B0%80%EC%A7%80-%EC%86%8D%EC%84%B1&quot; aria-label=&quot;http의 세가지 속성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP의 세가지 속성&lt;/h3&gt;
+&lt;h3 id=&quot;1-요청과-응답을-한다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1-%EC%9A%94%EC%B2%AD%EA%B3%BC-%EC%9D%91%EB%8B%B5%EC%9D%84-%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;1 요청과 응답을 한다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1. 요청과 응답을 한다.&lt;/h3&gt;
+&lt;h3 id=&quot;2-stateless&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#2-stateless&quot; aria-label=&quot;2 stateless permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;2. Stateless&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;현재 요청만 안다.&lt;br&gt;
+기존의 통신정보를 저장하지않는다.&lt;br&gt;
+stateless이기 때문에 요청에 필요한 모든 정보를 해당 요청에 첨부해서 같이 보내야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;3-http의-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3-http%EC%9D%98-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;3 http의 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3. HTTP의 구조&lt;/h3&gt;
+&lt;h3 id=&quot;http-request-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http-request-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;http request 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP Request 구조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Start line&lt;/li&gt;
+&lt;li&gt;Headers&lt;/li&gt;
+&lt;li&gt;Body&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.techtud.com/sites/default/files/public/user_files/tud46242/ht2.JPG&quot; alt=&quot;getbody&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;start-line&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#start-line&quot; aria-label=&quot;start line permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Start Line&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP의 첫 라인&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;start line도 3부분으로 구성되어 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP Method&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 request가 의도한 action을 정의하는 부분&lt;/li&gt;
+&lt;li&gt;HTTP Method에는 GET, POST, PUT, DELETE, OPTIONS 등등이 있다.&lt;/li&gt;
+&lt;li&gt;주로 GET과 POST가 쓰인다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Request Target&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 request가 전송되는 목표 uri&lt;/li&gt;
+&lt;li&gt;예를 들어 &lt;code class=&quot;language-text&quot;&gt;/login&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;HTTP Version&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용되는 HTTP 버젼이다. 버젼에는 &lt;code class=&quot;language-text&quot;&gt;1.0&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;1.1&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;2.0&lt;/code&gt; 등이 있다.
+&lt;code class=&quot;language-text&quot;&gt;GET /search HTTP/1.1&lt;/code&gt;
+내가 GET 메소드로 보낼건데 /search가 타겟이다. 버전은 HTTP/1.1이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;headers&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#headers&quot; aria-label=&quot;headers permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Headers&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;요청에 대한 메타 데이터&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;해당 request에 대한 추가 정보를 담고 있는 부분이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ex) request 메세지의 총 길이 (Content-Length) 등.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;Key:Value&lt;/code&gt; 값으로 되어 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;ex) &lt;code class=&quot;language-text&quot;&gt;HOST: google.com&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Header도 크게 3부분으로 나뉘지만 (general, request, entity headers) 너무 자세한 분이므로 3부분으로 구성되어 있다는 것만 알고 있어도 된다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;자주 사용되는 header 정보&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Host&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요청이 전송되는 target의 host url: 예를 들어 google.com&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;User Agent&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;요청을 보내는 클라이언트의 정보: 예를 들어 웹브라우저에 대한 정보 크롬 몇버전 쓰고 어떤 컴퓨터를 쓰는지 등. 거의 광고할 때 사용되는데 민감한 정보 이슈때문에 더이상 사용하지 않기로 했다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Accept&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 요청이 받을 수 있는 response 타입&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Connection&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 요청이 끝난 후 서버가 계속해서 네트워크 커넥션을 유지할 것인지에 대해 지시하는 부분&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Content-Type&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 요청이 보내는 메세지 body의 타입. JSON을 보내면 &lt;code class=&quot;language-text&quot;&gt;application/json&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Content-Length&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;메세지 body의 길이&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Type: application/json
+Content-Length: 257
+Host: google.com
+User-Agent: HTTPie/0.9.3&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4 id=&quot;body&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#body&quot; aria-label=&quot;body permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Body&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 request의 실제 데이터&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Body가 없는 request도 많다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;예를 들어, GET request들은 대부분 body가 없음&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;전체 request 구조&lt;/p&gt;
+&lt;h3 id=&quot;http-response-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#http-response-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;http response 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;HTTP Response 구조&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Status line&lt;/li&gt;
+&lt;li&gt;Headers&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Body&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.techtud.com/sites/default/files/public/user_files/tud46242/ht3.JPG&quot; alt=&quot;response&quot;&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;status-line&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#status-line&quot; aria-label=&quot;status line permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Status line&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;response &lt;code class=&quot;language-text&quot;&gt;상태&lt;/code&gt;를 알려주기 때문에 status line이라고 한다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;3부분으로 구성되어 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;HTTP 버전&lt;/li&gt;
+&lt;li&gt;Status code: 응답 상태를 나타내는 코드&lt;/li&gt;
+&lt;li&gt;ex) 200, 404&lt;/li&gt;
+&lt;li&gt;Status text: 응답 상태를 간략하게 설명해주는 부분&lt;/li&gt;
+&lt;li&gt;ex) “Not Found”&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 404 Not Found&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;=&gt; 404란? google.com은 정확히 도달했지만 target이 잘못됐다는 뜻이다. host가 잘못되면 응답이 아예 오지 않는다.&lt;/p&gt;
+&lt;h4 id=&quot;headers-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#headers-1&quot; aria-label=&quot;headers 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Headers&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Response의 Headers와 동일하다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;다만 response에서만 사용되는 header값들이 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;예를 들어, User-Agent 대신 Server 헤더가 사용된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;body-1&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#body-1&quot; aria-label=&quot;body 1 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Body&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Response의 body와 일반적으로 동일하다.&lt;/li&gt;
+&lt;li&gt;Request와 마찬가지로 모든 Response에 body가 있지는 않다. 데이터를 전송할 필요가 없으면 body가 비어있게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;터미널로 요청해서 응답을 받으면 html코드 그대로 응답이 오고 브라우저에서는 태그가 랜더링되어서 나온다.&lt;/p&gt;
+&lt;h3 id=&quot;자주-쓰이는-http-method&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EC%A3%BC-%EC%93%B0%EC%9D%B4%EB%8A%94-http-method&quot; aria-label=&quot;자주 쓰이는 http method permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자주 쓰이는 HTTP Method&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://lh3.googleusercontent.com/proxy/0WSbnDGi-FD1aqJsuuhChJX5_uDiOU8rqLQ831kVjBpDcEO7ILTdBxeAaU-Y47mRrLbpa4DW3w84ykyfIeHadX8vyvODL80kc2yiRp9edjvkcNnghipkVBXWsuYf1Q&quot; alt=&quot;getpost&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;GET&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;이름 그대로 어떠한 데이터를 서버로 부터 &lt;code class=&quot;language-text&quot;&gt;받아(GET)&lt;/code&gt;올 때 주로 사용하는 Method.&lt;/li&gt;
+&lt;li&gt;가장 간단하고 많이 사용된다.&lt;/li&gt;
+&lt;li&gt;주로 데이터를 받아올 때 사용되기 때문에 request에 body를 안보내는 경우가 많다.&lt;/li&gt;
+&lt;li&gt;데이터 값이 URL의 뒤에 이어붙는다.&lt;/li&gt;
+&lt;li&gt;GET이 URL을 뒤에 붙여 늘리는 방식을 채택했기 때문에 전송하는 &lt;code class=&quot;language-text&quot;&gt;데이터량에 제한&lt;/code&gt;이 있고 사용자에게 &lt;code class=&quot;language-text&quot;&gt;데이터가 그대로 노출&lt;/code&gt;된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;POST&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터를 &lt;code class=&quot;language-text&quot;&gt;생성/수정/삭제&lt;/code&gt; 할 때 주로 사용되는 Method.&lt;/li&gt;
+&lt;li&gt;데이터를 생성 및 수정할 때 많이 사용하기 때문에 대부분의 경우 request body가 포함돼서 보내진다.&lt;/li&gt;
+&lt;li&gt;데이터를 HTTP body에 넣어서 전달한다. 그러므로 GET과 달리 &lt;code class=&quot;language-text&quot;&gt;데이터가 그대로 노출되지 않으며&lt;/code&gt;(암호화되지는 않음) &lt;code class=&quot;language-text&quot;&gt;전송량에 제한이 없다.&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;암호화는 따로 없기 때문에 보안에는 어차피 GET과 POST 둘 다 취약하다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;!!중요!!&lt;/strong&gt;&lt;br&gt;
+&lt;strong&gt;Method와 Status는 개발자가 정의해야 한다.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;OPTIONS&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;주로 요청 URI에서 사용할 수 있는 Method를 받아올 때 사용된다.&lt;/li&gt;
+&lt;li&gt;ex) &lt;code class=&quot;language-text&quot;&gt;/update&lt;/code&gt; uri에서 어떤 method를 요청 가능한가(GET? POST?)를 알고 싶으면 먼저 &lt;code class=&quot;language-text&quot;&gt;OPTIONS&lt;/code&gt; 요청을 사용해서 확인하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http -v OPTIONS httpL//example.org
+
+OPTIONS / HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Content-Length: 0
+Host: example.org
+User-Agent: HTTPie/0.9.3
+
+
+HTTP/1.1 200 OK
+Allow: OPTIONS, GET, HEAD, POST
+Cache-Control: max-age=604800
+Content-Length: 0
+Date: Mon, 20 Aug 2018 08:37:45 GMT
+Expires: Mon, 27 Aug 2018 08:37:45 GMT
+Server: EOS (vny006/0450)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;자주-쓰이는-http-status-code&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EC%A3%BC-%EC%93%B0%EC%9D%B4%EB%8A%94-http-status-code&quot; aria-label=&quot;자주 쓰이는 http status code permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자주 쓰이는 HTTP Status Code&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;200-ok&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#200-ok&quot; aria-label=&quot;200 ok permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;200 OK&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;가장 자주 보게되는 status code.&lt;/li&gt;
+&lt;li&gt;문제 없이 다 잘 실행되었을 때 보내는 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;301-moved-permanently&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#301-moved-permanently&quot; aria-label=&quot;301 moved permanently permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;301 Moved Permanently&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;해당 URI가 다른 주소로 바뀌었을 때 보내는 코드&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;HTTP/1.1 301 Moved Permanently
+Location: http://www.example.org/index.asp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;400-bad-request&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#400-bad-request&quot; aria-label=&quot;400 bad request permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;400 Bad Request&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;해당 요청이 잘못된 요청일 때 보내는 코드&lt;/li&gt;
+&lt;li&gt;주로 요청에 포함된 input값들이 잘못된 값들이 보내졌을 때 사용되는 코드&lt;/li&gt;
+&lt;li&gt;예를 들어, 전화번호를 보내야 하는데 text가 보내졌을 때 등등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;401-unauthorized&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#401-unauthorized&quot; aria-label=&quot;401 unauthorized permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;401 Unauthorized&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;유저가 해당 요청을 진행 하려면 먼저 로그인을 하거나 회원 가입을 하거나 등등이 필요하다는 것을 나타내려할 때 쓰이는 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;403-forbidden&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#403-forbidden&quot; aria-label=&quot;403 forbidden permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;403 Forbidden&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;유저가 해당 요청에 대한 권한이 없다는 뜻&lt;/li&gt;
+&lt;li&gt;예를 들어, 오직 과금을 한 유저만 볼 수 있는 데이터를 요청했을 때 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;404-not-found&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#404-not-found&quot; aria-label=&quot;404 not found permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;404 Not Found&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;요청된 uri가 존재하지 않는다는 뜻&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http -v google.com/no-such-uri
+
+GET /no-such-uri HTTP/1,1
+Accept: */*
+Accept-Encoding: gzip, deflate
+Connection: keep-alive
+Host: google.com
+User-Agent: HTTPie/0.9.3
+
+HTTP/1.1 404 Not Found
+Content-Length: 1572
+Content-Type: text/html; charset=UTF-8
+Date: Mon, 20 Aug 2018 08:46:47 GMT
+Referrer-Policy: no-referrer&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h5 id=&quot;500-internal-server-error&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#500-internal-server-error&quot; aria-label=&quot;500 internal server error permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;500 Internal Server Error&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;서버에서 에러가 났을 때 사용되는 코드&lt;/li&gt;
+&lt;li&gt;API 개발을 하는 백엔드 개발자들이 싫어하는 코드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;=======================&lt;br&gt;
+400번대 - 프론트 너가 잘못한거야&lt;br&gt;
+500번대 - 백엔드 책임&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day2 CodeKata | React To-Do List]]></title><description><![CDATA[React 각종 팁, Git Session]]></description><link>https://dansjkim.github.io//posts/til-200213</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200213</guid><pubDate>Thu, 13 Feb 2020 22:40:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
 &lt;h1 id=&quot;til-2일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-2%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 2일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 2일차&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;10:30 | Code Kata&lt;/li&gt;
 &lt;li&gt;11:00 | React To-Do List Tutorial&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h1 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h1&gt;
-&lt;p&gt;&lt;img src=&quot;/media/code-kata-day3.png&quot; alt=&quot;codekata&quot;&gt;
-&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/day4.js&quot; title=&quot;Github&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;내 코드&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;숫자인 num을 인자로 넘겨주면, 뒤집은 모양이 num과 똑같은지 여부를 반환해주세요.
+
+num: 숫자
+return: true or false (뒤집은 모양이 num와 똑같은지 여부)
+
+
+예를 들어,
+num = 123
+return false 
+=&amp;gt; 뒤집은 모양이 321 이기 때문
+
+num = 1221
+return true 
+=&amp;gt; 뒤집은 모양이 1221 이기 때문
+
+num = -121
+return false 
+=&amp;gt; 뒤집은 모양이 121- 이기 때문
+
+num = 10
+return false 
+=&amp;gt; 뒤집은 모양이 01 이기 때문&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/day4.js&quot; title=&quot;Github&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;내 코드&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;react-to-do-list-tutorial&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#react-to-do-list-tutorial&quot; aria-label=&quot;react to do list tutorial permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;React To-Do-List Tutorial&lt;/h1&gt;
 &lt;h3 id=&quot;배운-내용&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B0%B0%EC%9A%B4-%EB%82%B4%EC%9A%A9&quot; aria-label=&quot;배운 내용 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;배운 내용&lt;/h3&gt;
 &lt;ul&gt;
