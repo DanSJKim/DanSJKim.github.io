@@ -1,4 +1,488 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 18 Feb 2020 15:14:47 GMT</lastBuildDate><item><title><![CDATA[React Native | Switch Navigator]]></title><description><![CDATA[React Native | Switch navigator]]></description><link>https://dansjkim.github.io//posts/switch-navigator</link><guid isPermaLink="false">https://dansjkim.github.io//posts/switch-navigator</guid><pubDate>Tue, 18 Feb 2020 23:50:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 01 Mar 2020 14:59:45 GMT</lastBuildDate><item><title><![CDATA[[Wecode] TIL_Day32 Code Kata | Group Project_Day5 | Tips]]></title><description><![CDATA[Code Kata, Group Project Day5, Group Project Tips]]></description><link>https://dansjkim.github.io//posts/til-200228</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200228</guid><pubDate>Fri, 28 Feb 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-32일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-32%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 32일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 32일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;14:30 | Group Project - BR-Sariwon City list SelectBox with Server request&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* 재귀 알고리즘
+오늘은 재귀알고리즘에 대한 문제입니다.
+재귀(recursion)란, 자신을 정의할 때 자기 자신을 호출하는 방법을 뜻합니다. 프로그래밍의 함수정의에서 많이 사용됩니다.
+
+예)
+const countdown = n =&amp;gt; {
+  console.log(n);
+  countdown(n-1);
+}
+
+countdown(10);
+
+countdown 함수는 받은 인자를 console로 출력합니다.
+그런데 위의 함수를 실행하면 10에서 시작해서 무한으로 마이너스 값까지 내려갑니다.
+
+그래서 재귀함수는 아래의 절차가 꼭 필요합니다.
+언제 멈출것인가?
+
+위를 고려해 0이 되면 더이상 재귀를 이어나가지 않도록 종료 조건을 추가하겠습니다.
+const countdown = n =&amp;gt; {
+  console.log(n);
+
+  if (n === 0) return;
+
+  countdown(n-1);
+}
+
+countdown(10);
+
+재귀의 이론은 위와 같이 아주 간단합니다. 재귀를 더 공부하고 싶은 분은 인터넷에 재귀 문제를 찾아 더 풀어보셔도 좋고, 알고리즘 책에서 재귀 부분만 더 읽으셔도 좋습니다.
+
+
+* 문제
+재귀를 사용하여 팩토리얼(factorial)을 구하는 함수를 구현해주세요.
+팩토리얼이란 1에서부터 n까지의 정수를 모두 곱한것을 말합니다.
+
+1! = 1
+2! = 1 * 2
+5! = 1 * 2 * 3 * 4 * 5&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/week3-day5.js&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;코드&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;group-project--br-sariwon-5일-차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#group-project--br-sariwon-5%EC%9D%BC-%EC%B0%A8&quot; aria-label=&quot;group project  br sariwon 5일 차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Group Project | BR-Sariwon 5일 차&lt;/h1&gt;
+&lt;h2 id=&quot;오늘-한-일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%ED%95%9C-%EC%9D%BC&quot; aria-label=&quot;오늘 한 일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 한 일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;select box 백엔드 연결&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;프로젝트-tips&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-tips&quot; aria-label=&quot;프로젝트 tips permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;프로젝트 tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Mock data&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;setstate는-비동기-함수다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#setstate%EB%8A%94-%EB%B9%84%EB%8F%99%EA%B8%B0-%ED%95%A8%EC%88%98%EB%8B%A4&quot; aria-label=&quot;setstate는 비동기 함수다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;setState는 비동기 함수다&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;setState메소드가 실행된 직후에 변경된 상태값이 적용되는게 아니고 답변을 기다려야하는 &lt;strong&gt;하나의 요청&lt;/strong&gt;이라고 생각하면 된다.&lt;br&gt;
+setstate 호출 직후에 state에 접근하면 변경 이전 값이 출력된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;setstate-직후-값-확인-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#setstate-%EC%A7%81%ED%9B%84-%EA%B0%92-%ED%99%95%EC%9D%B8-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;setstate 직후 값 확인 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;setState 직후 값 확인 방법&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;setState 함수의 두번째 인자로 콜백 함수를 넘겨 준다.
+두번째 인자로 넘겨주는 함수는 해당 비동기처리가 끝나면 실행되는 콜백 함수다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75621790-7c073000-5bdc-11ea-9d49-8c5d0ce3f215.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;setstate의-cb는-필요하지-않을-수도-있다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#setstate%EC%9D%98-cb%EB%8A%94-%ED%95%84%EC%9A%94%ED%95%98%EC%A7%80-%EC%95%8A%EC%9D%84-%EC%88%98%EB%8F%84-%EC%9E%88%EB%8B%A4&quot; aria-label=&quot;setstate의 cb는 필요하지 않을 수도 있다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;setState의 CB는 필요하지 않을 수도 있다?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;위의 코드같은 경우 이밴트객체가 변경되는 값을 가장 먼저 알기 때문에 이벤트객체에 담긴 값을 바로 찍어주는 것이 더 좋다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;콜백함수가 필요하지 않은 경우가 많은 이유&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;입력한 값을 이미 알고잇는건데 굳이state로 확인하지 않아도 된다.&lt;/li&gt;
+&lt;li&gt;대표적인 예가 &lt;strong&gt;e.target.value&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;그래서 콜백이 필요하지 않은 경우가 훨씬 많다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75621776-35b1d100-5bdc-11ea-9953-ebf2ec1f077f.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;fragment&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#fragment&quot; aria-label=&quot;fragment permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Fragment&lt;/h3&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75621849-19fafa80-5bdd-11ea-967a-99fdd238f927.png&quot;&gt;
+JSX의 가장 중요한 규칙이 하나의 부모로 요소들을 감싸는 것이다.
+스타일적으로 클래스를 넣어서 뭔가 스타일링을 해야될 때는 마음껏 div를 써서 감싸도 되지만
+react를 하다보면 의미없이 div를 감싸는 경우가 생기는데, 그때는 react의 Fragment를 사용하면 된다.&lt;/p&gt;
+&lt;p&gt;앞으로 자식이 다형제로 되어있고 크게 감싸는애가 필요없을 때 앞뒤로 요런 식으로 사용하면 된다.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75627921-cbb71d00-5c17-11ea-8c40-5fa79d1bdb65.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;children&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#children&quot; aria-label=&quot;children permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Children&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;props
+부모로 부터 자식 컴포넌트로 전달되는 데이터&lt;br&gt;
+컴포넌트의 특징 하나의 컴포넌트가 다른 컴포넌트를 포함할 수 있다.&lt;br&gt;
+￼부모 컴포넌트에서 자식 컴포넡트가 어떻게 생기고(UI) 어떻게 동작하며 사용자와 상호작용하는지 props를 통해 결정한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;레이아웃이나 틀이 정해져있고
+그안에 나타나는내용들을 조금씩 다르게 하고 싶을때 리액트 &lt;strong&gt;children&lt;/strong&gt;을 사용하면 코드가 깔끔해지고 효율적으로 컴포넌트를 사용할 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;children 사용시 장점&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;레이아웃을 구성하는데 효과적이다.&lt;/li&gt;
+&lt;li&gt;컴포넌트 재사용성이 증가한다.&lt;/li&gt;
+&lt;li&gt;틀이 정해져있고 그안에 다른내용을 보여주고 싶을 때 훨씬 효율적으로 사용할 수 있다.&lt;/li&gt;
+&lt;li&gt;children 값으로 컴포넌트 뿐만 아니라 plain text, multiple elements 등 어떠한 것이든 전달할 수 있습니다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;￼결과가 비슷한듯 다른 부분에 children을 쓰자&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day31 Code Kata | Group Project_Day4]]></title><description><![CDATA[Code Kata, Group Project Day4, PR Feedback]]></description><link>https://dansjkim.github.io//posts/til-200227</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200227</guid><pubDate>Thu, 27 Feb 2020 16:09:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-31일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-31%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 31일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 31일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10:30 | Group Project - BR-Sariwon Custom Checkbox, Custom Selectbox&lt;/li&gt;
+&lt;li&gt;15:00 | Group Project - BR-Sariwon PR&lt;/li&gt;
+&lt;li&gt;15:30 | Code Kata&lt;/li&gt;
+&lt;li&gt;16:00 | Group Project - BR-Sariwon Code Update&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h1&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* 문제
+주어진 숫자 배열에서, 0을 배열의 마지막쪽으로 이동시켜주세요.
+원래 있던 숫자의 순서는 바꾸지 말아주세요.
+
+* 새로운 배열을 생성해서는 안 됩니다.
+
+Input: [0,1,0,3,12]
+Output: [1,3,12,0,0]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/week3-day4.js&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;코드&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;group-project--br-sariwon-4일-차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#group-project--br-sariwon-4%EC%9D%BC-%EC%B0%A8&quot; aria-label=&quot;group project  br sariwon 4일 차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Group Project | BR-Sariwon 4일 차&lt;/h1&gt;
+&lt;h2 id=&quot;오늘-한-일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%ED%95%9C-%EC%9D%BC&quot; aria-label=&quot;오늘 한 일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 한 일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;네비게이션바 구현&lt;/li&gt;
+&lt;li&gt;네비게이션바 버튼에 마우스 올렸을 때 화면 하단으로 확장되는 기능 구현&lt;/li&gt;
+&lt;li&gt;Modal창 구현 (우측 검색 버튼 클릭시 나타남)&lt;/li&gt;
+&lt;li&gt;Modal창 내 custom Select list, custom checkbox 구현&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;피드백&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%94%BC%EB%93%9C%EB%B0%B1&quot; aria-label=&quot;피드백 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;피드백&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;import statement 중 스타일 관련 코드는 가장 아래에 작성&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; React&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; Component &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;react&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Components/Nav/nav-bottom.scss&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;인라인 스타일 대신 css에 정의해서 클래스명으로 스타일 적용 하기&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;삼항 연산자 사용 goood&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;className&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token template-string&quot;&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;monthly-icecream &lt;/span&gt;&lt;span class=&quot;token interpolation&quot;&gt;&lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;${&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;state&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;isHover &lt;span class=&quot;token operator&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;
+          &lt;span class=&quot;token operator&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;monthly-icecream-on&quot;&lt;/span&gt;
+          &lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;monthly-icecream-off&quot;&lt;/span&gt;
+      &lt;span class=&quot;token interpolation-punctuation punctuation&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token template-punctuation string&quot;&gt;`&lt;/span&gt;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;데이터는 같은 파일에서 작성하지 않고 &lt;strong&gt;js파일에 담아서 import&lt;/strong&gt; 해오거나, &lt;strong&gt;public-data-data.json&lt;/strong&gt; 파일에 담아서 &lt;strong&gt;fetch&lt;/strong&gt; 함수 사용해서 불러오는 방법으로 시도해 보기&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;jsx&quot;&gt;&lt;pre class=&quot;language-jsx&quot;&gt;&lt;code class=&quot;language-jsx&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; store &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;매장 찾기&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;고객센터&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; about &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;공지사항&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;보도자료&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;채용정보&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;점포개설문의&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt; link&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; title&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;CONTACT US&quot;&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;SASS는 다른 파일에 영향이 갈 수 있기 때문에 nesting을 잘 해주기
+&lt;strong&gt;가장 바깥 요소는 클래스명을 컴포넌트 이름으로 해주고, 그 안에 전부 nesting될 수 있도록 바꾼다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&amp;#x26;:first-child 이런식으로 li 태그 안으로 nesting 해주기 &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;scss&quot;&gt;&lt;pre class=&quot;language-scss&quot;&gt;&lt;code class=&quot;language-scss&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;/* before */&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;li &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; center&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 12px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;li:first-child &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 40px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token comment&quot;&gt;/* after */&lt;/span&gt;
+&lt;span class=&quot;token selector&quot;&gt;li &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;text-align&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; center&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding-bottom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 12px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+
+  &lt;span class=&quot;token selector&quot;&gt;&lt;span class=&quot;token parent important&quot;&gt;&amp;amp;&lt;/span&gt;:first-child &lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token property&quot;&gt;padding-top&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 40px&lt;span class=&quot;token punctuation&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;mock-data&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mock-data&quot; aria-label=&quot;mock data permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;mock data&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://velog.io/@joonsikyang/ReactMock-Data&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;mock data&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pr-이후-수정-사항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pr-%EC%9D%B4%ED%9B%84-%EC%88%98%EC%A0%95-%EC%82%AC%ED%95%AD&quot; aria-label=&quot;pr 이후 수정 사항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PR 이후 수정 사항&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;상단 우측 buttons 배치 수정&lt;/li&gt;
+&lt;li&gt;카테고리 목록 펼쳤을 때 하단 화면 밀리는 현상 수정 ( position: absolute로 수정)&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day30 Code Kata | Group Project_Day3]]></title><description><![CDATA[Code Kata, Group Project Day3]]></description><link>https://dansjkim.github.io//posts/til-200226</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200226</guid><pubDate>Wed, 26 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-29일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-29%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 29일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 29일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10:30 | Code Kata&lt;/li&gt;
+&lt;li&gt;13:00 | Group Project | BR-Sariwon&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h1 id=&quot;group-project--br-sariwon-3일-차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#group-project--br-sariwon-3%EC%9D%BC-%EC%B0%A8&quot; aria-label=&quot;group project  br sariwon 3일 차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Group Project | BR-Sariwon 3일 차&lt;/h1&gt;
+&lt;h2 id=&quot;오늘-한-일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%ED%95%9C-%EC%9D%BC&quot; aria-label=&quot;오늘 한 일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 한 일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Navigation Modal Page&lt;/li&gt;
+&lt;li&gt;Navigation custom select list, custom checkbox&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day29 Code Kata | Group Project_Day2]]></title><description><![CDATA[Code Kata, Group Project Day2, PR, Database Session]]></description><link>https://dansjkim.github.io//posts/til-200225</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200225</guid><pubDate>Tue, 25 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-29일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-29%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 29일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 29일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;11:00 | PR Session&lt;/li&gt;
+&lt;li&gt;14:00 | Database Session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;문제
+문자로 구성된 배열을 input으로 전달하면, 문자를 뒤집어서 return 해주세요.
+
+
+* 새로운 배열을 선언하면 안 됩니다.
+* 인자로 받은 배열을 수정해서 만들어주세요.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/week3-day2.js&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Code&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;pr-session&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pr-session&quot; aria-label=&quot;pr session permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PR Session&lt;/h2&gt;
+&lt;h3 id=&quot;pr전-체크-리스트&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#pr%EC%A0%84-%EC%B2%B4%ED%81%AC-%EB%A6%AC%EC%8A%A4%ED%8A%B8&quot; aria-label=&quot;pr전 체크 리스트 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;PR전 체크 리스트&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;필요한 test들을 완료하였고 기능이 제대로 실행 되는지 확인&lt;/li&gt;
+&lt;li&gt;Wecode의 코드 스타일 가이드에 맞추어 코드를 작성&lt;/li&gt;
+&lt;li&gt;자신의 의도한 파일들과 수정 사항들만 커밋이 된 것을 확인&lt;/li&gt;
+&lt;li&gt;본 수정사항들을 팀원과 사전에 상의하였고 팀원들 모두 해당 PR에 대하여 알고 있음
+git add . 으로 commit하면 안된다. 자기가 작업한 파일을 명시해서 push하자.   &lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;database-session&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#database-session&quot; aria-label=&quot;database session permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Database Session&lt;/h2&gt;
+&lt;h3 id=&quot;what-is-database&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#what-is-database&quot; aria-label=&quot;what is database permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;What is Database?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;데이터를 저장 및 보존하는 시스템&lt;/li&gt;
+&lt;li&gt;Application에서는 데이터가 메모리상에 존재해서 Application이 종료되면 데이터를 다시 읽어들일 수 없다.&lt;/li&gt;
+&lt;li&gt;일반적으로 database에는 &lt;strong&gt;RDBMS&lt;/strong&gt;와 &lt;strong&gt;“NoSQL”로 명칭되는 Non-relational database&lt;/strong&gt;가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;rdbms-relational-database-management-system&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rdbms-relational-database-management-system&quot; aria-label=&quot;rdbms relational database management system permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;RDBMS (Relational Database Management System)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75263762-c598f900-5831-11ea-9e60-8805cf0b577a.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;관계형 데이터 모델에 기초를 둔 데이터베이스 시스템을 말한다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;관계형 데이터란? &lt;strong&gt;데이터를 서로 상호 관련성을 가진 형태로 표현한 데이터&lt;/strong&gt;를 말한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;모든 데이터들은 2차원 table로 표현된다.&lt;/li&gt;
+&lt;li&gt;각 테이블은 column(항목)와 row(실제 값)으로 구성된다.&lt;/li&gt;
+&lt;li&gt;각 column은 저만의 &lt;strong&gt;고유 키(Primary Key)&lt;/strong&gt;가 있다. 주로 &lt;strong&gt;Primary key&lt;/strong&gt;를 통해서 해당 로우를 찾거나 인용(reference)하게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;각 테이블들은 서로 상호 관련성을 가지고 연결될 수 있다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;테이블끼리의 연결은 크게 3가지 종류가 있다.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;one to one&lt;/strong&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75264804-4d333780-5833-11ea-87d7-194c0e6d09d8.png&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;one to many&lt;/strong&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75264816-50c6be80-5833-11ea-8c6f-d0f1d2ced1ec.png&quot;&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;many to many&lt;/strong&gt;
+&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75264829-545a4580-5833-11ea-8618-3c548889d9cc.png&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;테이블과-어떻게-연결할까&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%85%8C%EC%9D%B4%EB%B8%94%EA%B3%BC-%EC%96%B4%EB%96%BB%EA%B2%8C-%EC%97%B0%EA%B2%B0%ED%95%A0%EA%B9%8C&quot; aria-label=&quot;테이블과 어떻게 연결할까 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;테이블과 어떻게 연결할까?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Foreign key라는 개념을 사용해서 주로 연결한다.&lt;/li&gt;
+&lt;li&gt;각 테이블의 Primary key 끼리 WHERE문을 이용해서 조인할 수도 있지만 쓰이지 않는다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;데이터베이스를-관계형으로-짜는-이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%B2%A0%EC%9D%B4%EC%8A%A4%EB%A5%BC-%EA%B4%80%EA%B3%84%ED%98%95%EC%9C%BC%EB%A1%9C-%EC%A7%9C%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;데이터베이스를 관계형으로 짜는 이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;데이터베이스를 관계형으로 짜는 이유?&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;바뀐 데이터가 있을 경우에 연관된 해당 테이블의 데이터만 바꾸면 된다.&lt;/li&gt;
+&lt;li&gt;잘못된 값을 넣을 확률이 적다. (데이터를 넣을 때 Foreign key가 존재하지 않으면 에러가 뜨기 때문에)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;acid-atomicity-consistency-isolation-durability&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#acid-atomicity-consistency-isolation-durability&quot; aria-label=&quot;acid atomicity consistency isolation durability permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ACID (Atomicity, Consistency, Isolation, Durability)&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;원자성, 일관성, 고립성, 지속성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;transaction&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#transaction&quot; aria-label=&quot;transaction permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Transaction&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Transaction은 일련의 작업들이 마치 하나의 작업처럼 취급되어서 모두 다 성공하거나 모두 다 실패하는 것을 이야기 한다.&lt;/li&gt;
+&lt;li&gt;예를 들어, 회원 정보를 업데이트할 때 보통 해당 유저의 프로파일을 지우고 덮어 쓴다.&lt;br&gt;
+데이터를 지우고 에러가 나면  데이터가 지워지기 때문에 이런 것을 트랜잭션으로 묶어줘야 한다.&lt;/li&gt;
+&lt;li&gt;대표적인 관계형 데이터베이스에는 MySQL과 PostgreSQL(postgres)가 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;nosql&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#nosql&quot; aria-label=&quot;nosql permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;NoSQL&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;비관계형 타입의 데이터를 저장할 때 사용되는 데이터베이스 시스템&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;비관계형이기 때문에 데이터들을 저장하기 전에 정의할 필요가 없다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;관계형 데이터베이스는 데이터들을 저장하기 전에 어디에 어떻게 저장할 것인지 정의해야 한다.&lt;/li&gt;
+&lt;li&gt;즉, 테이블을 정의하는 것을 말한다 (테이블 이름, 테이블과 다른 테이블의 관계, 각 컬럼의 타입 등)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;대표적인 NoSQL 데이터베이스로는 &lt;strong&gt;MongoDB, Radis, Cassandra&lt;/strong&gt; 등이 있다.&lt;/li&gt;
+&lt;li&gt;관계형: 데이터 정형화가 가능할 때 (보통 정형화된 데이터가 많다.)&lt;/li&gt;
+&lt;li&gt;비관계형: 비정형화 데이터를 저장할 때&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;최근에는 하나의 데이터베이스에서 관계형과 비관계형 모두 쓸 수 있게 만들었다.&lt;/p&gt;
+&lt;h2 id=&quot;sql-structured-query-language&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sql-structured-query-language&quot; aria-label=&quot;sql structured query language permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SQL (Structured Query Language)&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;MySQL과 같은 관계형 데이터베이스에서 데이터를 읽거나 생성 및 수정하기 위해 사용하는 언어&lt;/li&gt;
+&lt;li&gt;CRUD&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;join의-유형&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#join%EC%9D%98-%EC%9C%A0%ED%98%95&quot; aria-label=&quot;join의 유형 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Join의 유형&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;https://prepinsta.com/wp-content/uploads/2019/05/types-of-Joins.png&quot;&gt;&lt;/p&gt;
+&lt;h4 id=&quot;파일-시스템으로-데이터를-저장하면-단점이-뭘까&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%BC-%EC%8B%9C%EC%8A%A4%ED%85%9C%EC%9C%BC%EB%A1%9C-%EB%8D%B0%EC%9D%B4%ED%84%B0%EB%A5%BC-%EC%A0%80%EC%9E%A5%ED%95%98%EB%A9%B4-%EB%8B%A8%EC%A0%90%EC%9D%B4-%EB%AD%98%EA%B9%8C&quot; aria-label=&quot;파일 시스템으로 데이터를 저장하면 단점이 뭘까 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파일 시스템으로 데이터를 저장하면 단점이 뭘까?&lt;/h4&gt;
+&lt;p&gt;  파일로 저장하면 데이터의 관계성을 찾기가 힘들고 검색하기도 힘들다.
+데이터를 update, delete, search하는 기능을 추가해준 시스템이 &lt;strong&gt;Database&lt;/strong&gt;다.&lt;/p&gt;
+&lt;h1 id=&quot;group-project--br-sariwon-2일-차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#group-project--br-sariwon-2%EC%9D%BC-%EC%B0%A8&quot; aria-label=&quot;group project  br sariwon 2일 차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Group Project | BR-Sariwon 2일 차&lt;/h1&gt;
+&lt;h2 id=&quot;오늘-한-일&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%98%A4%EB%8A%98-%ED%95%9C-%EC%9D%BC&quot; aria-label=&quot;오늘 한 일 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;오늘 한 일&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;네비게이션 바 위에 마우스 hover했을 때 height 확장 되는 애니메이션 추가&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day28 Group Project_Day1, SCSS]]></title><description><![CDATA[Group Project Day1 | Scrum, SCSS]]></description><link>https://dansjkim.github.io//posts/til-200224</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200224</guid><pubDate>Mon, 24 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-28일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-28%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 28일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 28일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;11:00 | Group Project Session&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;그룹-프로젝트의-목적&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B7%B8%EB%A3%B9-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EC%9D%98-%EB%AA%A9%EC%A0%81&quot; aria-label=&quot;그룹 프로젝트의 목적 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;그룹 프로젝트의 목적&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;실제 웹서비스를 처음부터 끝까지 개발하는 것을 훈련하는 것이 목적이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;눈에 보이는 요소가 완성도의 역할을 굉장히 크게 한다.
+코드퀄리티도 중요하지만 3자가 보는 것은 프론트엔드단의 완성도다.&lt;/p&gt;
+&lt;h2 id=&quot;project-process&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#project-process&quot; aria-label=&quot;project process permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Project Process&lt;/h2&gt;
+&lt;h3 id=&quot;scrum&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#scrum&quot; aria-label=&quot;scrum permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Scrum&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Planning Meeting
+한주동안 어떤 작업을 할 지 계획한다.&lt;/li&gt;
+&lt;li&gt;Kanban Board - Trello
+어떤 일을 할 것인지 테스크를 Trello를 사용해서 관리한다.&lt;/li&gt;
+&lt;li&gt;Daily Standup Meeting
+서서 하는 미팅. 매일 팀원들이 10~15분 정도 어제 했던 일, 오늘 할 일, 다른사람이 처리해서 진행해줘야 할 일에 대해 회의한다.&lt;/li&gt;
+&lt;li&gt;Github - OR &amp;#x26; Code Review
+멘토들한테 PR을 날려서 코드리뷰를 하고 기준에 부합한 것만 Merge된다. Github에서 코드리뷰, 피드백을 줄 것이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;2 weeks total - 2 sprint로 진행된다.&lt;/p&gt;
+&lt;p&gt;나무그네 이야기 - 의사소통이 중요하다.&lt;/p&gt;
+&lt;h2 id=&quot;intro-to-scrum&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#intro-to-scrum&quot; aria-label=&quot;intro to scrum permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Intro To Scrum&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;전체 개발 프로젝트의 68%가 실패한다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;실패의 정의&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;목표기능 미달 및 불량&lt;/li&gt;
+&lt;li&gt;일정 및 비용 초과&lt;/li&gt;
+&lt;li&gt;개발 중도포기 (완전 실패)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;소프트웨어 개발 프로젝트 운영은 굉장히 어렵다.&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;scrum의-기본-철학&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#scrum%EC%9D%98-%EA%B8%B0%EB%B3%B8-%EC%B2%A0%ED%95%99&quot; aria-label=&quot;scrum의 기본 철학 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Scrum의 기본 철학&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;개발 업무는 소요 시간과 진행과정을 예상하기가 굉장히 어렵다. 한시간 걸린다고 생각하면 2~3시간이 기본이고 1달을 생각하면 2~3달이 기본이다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;스크럼에서는 모든 문제들을 부정하지 않고, 피할 수 없다고 가정한다.&lt;/li&gt;
+&lt;li&gt;스크럼은 이러한 문제들을 없애는 것이 목적이 아니라 &lt;strong&gt;이러한 문제들에서 나오는 피해를 최소화하는 것이 목표다.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;sprint&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sprint&quot; aria-label=&quot;sprint permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Sprint&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;장기적인 계획이 아닌 단기적인 계획을 단계적으로 여러번 짜는 것이 중요하다. 이러한 단기 주기를 &lt;strong&gt;Sprint&lt;/strong&gt;라고 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;h3 id=&quot;sprint-진행-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sprint-%EC%A7%84%ED%96%89-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;sprint 진행 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Sprint 진행 방법&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;스프린트 시작 첫 날 planning 미팅을 갖고 스프린트 동안 할 일을 결정한다.&lt;/li&gt;
+&lt;li&gt;스프린트를 진행하면서 각자 주어진 일을 완료한다.&lt;/li&gt;
+&lt;li&gt;매일 standup 미팅을 통해 팀원끼리 서로 진행사항을 공유한다.&lt;/li&gt;
+&lt;li&gt;다음 세가지를 한사람씩 돌아가면서 이야기한다.&lt;/li&gt;
+&lt;li&gt;어제 했던 일, 오늘 할 일, 다른사람에 의해 막혀있는 것이나 다른사람이 해줘야 하는 것(blocker)&lt;/li&gt;
+&lt;li&gt;이러한 주기를 프로젝트 끝날 때 까지 반복한다.&lt;/li&gt;
+&lt;li&gt;계획을 단기적으로 짜면 현실적인 계획이 가능하다.&lt;/li&gt;
+&lt;li&gt;프로젝트 진행사황 파악이 쉬워지므로 문제나 차질이 있을 때 미리미리 대처할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;http://crmsearch.com/images/agileandwaterfall.gif&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://blog.crisp.se/wp-content/uploads/2016/01/Making-sense-of-MVP-.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://cdn-8a82.kxcdn.com/wp-content/uploads/2017/02/scrum_process_afa_5000.jpg&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;css--transition&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#css--transition&quot; aria-label=&quot;css  transition permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSS | Transition&lt;/h2&gt;
+&lt;p&gt;CSS 프로퍼티의 값이 변화할 때, 프로퍼티 값의 변화가 &lt;strong&gt;일정 시간(duration)&lt;/strong&gt;에 걸쳐 일어나도록 하는 것이다.&lt;/p&gt;
+&lt;h2 id=&quot;css--animation&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#css--animation&quot; aria-label=&quot;css  animation permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;CSS | Animation&lt;/h2&gt;
+&lt;p&gt;HTML 요소에 적용되는 CSS 스타일을 다른 CSS 스타일로 부드럽게 변화시킨다.&lt;br&gt;
+Transition으로도 어느 정도의 애니메이션을 표현할 수 있지만 Animation보다는 제한적이다.&lt;br&gt;
+Transition 프로퍼티는 단순히 요소 프로퍼티의 변화에 주안점이 있다면 Animation 프로퍼티는 애니메이션을 나타내는 CSS 스타일과 Sequence를 나타내는 복수의 @keyframes들로 이루어 진다.&lt;/p&gt;
+&lt;h3 id=&quot;keyframes&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#keyframes&quot; aria-label=&quot;keyframes permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;@keyframes&lt;/h3&gt;
+&lt;p&gt;CSS Animation과 Transition방식의 주된 차이는 @keyframes rule에 있다.&lt;br&gt;
+이 rule을 사용하면 애니메이션의 흐름(sequence)중의 여러 시점(breakpoint)에서 CSS 프로퍼티값을 지정할 수 있따.&lt;/p&gt;
+&lt;h3 id=&quot;scss&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#scss&quot; aria-label=&quot;scss permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SCSS&lt;/h3&gt;
+&lt;p&gt;Sass(Syntactically Awesome StyleSheet)는 CSS-pre-processor로서 CSS의 한계와 단점을 보완하여 보다 가독성이 높고 코드의 재사용에 유리한 CSS를 생성하기 위한 CSS의 extensiond이다.&lt;/p&gt;
+&lt;p&gt;CSS는 문법이 간결해서 배우기 쉽고 명확하여 프로젝트 초기에는 문제가 없지만 프로젝트의 규모가 커지고 수정이 빈번히 발생함에 따라 쉽게 지저분해 지고 유지보수도 어려워지는 단점이 있다.
+Sass는 다음과 같은 추가 기능과 유용한 도구들을 제공한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;변수의 사용&lt;/li&gt;
+&lt;li&gt;조건문과 반복문&lt;/li&gt;
+&lt;li&gt;Import&lt;/li&gt;
+&lt;li&gt;Nesting&lt;/li&gt;
+&lt;li&gt;Mixin&lt;/li&gt;
+&lt;li&gt;Extend/Inheritance&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;sass의-장점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#sass%EC%9D%98-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;sass의 장점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Sass의 장점&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;CSS보다 심플한 표기법으로 CSS를 구조화하여 표현할 수 있다.&lt;/li&gt;
+&lt;li&gt;스킬 레벨이 다른 팀원들과의 작업 시 발생할 수 있는 구문의 수준 차이를 평준화할 수 있다.&lt;/li&gt;
+&lt;li&gt;CSS에는 존재하지 않는 Mixin 등의 강력한 활용하여 CSS 유지보수의 편의성을 큰 폭으로 향상시킬 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;group-project--br-sariwon-1일-차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#group-project--br-sariwon-1%EC%9D%BC-%EC%B0%A8&quot; aria-label=&quot;group project  br sariwon 1일 차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Group Project | BR-Sariwon 1일 차&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/53449023/75163040-e003a180-5761-11ea-8fee-6637ec57f8c5.png&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;베스킨라빈스 상단 메뉴 구현&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day26 React Native Mobile Instagram Clone]]></title><description><![CDATA[ React Native  ]]></description><link>https://dansjkim.github.io//posts/til-200222</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200222</guid><pubDate>Sat, 22 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-11일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-11%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 11일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 11일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;14:00 | React Native Instagram Clone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;게시물 등록을 구현하려는데 컴포넌트가 많이 중첩돼서 데이터 넘기는게 힘들었다.&lt;/p&gt;
+&lt;p&gt;데이터 넘겨주는 방법 찾는데만  새벽 4시에 방법을 겨우 찾음..&lt;/p&gt;
+&lt;p&gt;파라미터를 최상위 컴포넌트에서 바꾸는게 이상하다는 다른사람의 말에 힌트를 얻어서 문제를 해결했다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day10 Code Kata | React Native Mobile Instagram Clone]]></title><description><![CDATA[인증|인가 세션, React Native Westagram Clone - Modal, Header Button Navigation]]></description><link>https://dansjkim.github.io//posts/til-200221</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200221</guid><pubDate>Fri, 21 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-9일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-9%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 9일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 9일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10:30 | Code Kata&lt;/li&gt;
+&lt;li&gt;11:00 | Westagram Clone&lt;/li&gt;
+&lt;li&gt;17:30 | React-Westagram Code Review&lt;/li&gt;
+&lt;li&gt;19:00 | React-BaskinRobbins Clone Planning&lt;/li&gt;
+&lt;li&gt;23:30 | Header Button Navigation&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day9 Code Kata | React Native Mobile Instagram Clone]]></title><description><![CDATA[인증|인가 세션, React Native Westagram Clone - 상단 바, 댓글 달기]]></description><link>https://dansjkim.github.io//posts/til-200220</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200220</guid><pubDate>Thu, 20 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-9일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-9%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 9일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 9일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10:30 | Code Kata&lt;/li&gt;
+&lt;li&gt;11:00 | javascript fetch 세션&lt;/li&gt;
+&lt;li&gt;13:30 | react fetch 세션&lt;/li&gt;
+&lt;li&gt;14:00 | React Native Westagram Clone&lt;/li&gt;
+&lt;li&gt;16:00 | API 붙이기&lt;/li&gt;
+&lt;li&gt;19:00 | React Native Westagram Clone | Swipe Delete&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* 문제
+nums는 숫자로 이루어진 배열입니다. 
+가장 자주 등장한 숫자를 k 개수만큼 return해주세요.
+
+nums = [1,1,1,2,2,3],
+k = 2
+
+return [1,2]
+
+nums = [1]
+k = 1
+
+return [1]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/week2-day4.js&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;코드&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day8 Code Kata | React Native Mobile Instagram Clone]]></title><description><![CDATA[인증|인가 세션, React Native Westagram Clone - 상단 바, 댓글 달기]]></description><link>https://dansjkim.github.io//posts/til-200219</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200219</guid><pubDate>Wed, 19 Feb 2020 23:46:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
+&lt;h1 id=&quot;til-7일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-7%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 7일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 7일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;10:30 | Code Kata&lt;/li&gt;
+&lt;li&gt;11:00 | 팀 프로젝트 클론 사이트 선정&lt;/li&gt;
+&lt;li&gt;13:00 | 인증 인가 세션&lt;/li&gt;
+&lt;li&gt;17:00 | React Native Westagram Clone - 상단 바, 댓글 달기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;code-kata&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#code-kata&quot; aria-label=&quot;code kata permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Code Kata&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;* 문제
+숫자로 이루어진 배열인 nums를 인자로 전달합니다.
+숫자중에서 과반수(majority, more than a half)가 넘은 숫자를 반환해주세요.
+
+예를 들어,
+
+nums = [3,2,3]
+return 3
+
+nums = [2,2,1,1,1,2,2]
+return 2
+
+
+* 가정
+nums 배열의 길이는 무조건 2개 이상&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/DanSJKim/code-kata/blob/master/week2-day2.js&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;코드&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Native | Switch Navigator]]></title><description><![CDATA[React Native | Switch navigator]]></description><link>https://dansjkim.github.io//posts/switch-navigator</link><guid isPermaLink="false">https://dansjkim.github.io//posts/switch-navigator</guid><pubDate>Tue, 18 Feb 2020 23:50:32 GMT</pubDate><content:encoded>&lt;!-- ![workflow](/media/react-logo.png) --&gt;
 &lt;h2 id=&quot;switch-navigator-사용법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#switch-navigator-%EC%82%AC%EC%9A%A9%EB%B2%95&quot; aria-label=&quot;switch navigator 사용법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Switch navigator 사용법&lt;/h2&gt;
 &lt;h3 id=&quot;createswitchnavigator&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#createswitchnavigator&quot; aria-label=&quot;createswitchnavigator permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;createSwitchNavigator&lt;/h3&gt;
 &lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;switch navigator&lt;/code&gt;는 화면 전환 시 스택이 쌓이지 않고 새로운 화면을 띄워준다.&lt;br&gt;
