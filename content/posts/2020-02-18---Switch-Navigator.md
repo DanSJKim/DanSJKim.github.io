@@ -1,33 +1,36 @@
 ---
-title: "React Native | Switch Navigator"
-date: "2020-02-18T23:50:32.169Z"
-template: "post"
+title: 'React Native | Switch Navigator'
+date: '2020-02-18T23:50:32.169Z'
+template: 'post'
 draft: false
-slug: "switch-navigator"
-category: "React Native"
+slug: 'switch-navigator'
+category: 'React Native'
 tags:
-  - "React Native"
-  - "React Navigation"
-  
-description: "React Native | Switch navigator"
-socialImage: "https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg"
+  - 'React Native'
+  - 'React Navigation'
+
+description: 'React Native | Switch navigator'
+socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 ---
+
 <!-- ![workflow](/media/react-logo.png) -->
 
 ## Switch navigator 사용법
 
 ### createSwitchNavigator
-`switch navigator`는 화면 전환 시 스택이 쌓이지 않고 새로운 화면을 띄워준다.   
-로그인 후 메인화면으로 넘어가는 상황에는 `stack navigator`를 사용하면 안된다.   
-이미 로그인을 하고도 아래에 로그인 창이 쌓여있으면 뒤로가기로 다시 되돌아갈 수도 있기 때문이다.   
- 
+
+`switch navigator`는 화면 전환 시 스택이 쌓이지 않고 새로운 화면을 띄워준다.  
+로그인 후 메인화면으로 넘어가는 상황에는 `stack navigator`를 사용하면 안된다.  
+이미 로그인을 하고도 아래에 로그인 창이 쌓여있으면 뒤로가기로 다시 되돌아갈 수도 있기 때문이다.
 
 ```jsx
 createSwitchNavigator(RouteConfigs, SwitchNavigatorConfig);
 ```
+
 위 함수를 사용해야 한다.
-실제 인자로는 아래와 같은 값이 들어간다.   
-**ex)**    
+실제 인자로는 아래와 같은 값이 들어간다.  
+**ex)**
+
 ```jsx
 createSwitchNavigator(
   {
@@ -52,13 +55,17 @@ import {
   Button,
   StatusBar,
   StyleSheet,
-  View,
+  View
 } from 'react-native';
-import { createStackNavigator, createSwitchNavigator, createAppContainer } from 'react-navigation';
+import {
+  createStackNavigator,
+  createSwitchNavigator,
+  createAppContainer
+} from 'react-navigation';
 
 class SignInScreen extends React.Component {
   static navigationOptions = {
-    title: 'Please sign in',
+    title: 'Please sign in'
   };
 
   render() {
@@ -77,7 +84,7 @@ class SignInScreen extends React.Component {
 
 class HomeScreen extends React.Component {
   static navigationOptions = {
-    title: 'Welcome to the app!',
+    title: 'Welcome to the app!'
   };
 
   render() {
@@ -101,7 +108,7 @@ class HomeScreen extends React.Component {
 
 class OtherScreen extends React.Component {
   static navigationOptions = {
-    title: 'Lots of features here',
+    title: 'Lots of features here'
   };
 
   render() {
@@ -149,22 +156,25 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center',
-  },
+    justifyContent: 'center'
+  }
 });
 
 const AppStack = createStackNavigator({ Home: HomeScreen, Other: OtherScreen });
 const AuthStack = createStackNavigator({ SignIn: SignInScreen });
 
-export default createAppContainer(createSwitchNavigator(
-  {
-    AuthLoading: AuthLoadingScreen,
-    App: AppStack,
-    Auth: AuthStack,
-  },
-  {
-    initialRouteName: 'AuthLoading',
-  }
-));
+export default createAppContainer(
+  createSwitchNavigator(
+    {
+      AuthLoading: AuthLoadingScreen,
+      App: AppStack,
+      Auth: AuthStack
+    },
+    {
+      initialRouteName: 'AuthLoading'
+    }
+  )
+);
 ```
+
 [사이트 링크](https://snack.expo.io/@react-navigation/auth-flow-v3)
