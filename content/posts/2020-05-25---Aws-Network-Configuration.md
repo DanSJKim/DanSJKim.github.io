@@ -6,15 +6,10 @@ draft: false
 slug: aws-network-configuration
 category: aws
 tags:
-<<<<<<< HEAD
   - 'aws'
   - 'network'
 
 description: ''
-=======
-  - AWS
-  - Network
->>>>>>> 4ac1cd36f305718a5208b4535d2baa7d7946fa86
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 published: false
 ---
