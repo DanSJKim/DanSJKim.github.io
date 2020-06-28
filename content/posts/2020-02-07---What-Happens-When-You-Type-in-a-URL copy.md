@@ -6,9 +6,10 @@ draft: false
 slug: "what-happens-when-you-type-in-a-url"
 category: "Web"
 tags:
-  - "Web"
-  - "Browser"
-  - "Wecode"
+  - "wecode"
+  - "web"
+  - "browser"
+
 description: "브라우저에 www.wecode.co.kr을 치면 어떤 일이 일어날까?"
 socialImage: "/media/browser-dns-host.jpg"
 ---

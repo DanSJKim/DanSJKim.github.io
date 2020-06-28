@@ -6,9 +6,8 @@ draft: false
 slug: "react-navigation-1"
 category: "React Native"
 tags:
-  - "React Native"
-  - "React Navigation"
-  - "Code Kata"
+  - "react native"
+  - "react navigation"
   
 description: "react-navigation 시작하기"
 socialImage: "https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg"

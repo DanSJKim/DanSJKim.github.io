@@ -6,9 +6,8 @@ draft: false
 slug: 'database-execution-plan'
 category: 'Database'
 tags:
-  - 'Database'
-  - 'MySQL'
-
+  - 'database'
+  - 'mySQL'
 description: '실행 계획의 사용법과 필드의 의미'
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 ---
@@ -736,7 +735,7 @@ FROM절 이외의 부분에서 사용하는 서브쿼리가 자체적으로 실�
 
 Using where가 표시될 때 Rows 컬럼이 실제 SELECT되는 레코드 건수보다 상당히 높은 경우는 반드시 보완해서 레코드 수의 차이를 줄이는 것이 중요하다. 
 
-**쿼리의 실행 계획이 좋은 경우 **
+**쿼리의 실행 계획이 좋은 경우**
 
 - Distinct
 

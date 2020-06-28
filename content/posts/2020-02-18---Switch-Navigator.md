@@ -6,8 +6,8 @@ draft: false
 slug: 'switch-navigator'
 category: 'React Native'
 tags:
-  - 'React Native'
-  - 'React Navigation'
+  - 'react native'
+  - 'react navigation'
 
 description: 'React Native | Switch navigator'
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'

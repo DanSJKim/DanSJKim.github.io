@@ -6,8 +6,8 @@ draft: false
 slug: "git-command-list-post"
 category: "Git"
 tags:
-  - "Git"
-  - "Wecode"
+  - "git"
+  - "wecode"
 description: "Git의 주요 명령어를 정리해 보았다."
 socialImage: "/media/workflow.jpg"
 ---

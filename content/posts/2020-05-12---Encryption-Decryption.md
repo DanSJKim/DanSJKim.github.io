@@ -7,7 +7,7 @@ slug: 'encryption-decryption'
 category: 'database'
 tags:
   - '암호화'
-  - 'AES'
+  - 'aes'
 description: '데이터 암호화, 복호화'
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 ---

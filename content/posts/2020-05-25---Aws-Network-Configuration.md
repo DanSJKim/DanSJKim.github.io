@@ -6,8 +6,8 @@ draft: false
 slug: 'aws-network-configuration'
 category: 'aws'
 tags:
-  - 'AWS'
-  - 'Network'
+  - 'aws'
+  - 'network'
 
 description: ''
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'

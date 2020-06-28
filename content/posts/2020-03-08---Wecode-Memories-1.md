@@ -6,7 +6,7 @@ draft: false
 slug: 'memories1'
 category: '후기'
 tags:
-  - 'Wecode'
+  - 'wecode'
   - '후기'
 
 description: '위코드 시작부터 1차 프로젝트까지'
