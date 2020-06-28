@@ -1,16 +1,22 @@
 ---
-title: 'AWS 네트워크 구성하기'
+title: AWS 네트워크 구성하기
 date: '2020-05-25T15:09:32.169Z'
-template: 'post'
+template: post
 draft: false
-slug: 'aws-network-configuration'
-category: 'aws'
+slug: aws-network-configuration
+category: aws
 tags:
+<<<<<<< HEAD
   - 'aws'
   - 'network'
 
 description: ''
+=======
+  - AWS
+  - Network
+>>>>>>> 4ac1cd36f305718a5208b4535d2baa7d7946fa86
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
+published: false
 ---
 
 # AWS 네트워크 구성하기
@@ -19,22 +25,22 @@ socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 
 기본적인 네트워크 구성 순서는 크게 다음과 같다.
 
-- VPC 생성
+1. VPC 생성
 
-- 서브넷 생성
+2. 서브넷 생성
 
-- 인터넷 게이트웨이 생성
+3. 인터넷 게이트웨이 생성
 
-- 인터넷 게이트웨이 VPC 연결
+4. 인터넷 게이트웨이 VPC 연결
 
-- 라우팅 테이블 구성
+5. 라우팅 테이블 구성
 
-- 보안 그룹 생성
+6. 보안 그룹 생성
 
-- 웹 서버 1 생성
+7. 웹 서버 1 생성
 
-- 웹 서버 1의 AMI 생성
+8. 웹 서버 1의 AMI 생성
 
-- AMI 기반 웹 서버 2 생성
+9. AMI 기반 웹 서버 2 생성
 
-- 로드밸런서 구성
+10. 로드밸런서 구성
