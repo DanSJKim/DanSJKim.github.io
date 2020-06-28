@@ -6,8 +6,8 @@ draft: false
 slug: "react-navigation-3"
 category: "React Native"
 tags:
-  - "React Native"
-  - "React Navigation"
+  - "react native"
+  - "react navigation"
 
 description: "화면 이동, 중복 화면 띄우기, 화면 되돌아가기, 첫 화면으로 돌아가기"
 socialImage: "https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg"

@@ -6,8 +6,8 @@ draft: false
 slug: 'what-is-redux'
 category: 'Redux'
 tags:
-  - 'Redux'
-  - 'TIL'
+  - 'redux'
+  - 'til'
 
 description: 'Redux에 대해 알아보자'
 socialImage: 'https://miro.medium.com/max/2800/0*U2DmhXYumRyXH6X1.png'

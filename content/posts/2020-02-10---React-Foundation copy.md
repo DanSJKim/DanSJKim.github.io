@@ -6,9 +6,9 @@ draft: false
 slug: "react-foundation"
 category: "React"
 tags:
-  - "React"
-  - "Wecode"
-  - "Session"
+  - "react"
+  - "wecode"
+  - "session"
 description: "React에 대해 알아보자"
 socialImage: "/media/react-logo.png"
 ---

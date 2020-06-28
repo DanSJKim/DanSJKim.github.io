@@ -6,8 +6,8 @@ draft: false
 slug: "react-navigation-2"
 category: "React Native"
 tags:
-  - "React Native"
-  - "React Navigation"
+  - "react native"
+  - "react navigation"
   
 description: ""
 socialImage: "https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg"
