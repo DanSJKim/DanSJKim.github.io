@@ -1,5 +1,6 @@
 ---
-date: '2020-05128T15:09:32.169Z'
+title: '데이터 암호화 및 복호화'
+date: '2020-05-12T16:09:32.169Z'
 template: 'post'
 draft: false
 slug: 'encryption-decryption'

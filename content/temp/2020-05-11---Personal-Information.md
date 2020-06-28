@@ -1,12 +1,13 @@
 ---
-date: '2020-05118T16:09:32.169Z'
+title: '개인정보의 정의 및 종류'
+date: '2020-05-11T16:09:32.169Z'
 template: 'post'
 draft: false
 slug: 'what-is-personal-information'
 category: 'etc'
 tags:
   - '개인정보'
-description: '개인 정보란?'
+description: '개인 정보'
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 ---
 
@@ -14,7 +15,6 @@ socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 
 - 살아있는 개인을 알아볼 수 있는 정보
 - 그 정보만으로 특정 개인을 알아볼 수 없더라도, 다른 정보와 쉽게 결합하여 개인을 알아볼 수 있다면 개인정보에 해당된다.
-
 
 
 ## 개인정보의 종류

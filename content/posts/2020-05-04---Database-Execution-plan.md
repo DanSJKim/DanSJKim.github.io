@@ -1,5 +1,4 @@
 ---
-
 title: '[Database] 실행 계획 - Execution Plan'
 date: '2020-05-04T16:09:32.169Z'
 template: 'post'
