@@ -1,4 +1,1449 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 12 Apr 2020 14:53:16 GMT</lastBuildDate><item><title><![CDATA[[Wecode] TIL_Day74]]></title><description><![CDATA[TIL_Day74 | Brandi_Day19 ]]></description><link>https://dansjkim.github.io//posts/til-200410</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200410</guid><pubDate>Fri, 10 Apr 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-74일차--브랜디-기업-협업-19일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-74%EC%9D%BC%EC%B0%A8--%EB%B8%8C%EB%9E%9C%EB%94%94-%EA%B8%B0%EC%97%85-%ED%98%91%EC%97%85-19%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 74일차  브랜디 기업 협업 19일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 74일차 | 브랜디 기업 협업 19일차&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Jun 2020 06:12:46 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[AWS 네트워크 구성하기]]></description><link>https://dansjkim.github.io//posts/aws-network-configuration</link><guid isPermaLink="false">https://dansjkim.github.io//posts/aws-network-configuration</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;aws-네트워크-구성하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aws-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;aws 네트워크 구성하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS 네트워크 구성하기&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/42b11/network-config.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7klEQVQoz32SXW/TMBSG+///CDfcIQGDalWbtomTOI6dxPlq0jQRYwVpbalgHQheTrx0MKRycWTr2Od5z9doU3hY+D5mrouJbZtzGQSIq8pYUtdQRYEg0U++f02v15g6Dq4XFkZV5sPyXMw5hx0KBDoFkxK6XpuPadPAIcGr9+8QpinytjP+s/WCCZ2B8sCDOUZR3VDQBnnXIkgzvJlNERYZ/CQ2xlNNgh5eXV2b7KcuA1MSXCfmPSARkyUxdNNilPxVmkhyvJi8xCS0EOYZRK4hy4wACm/HSyyFgOUz+DqmtxQ8i+EogXhF8QNn1IPOwDAjSKERVSsqozZBoqRAlWD82sE84PDTiN5LqqKgmAosCh+BA+cZUFDJPKNSdAhbMPCchtNo2MqBKyxYkmFsjxGWCs3H1oizSCK6CKQMPR0hXZf4dNPi4bDF/bcDpJaQNLCszrHtKtzvb/H9x4nAqQFezLAv2U0kalL/RaDTbY395wJc0CbMI1S1wM99h9O2wfHrgYDZ/4HnDOubDXb7O3TdBnfHAxT1NK5qlB9a7L8c0LYNdscd1Co3PYxWq8s9ZHEIJ+ZYUN+m4YzuHolIM1EWB1hGbPD7xm8yHOJ7ewbslbjWww4mT7vm6z/3fgf7NXo8pfknaeIyz6HKEr8BGc4C8S0EI0cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/8ac56/network-config.webp 240w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/d3be9/network-config.webp 480w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/e46b2/network-config.webp 960w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/f992d/network-config.webp 1440w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/882b9/network-config.webp 1920w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/42e4d/network-config.webp 2364w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/8ff5a/network-config.png 240w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/e85cb/network-config.png 480w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/d9199/network-config.png 960w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/07a9c/network-config.png 1440w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/29114/network-config.png 1920w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/42b11/network-config.png 2364w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/d9199/network-config.png&quot;
+          alt=&quot;network-config&quot;
+          title=&quot;network-config&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;기본적인 네트워크 구성 순서는 크게 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VPC 생성&lt;/li&gt;
+&lt;li&gt;서브넷 생성&lt;/li&gt;
+&lt;li&gt;인터넷 게이트웨이 생성&lt;/li&gt;
+&lt;li&gt;인터넷 게이트웨이 VPC 연결&lt;/li&gt;
+&lt;li&gt;라우팅 테이블 구성&lt;/li&gt;
+&lt;li&gt;보안 그룹 생성&lt;/li&gt;
+&lt;li&gt;웹 서버 1 생성&lt;/li&gt;
+&lt;li&gt;웹 서버 1의 AMI 생성&lt;/li&gt;
+&lt;li&gt;AMI 기반 웹 서버 2 생성&lt;/li&gt;
+&lt;li&gt;로드밸런서 구성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;vpc-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vpc-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;vpc 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VPC 생성&lt;/h2&gt;
+&lt;h3 id=&quot;vpc-이해하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vpc-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0&quot; aria-label=&quot;vpc 이해하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VPC 이해하기&lt;/h3&gt;
+&lt;p&gt;VPC를 이해하기 전에 VPN(Virtual Private Network)먼저 이해해야 한다.&lt;/p&gt;
+&lt;p&gt;VPC는 AWS 클라우드의 격리된 부분으로서, Amazon EC2 인스턴스와 같은 AWS 객체로 채워진다. &lt;/p&gt;
+&lt;p&gt;나만의 데이터센터를 만든다.&lt;/p&gt;
+&lt;p&gt;VPC에 대한 IPv4 주소 범위를 지정해야 합니다. IPv4 주소 범위를 CIDR(Classless Inter-Domain Routing) 블록으로 지정합니다(예: 10.0.0.0/16). /16보다 큰 IPv4 CIDR 블록은 지정할 수 없습니다. 또는 Amazon 제공 IPv6 CIDR 블록을 VPC에 연결할 수 있습니다.&lt;/p&gt;
+&lt;p&gt;CIDR블록&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[데이터 암호화, 복호화]]></description><link>https://dansjkim.github.io//posts/encryption-decryption</link><guid isPermaLink="false">https://dansjkim.github.io//posts/encryption-decryption</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;암호란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8%EB%9E%80&quot; aria-label=&quot;암호란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호란?&lt;/h1&gt;
+&lt;h2 id=&quot;cryptography&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cryptography&quot; aria-label=&quot;cryptography permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cryptography&lt;/h2&gt;
+&lt;p&gt;평문을 암호문으로 변환하거나 암호문을 평문으로 변환하는 기술&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Plaintext&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;해독 가능한 형태의 텍스트&lt;/p&gt;
+&lt;p&gt;ex) (“123456”)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ciphertext&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;해독 불가능한 형태의 텍스트&lt;/p&gt;
+&lt;p&gt;ex(“aBD#fefa$fae!“)&lt;/p&gt;
+&lt;h2 id=&quot;encryptiondecryption&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#encryptiondecryption&quot; aria-label=&quot;encryptiondecryption permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Encryption&amp;#x26;Decryption&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Encryption&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;평문을 암호문으로 변환하는 과정&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decryption&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;암호문을 평문으로 변환하는 과정&lt;/p&gt;
+&lt;h2 id=&quot;암호화의-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8%ED%99%94%EC%9D%98-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;암호화의 종류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호화의 종류&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;단방향&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;암호화 후 복호화할 수 없다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;양방향&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;암호화와 복호화 모두 가능하다.&lt;/p&gt;
+&lt;p&gt;ex) 사용자 주소, 이메일, 번호 또는 전자서명 같이 재사용성이 있는 정보는 암호화 복호화 모두 이루어져야 한다.&lt;/p&gt;
+&lt;h2 id=&quot;암호-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;암호 알고리즘 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호 알고리즘&lt;/h2&gt;
+&lt;h3 id=&quot;단방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EB%B0%A9%ED%96%A5&quot; aria-label=&quot;단방향 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단방향&lt;/h3&gt;
+&lt;p&gt;PBKDF2&lt;/p&gt;
+&lt;p&gt;bcrypt&lt;/p&gt;
+&lt;p&gt;scrypt&lt;/p&gt;
+&lt;h3 id=&quot;양방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%96%91%EB%B0%A9%ED%96%A5&quot; aria-label=&quot;양방향 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;양방향&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;대칭형(비밀키 암호) 알고리즘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AES&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;고급 암호화 표준(Advanced Encryption Standard)이라고 불리는 AES 암호 알고리즘은 DES를 대체한 암호 알고리즘이며 암호화와 복호화 과정에서 동일한 키를 사용하는 &lt;strong&gt;대칭 키 알고리즘&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;현재 가장 보편적으로 쓰이는 암호화 방식이며 현 미국 표준 방식인 AES.128~256비트 키를 적용할 수 있어 보안성이 뛰어나며 공개된 알고리즘이라 누구나 사용할 수 있디.&lt;/p&gt;
+&lt;p&gt;Rijmen과 Daemen이 개발한 Rijndael 알고리즘이 AES 공모에서 선정되면서 AES로 암호화 표준이 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AES는 SPN(Substituion-Permutation Network)라는 구조를 사용&lt;/strong&gt;한다. &lt;/p&gt;
+&lt;p&gt;SPN구조는 암호화와 복호화 과정이 서로 다르다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Feistel 구조와 SPN 구조의 차이&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feistel 구조&lt;/strong&gt;는 암복호화 과정에서 &lt;strong&gt;역함수가 필요 없다는 장점&lt;/strong&gt;이 있지만 구현시 스왑(Swap)단계 때문에 &lt;strong&gt;연산량이 많이 소요 되며 암호에 사용되는 라운드 함수를 안전하게 설계해야 한다는 단점&lt;/strong&gt;이 있다. &lt;/p&gt;
+&lt;p&gt;대표적인 암호로는 &lt;strong&gt;DES&lt;/strong&gt;가 있으며 Single DES는 &lt;strong&gt;안전성 문제&lt;/strong&gt;로 현재 사용하고 있지 않다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SPN 구조&lt;/strong&gt;는 암복호화 과정에서 &lt;strong&gt;역함수가 필요하도록 설계되어야 한다는 단점&lt;/strong&gt;이 있지만 중간에 비트의 이동없이 한번에 암복호화가 가능하기 때문에 &lt;strong&gt;페스탈 구조에 비해 효율적으로 설&lt;/strong&gt;계할 수 있다. 대표적인 암호로는 &lt;strong&gt;AES&lt;/strong&gt;가 있으며 AES는 현재 널리 상용되고 있다.&lt;/p&gt;
+&lt;p&gt;출처: &lt;a href=&quot;https://www.crocus.co.kr/1230&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.crocus.co.kr/1230&lt;/a&gt; [Crocus]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;비대칭형(공개키 암호) 알고리즘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RSA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;공개키 암호시스템의 하나로 암호화뿐만 아니라 전자서명이 가능한 최초의 알고리즘&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[ISMS란?]]></description><link>https://dansjkim.github.io//posts/isms</link><guid isPermaLink="false">https://dansjkim.github.io//posts/isms</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;isms란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#isms%EB%9E%80&quot; aria-label=&quot;isms란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ISMS란?&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;ISMS&lt;/strong&gt;란 &lt;strong&gt;정보보호관리체계(Information Security Management System)&lt;/strong&gt;를 의미하며, ISMS 솔루션은 기업이 주요 정보자산을 보호하기 위한 수립, 관리, 운영을 지원해주는 보안 통합 솔루션이다.&lt;/p&gt;
+&lt;p&gt;제3의 인증기관이 객관적, 독립적으로 관리체계를 평가하여, 관련 기준에 대한 적합 여부를 보증한다.&lt;/p&gt;
+&lt;p&gt;기업 및 조직이 보유하고 있는 기업정보, 산업기밀, 개인정보 등의 중요한 정보자산이 안전하고 신뢰성 있게 관리되고 있음을 국가로부터 인증 받는 국가 공인 제도다.&lt;/p&gt;
+&lt;h4 id=&quot;isms인증-의무대상자정보통신망법-제47조-2항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#isms%EC%9D%B8%EC%A6%9D-%EC%9D%98%EB%AC%B4%EB%8C%80%EC%83%81%EC%9E%90%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%A7%9D%EB%B2%95-%EC%A0%9C47%EC%A1%B0-2%ED%95%AD&quot; aria-label=&quot;isms인증 의무대상자정보통신망법 제47조 2항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ISMS인증 의무대상자(정보통신망법 제47조 2항)&lt;/h4&gt;
+&lt;p&gt;인증 의무대상자 확인 및 책임은 기업(기관)에 있으므로 스스로 의무대상 여부를 확인하여 인증 취득 필요&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABR0lEQVQoz12RycoCQQyE+/0fYwRHES+ONxUX8KR48AEEUXDf93Ep+QKR+f+Goro7lUo6HYbDoer1utrttrrdrnGz2VSr1fpxv99Xr9f7c+fc6XSM8RgMBgoY5HI5lUolJUlinM/nVSwWbV+tVk1cq9VUqVTsHsRxrEKhoHK5bBxFkRqNhsLpdNJ8PtdqtTJeLpfa7XZ6PB4idj6fdTwetd/vdb1exTocDqbfbDamJ07s9XopkEBgu91aEmYIbrebLpeLCQFnEj6fj8XRU5A97BozJLher80Q3O9369BFMHe+MKBwmqamcz3nkL34DzeDfU+XvGixWPzGNJvN7OkUCgRHo5Emk4nG47FhOp3a7LKGzu/327pjjnTkMUAT4fl8/jqEPQn4CNBkF2b+gYAzDZghQ2ZlGfA0jGAKkeCf5J/H6wCGNILuCwv+mlL+qxrXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/8ac56/isms.webp 240w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/d3be9/isms.webp 480w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/08b4d/isms.webp 750w&quot;
+          sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/8ff5a/isms.png 240w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/e85cb/isms.png 480w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png 750w&quot;
+          sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png&quot;
+          alt=&quot;isms&quot;
+          title=&quot;isms&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&quot;정보보호관리체계-인증-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EA%B4%80%EB%A6%AC%EC%B2%B4%EA%B3%84-%EC%9D%B8%EC%A6%9D-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;정보보호관리체계 인증 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정보보호관리체계 인증 구성 요소&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 753px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACIElEQVQ4y41TTU/jMBDN//8LPSAOrZAooiqo9II4cOO+Wm3FLpQ2aULSOonz4cRO3/q5eLd7W0sjezzjN28+HByPR1C4uk6hKAqn98YgKiv8OhR4EyV+crfCO9oHa8+FsG8699bjBDhbbasgRA7da+jhiG0hscoEVukBPz4PeLXn0AKegvcQeYG6ac8hEJhBo+0lapWj7oSTti8tQ3WKPAzolHLstdZgLkbVME2JobbB5R66ElaX1tcgULqG0hKpfEdSvCIS31GpDLI5WMYtmrZxQH3fo2kaKNWhKzMMTYE2XKH5+AYtYhgLPvSKDA2SNMQmfMcu2SKKN/jMdtDG1uaIP/X1dXKlqUrsPt6QxSHyLEG8XbuzsYEDOqWfKbI0Q1XVlkWLM4x/Cu4B6bOLE5RSoiglwmiHXptTDQdboyiKEMcx6roG9XOAc6GNS5YlNpsN0jS1TTxgvV4jz/O/XfYg/7tY2zAMHQGOTZZlKG0Qx5CH/X5vIwln8EKd9xQfkCwotBOQO+eWwvuqqhC8vLzg5uYGy+USs9kM8/kcd3d3eHp6wsPDA+7v721nTyMzmUxwcXGBy8tL94Y23lEfjUZ4fHxEwHEgmyRJXCSmQGE6TM3/BPrd3t7i6uoK0+kUi8XCkWDw6+trjMdjPD8/n7pMZ2k75gb3qwHGfi2m6tPlTjuFvj59kmFw+tPmukyFbDyQD+JBz0fGs/Xiy+HH6zfDANtJpOv7IgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/8ac56/isms-cert.webp 240w,
+/static/1efed49d785fd7b7ebc38c499369aa90/d3be9/isms-cert.webp 480w,
+/static/1efed49d785fd7b7ebc38c499369aa90/67c6f/isms-cert.webp 753w&quot;
+          sizes=&quot;(max-width: 753px) 100vw, 753px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/8ff5a/isms-cert.png 240w,
+/static/1efed49d785fd7b7ebc38c499369aa90/e85cb/isms-cert.png 480w,
+/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png 753w&quot;
+          sizes=&quot;(max-width: 753px) 100vw, 753px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png&quot;
+          alt=&quot;isms-cert&quot;
+          title=&quot;isms-cert&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;13개분야의 104개 항목을 만족시키고 이에 대한 증빙 및 문서를 가지고 있어야 인증이 가능하다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[개인 정보란?]]></description><link>https://dansjkim.github.io//posts/what-is-personal-information</link><guid isPermaLink="false">https://dansjkim.github.io//posts/what-is-personal-information</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;개인-정보&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9D%B8-%EC%A0%95%EB%B3%B4&quot; aria-label=&quot;개인 정보 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개인 정보&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;살아있는 개인을 알아볼 수 있는 정보&lt;/li&gt;
+&lt;li&gt;그 정보만으로 특정 개인을 알아볼 수 없더라도, 다른 정보와 쉽게 결합하여 개인을 알아볼 수 있다면 개인정보에 해당된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;개인정보의-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EC%9D%98-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;개인정보의 종류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개인정보의 종류&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;개인정보의 유형과 종류&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;유형 1 - 인적사항&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;성명, 주민등록번호, 주소, 본적지, 생년월일, 출생지&lt;/li&gt;
+&lt;li&gt;전화번호 등 연락처&lt;/li&gt;
+&lt;li&gt;이메일, 주소&lt;/li&gt;
+&lt;li&gt;가족관계 및 가족구성원 정보 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 2 - 신체적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;신체정보: 얼굴, 음성, 키, 몸무게, 지문, 홍채, 유전자 정보&lt;/li&gt;
+&lt;li&gt;의료/건강정보: 건강상태, 진료기록, 신체장애, 장애등급, 병력 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 3 - 정신적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;도서 및 비디오 등 대여기록, 잡지구동정보, 물품구매내역, 웹사이트 검색 내역 등&lt;/li&gt;
+&lt;li&gt;사상, 신조, 종교, 가치관, 정당 노조가입여부 및 활동내역 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 4 - 사회적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;학력, 성적, 출성상황, 자격증 보유내역, 상벌기록, 생활기록부 등&lt;/li&gt;
+&lt;li&gt;병역여부, 군번, 계급, 근무부대 등&lt;/li&gt;
+&lt;li&gt;직장, 고용주, 근무처, 근로경력, 상벌기록, 직무평가기록 등&lt;/li&gt;
+&lt;li&gt;전과 범죄기록, 재판 기록, 과태료 납부내역 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 5 - 재산적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;소득, 신용카드번호, 통장계좌번호, 동산 부동산 보유내역, 저축내역 등&lt;/li&gt;
+&lt;li&gt;신용평가정보, 대출 또는 담보설정 내역, 신용카드 사용내역 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 6 - 기타&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전화통화내역, 웹사이트 접속내역, 이메일 또는 전화메세지, 기타 GPS 등에 의한 위치정보 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;참고 사이트&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.i-privacy.kr/jsp/user4/intro/define1.jsp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;개인정보보호포털&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://seller.11st.co.kr/tpost/FrontTPostAction.tmall?method=getTPostBoard&amp;#x26;unityBrdNo=43&amp;#x26;sellGroupCode=CM024&amp;#x26;brdInfoNo=101571066&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;판매자 개인정보 팁&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Database] 실행 계획 - Execution Plan]]></title><description><![CDATA[실행 계획의 사용법과 필드의 의미]]></description><link>https://dansjkim.github.io//posts/database-execution-plan</link><guid isPermaLink="false">https://dansjkim.github.io//posts/database-execution-plan</guid><pubDate>Mon, 04 May 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;database-실행-계획---execution-plan&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#database-%EC%8B%A4%ED%96%89-%EA%B3%84%ED%9A%8D---execution-plan&quot; aria-label=&quot;database 실행 계획   execution plan permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;[Database] 실행 계획 - Execution Plan&lt;/h1&gt;
+&lt;p&gt;DBMS에서는 쿼리를 최적으로 실행하기 위해 각 테이블의 데이터가 어떤 분포로 저장돼 있는지 통계 정보를 참조하며, 그러한 기본 데이터를 비교해 최적의 실행 계획을 수립하는 작업이 필요하다. DBMS에서는 &lt;strong&gt;옵티마이저&lt;/strong&gt;가 이러한 기능을 담당한다.&lt;/p&gt;
+&lt;p&gt;쿼리 비용 판단 기준에 대해 물어보면 많은 사람들이 실행 시간을 이야기 한다.&lt;br&gt;
+아주 틀린 이야기는 아니지만 기기의 상황과 데이터의 분포에 따라 실행 시간은 천차만별로 달라진다.&lt;br&gt;
+데이터베이스 비용 보기의 기본은 &lt;code class=&quot;language-text&quot;&gt;실행 계획&lt;/code&gt;이다.&lt;/p&gt;
+&lt;h2 id=&quot;개요&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9A%94&quot; aria-label=&quot;개요 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개요&lt;/h2&gt;
+&lt;h3 id=&quot;쿼리-실행-절차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%BC%EB%A6%AC-%EC%8B%A4%ED%96%89-%EC%A0%88%EC%B0%A8&quot; aria-label=&quot;쿼리 실행 절차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿼리 실행 절차&lt;/h3&gt;
+&lt;p&gt;MySQL 서버에서 쿼리 실행 과정은 크게 3가지로 나눌 수 있다.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;사용자로부터 요청된 SQL 문장을 잘게 쪼개서 MySQL 서버가 이해할 수 있는 수준으로 분리한다.&lt;/li&gt;
+&lt;li&gt;SQL의 파싱 정보(파스 트리)를 확인하면서 어떤 테이블부터 읽고 어떤 인덱스를 이용해 테이블을 읽을지 선택한다. 여기서 실행 계획이 만들어진다.&lt;/li&gt;
+&lt;li&gt;두번째 단계에서 결정된 테이블의 읽기 순서나 선택된 인덱스를 이용해 스토리지 엔진으로부터 데이터를 가져온다. MySQL 엔진에서는 스토리지 엔진으로부터 받은 레코드를 조인하거나 정렬하는 작업을 수행한다.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6b25c1a5fe94160c47179e6d226fa97b/541fe/optimizer.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 78.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAACXBIWXMAABYlAAAWJQFJUiTwAAAC0UlEQVQ4y41UXU8TQRSdn+M/MWpi1PDgq3/BEB9M1Ad8FTDhjcQXE6JCghqBYoxBCGhEQkixH1Kx7Xa77Xa7uzP72d1tj3emtAKGhJucznR35sy9555ZBorBYIAwDBWCIEC9XlcwTRNxHCOMIsS9BJcJJn+yLIPv++j3+0jTFJxzCCHQ6XRo7iIOBEyjgcjniAJfvfMIavQ8WJYFwzDU+jGhzO58cNfBH62F7WIbue9H+HJooHBswO5aikTCtm2Uy2Xs7u4in8//TyjLl5GmGWXmIV938fSTj8fLVTzJcaz/FEgiD34wlEdCyiIri0iaISH9OU8oDwl8D1rbwecSR26/iY+HNgqao8qWEo0gy/ZprZSKCAdE2ENIi+T8NKHUKKQsnY6OrqmrMfBcldWQTPwDrROCDzNMCX5vqNvgRL8s6ytCP4ihNQV+HbegGUTuhojCgA6izlNRElEA9GgMvASstf0cjYUbMBYnoC/dRWRVhoSUtecncIwdiINbqG1eg7N3Fd3f81QioLcPsbB1G6927mDx2wRebl4nWSbBrKWbOHrA8GOSQZ9iCOpfh4RJBEEnu/U3aLxjOF6m928Z2vv34HLgoLyGqVWGh68Z7r9gePSeYX7zCljaLYKXV1HbW0ambyGN+EnJKYQXwHN1+MY6urUPEPoKRLdA3SSvig7K+hohh2I9R+MKKrRfadgnROlZDyqzU21mp4tKzUSlaqLasKEbFukn7RIiiTFGGkstMyIc0O1Ieqqbcn66y9IO3HHA2waqpQLspgaXTD3qskfdVfC46jQX7sXGlt4UZFS3VII1Owt9Zgb29DScjQ1yBCVAhCNjS8j9MoExoXT5mSBij57ZxSLMuTlUiLD5bBoWEbpEwF1XGXkEaTGHqmGny5PXR16j0QJ5V13aKO+r2WpB0HOPMpOHXwQ2KlMSqU8Vpa5pGhqNBprNJpIkGeMy8RfT0KeDm/33vAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/6b25c1a5fe94160c47179e6d226fa97b/8ac56/optimizer.webp 240w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/d3be9/optimizer.webp 480w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/e46b2/optimizer.webp 960w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/f992d/optimizer.webp 1440w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/50272/optimizer.webp 1654w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/6b25c1a5fe94160c47179e6d226fa97b/8ff5a/optimizer.png 240w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/e85cb/optimizer.png 480w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/d9199/optimizer.png 960w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/07a9c/optimizer.png 1440w,
+/static/6b25c1a5fe94160c47179e6d226fa97b/541fe/optimizer.png 1654w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/6b25c1a5fe94160c47179e6d226fa97b/d9199/optimizer.png&quot;
+          alt=&quot;optimizer&quot;
+          title=&quot;optimizer&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 578px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/508ef/mysql_engine.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 68.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOCAIAAACgpqunAAAACXBIWXMAAAsSAAALEgHS3X78AAACqElEQVQozyVSaY+jOBDl//+OlUb7YaXRtuZqzUyHXCQEDIFubrBNYmwgGHN05+gj68xapdLTK78q67mUj4+P6/UKAMBFcbxex7e351u8P7+/i+PpMI7d+SzxH/6Wh8urOJ2Pr69SpfwvXhlGCNGurJ7iRIKnJH2KkqUBfk1nwH2UTJDBIM1inDd9T1rB+v4mPp5OtWhRXemBP3ds1QILx/6x3vz1Q/080+6Wxt+/tXvdWLj2zLb+uf/+6e7u86+fpufmRaHQuvJ3GNcMVbR5GdvTS/MyVENHWk67Ni2Ih6DM9djL6nS9urv/rq6Xn/798lWdKLQqXddVJ2qcpijPwyTeGIbtbP0oMi2gbzbTxWyuaboJLMfxosj1vDBJVuBx7bjKnlLGGMa4OhxoySzbDoJQdqQllTjL4IHzsio1bUVIUTBqmKa+0V3ZPU2kuAjl8aUpWIgOQlQQ2nA+jmPD234Ym5afL69cNG/vl1aIYRhynD+PzzGGCilZAjMAnBTjtuvdOCK0yAtyvFxwErQ0L3nTduPD1sOM7AiRD/n67RtvuZclN3GE0rKpdpRgss9yhPZ5kES/1Qd1+jBRH35OJhvLiCGGuz3aY1mNYUIYc8JQKfmhPPQI1oz1hHBCOlq09jbzfWgYPrBiC/i67hdFg1HD2ED2vCA9q2vIsFLxxvWj6XThOD6QjrpBEESrtel50WKhmUC665vAiaJ0vTYt+2mprdb6VjZ0kCcnN7r/iHd5WTFWlVtnGydxP/SiE20nRC+44Kxkfhi4jw6lRd0c0jCMstSWbkuxm8MoTTKEgihS5/P5ckko5UJIb5q2xXkOLHuhabP5XK6AvGfblp+FHsmV0/kslwzud3CXJwhmGKUISv9TCTBKILwFkuQfXm4bQgnK5Hdw0f4HDjraIip8jlwAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/8ac56/mysql_engine.webp 240w,
+/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/d3be9/mysql_engine.webp 480w,
+/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/03fb9/mysql_engine.webp 578w&quot;
+          sizes=&quot;(max-width: 578px) 100vw, 578px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/8ff5a/mysql_engine.png 240w,
+/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/e85cb/mysql_engine.png 480w,
+/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/508ef/mysql_engine.png 578w&quot;
+          sizes=&quot;(max-width: 578px) 100vw, 578px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/8e8c161e1e2f3d53b50ca2a0503bb7e9/508ef/mysql_engine.png&quot;
+          alt=&quot;mysql_engine&quot;
+          title=&quot;mysql_engine&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;첫번째와 두번째 단계는 거의 MySQL 엔진에서 처리하며, 세 번째 단계는 MySQL 엔진과 스토리지 엔진이 동시에 참여해서 처리한다.&lt;/p&gt;
+&lt;h2 id=&quot;실행-계획-분석&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%A4%ED%96%89-%EA%B3%84%ED%9A%8D-%EB%B6%84%EC%84%9D&quot; aria-label=&quot;실행 계획 분석 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;실행 계획 분석&lt;/h2&gt;
+&lt;p&gt;MySQL에서 쿼리의 실행 계획을 확인하려면 EXPLAIN 명령을 사용하면 된다. EXMPLAIN EXTENDED나 EXPLAIN PARTITIONS 명령을 이용해 더 상세한 실행 계획을 확인할 수도 있다.&lt;/p&gt;
+&lt;p&gt;표의 각 라인(레코드)은 쿼리 문장에서 사용된 테이블의 개수만큼 출력된다.&lt;/p&gt;
+&lt;p&gt;출력된 실행 계획에서 위쪽에 출력된 결과일 수록 쿼리의 바깥 부분이거나 먼저 접근한 테이블이고, 아래쪽에 출력된 결과일수록 쿼리의 안쪽부분 또는 나중에 접근한 테이블에 해당된다. 하지만 쿼리 문장과 직접 비교해 가면서 실행 계획의 위쪽부터 테이블과 매칭해서 비교하는 편이 더 쉽게 이해될 것이다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;DEPENDENT SUBQUERY&lt;/td&gt;
+&lt;td&gt;s&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;Using index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;id&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#id&quot; aria-label=&quot;id permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;id&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;SELECT 쿼리별로 부여되는 식별자 값&lt;/li&gt;
+&lt;li&gt;하나의 SELECT 문장에서 여러 테이블을 조인하면 테이블 숫자만큼 실행 계획 레코드가 출력되지만 id는 같다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;쿼리문장이 여러개의 SELECT로 구성되어 있으면 각 레코드마다 다른 id를 가지게 된다.&lt;/p&gt;
+&lt;p&gt;만약 하나의 SELECT문장 안에서 여러 개의 테이블을 조인하면 조인되는 테이블 개수만큼 실행 계획 레코드가 출력되지만 같은 id가 부여된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;EXPLAIN
+SELECT e.emp_no, e.first_name, s.from_date, s.salary FROM employees e, salaries s
+WHERE e.emp_no=s.emp_no
+LIMIT 10;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;index&lt;/td&gt;
+&lt;td&gt;ix_firstname&lt;/td&gt;
+&lt;td&gt;44&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;300584&lt;/td&gt;
+&lt;td&gt;Using index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;s&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;employees.e.emp_no&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&quot;select_type&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#select_type&quot; aria-label=&quot;select_type permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;select_type&lt;/h3&gt;
+&lt;p&gt;각 단위 select 쿼리가 어떤 타입의 쿼리인지 표시되는 칼럼이다.&lt;/p&gt;
+&lt;p&gt;쿼리가 아무리 복잡하더라도 실행 계획에서 select_type이 SIMPLE인 단위 쿼리를 반드시 하나만 존재한다.&lt;/p&gt;
+&lt;p&gt;일반적으로 제일 바깥 SELECT 쿼리의 select_type이 SIMPLE로 표시된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SIMPLE&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;UNION이나 서브 쿼리를 사용하지 않는 단순한 SELECT 쿼리인 경우 SIMPLE로 표시된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;SELECT * FROM USER;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;PRIMARY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;UNION이나 서브 쿼리가 포함된 SELECT 쿼리의 실행 계획에서 가장 바깥쪽에 있는 단위 쿼리는 select_type이 PRIMARY로 표시된다. 하나만 존재한다.
+하나만 존재한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;SELECT * FROM (SELECT * FROM USER) t;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UNION&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;UNION으로 결합하는 단위 SELECT 쿼리 중 두번째 이후 단위쿼리의 select_type는 UNION으로 표시된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DEPENDENT UNION&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;내부 쿼리가 외부 값의 영향을 받을 때 DEPENDENT가 붙는다.
+DEPENDENT 키워드를 포함하는 서브쿼리는 외부 쿼리에 의존적이므로 절대 외부 쿼리보다 먼저 실행될 수 없다.
+그래서 DEPENDENT가 포함된 서브쿼리는 비효율적인 경우가 많다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;EXPLAIN
+SELECT
+e.first_name,
+( SELECT CONCAT(’Salary change count : ‘, COUNT(*)) AS message
+  FROM salaries s WHERE s.emp_no=e.emp_no
+  UNION
+  SELECT CONCAT(‘Department change count : ‘, COUNT(*)) AS message
+  FROM dept_emp de WHERE de.emp_no=e.emp_no
+) AS message
+FROM employees e
+WHERE e.emp_no=10001;	&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 쿼리를 보면 UNION으로 결합되는 각 쿼리가 이 서브쿼리의 외부에서 정의된 employees 테이블의 emp&lt;em&gt;no 칼럼을 사용하고 있음을 알 수 있다. 이렇게 내부 쿼리가 외부의 값을 참조해서 처리될 때 DEPENDENT 키워드가 select&lt;/em&gt;type에 붙는다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;DEPENDENT SUBQUERY&lt;/td&gt;
+&lt;td&gt;s&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;17&lt;/td&gt;
+&lt;td&gt;Using index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;DEPENDENT UNION&lt;/td&gt;
+&lt;td&gt;de&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;ix&lt;em&gt;empno&lt;/em&gt;fromdate&lt;/td&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Using where; Using index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;DEPENDENT RESULT&lt;/td&gt;
+&lt;td&gt;&amp;#x3C;union2,3&gt;&lt;/td&gt;
+&lt;td&gt;ALL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UNION RESULT&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;UNION 결과를 담아두는 테이블을 의미한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;SUBQUERY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;FROM절 이외에서 사용되는 서브 쿼리를 의미한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN SELECT
+e.first_name,
+(SELECT COUNT(*) FROM dept_emp de, dept_manager dm WHERE dm.dept_no=de.dept_no) AS cnt FROM employees e
+WHERE e.emp_no=10001;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;SUBQUERY&lt;/td&gt;
+&lt;td&gt;dm&lt;/td&gt;
+&lt;td&gt;index&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;24&lt;/td&gt;
+&lt;td&gt;Using index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3&lt;/td&gt;
+&lt;td&gt;SUBQUERY&lt;/td&gt;
+&lt;td&gt;de&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;employees.dm.dept_no&lt;/td&gt;
+&lt;td&gt;18603&lt;/td&gt;
+&lt;td&gt;Using index&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;FROM절에 사용된 서브 쿼리는 select_type이 DERIVED라고 표시되고, 그밖의 위치에서 사용된 서브쿼리는 전부 SUBQUERY로 표시된다.&lt;/p&gt;
+&lt;p&gt;DERIVED는 파생 테이블과 같은 의미로 이해하면 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DEPENDENT SUBQUERY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;서브 쿼리가 바깥쪽 SELECT 쿼리에서 정의된 칼럼을 사ㅛㅇ하는 경우를 DEPENDENT SUBQUERY라고 한다.&lt;/p&gt;
+&lt;p&gt;마찬가지로 DEPENDENT 키워드가 붙기 떄문에 일반 서브쿼리보다 처리 속도가 느릴 때가 많다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;SELECT * FROM user u1 WHERE EXISTS (
+    SELECT * FROM user u2 WHERE u1.user_id = u2.user_id 
+);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;DERIVED&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Subquery가 FROM절에 사용된 경우 MySQL은 항상 select&lt;em&gt;type이 DERIVED인 실행 계획을 만든다.&lt;br&gt;
+DERIVED는 단위 쿼리의 실행 결과를 메모리나 디스크에 임시 테이블로 생성하는 것을 의미한다.&lt;br&gt;
+select&lt;/em&gt;type이 DERIVED인 경우에 생성되는 임시 테이블을 파생 테이블이라고도 한다.   &lt;/p&gt;
+&lt;p&gt;파생 테이블에는 인덱스가 전혀 없으므로 다른 테이블과 조인할 때 성능상 불리할 때가 많다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;SELECT * FROM (SELECT * FROM USER) t; &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UNCACHEABLE SUBQUERY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;조건이 똑같은 서브 쿼리가 실행될 때는 다시 실행하지 않고 이전의 실행 결과를 그대로 사용할 수 있게 서브 쿼리의 결과를 내부적인 캐시 공간에 담아둔다.&lt;/p&gt;
+&lt;p&gt;SUBQUERY는 바깥쪽의 영향을 받지 않으므로 처음 한번만 실행해서 그 결과를 캐시하고 필요할 때 캐시된 결과를 이용한다.&lt;/p&gt;
+&lt;p&gt;DEPENDENT SUBQUERY는 의존하는 바깥쪽 쿼리의 칼럼의 값 단위로 캐시해두고 사용한다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/ee61d0c59f726ea40d30d8449fda6bdf/07d7d/subquery-cache.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 63.33333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAABYlAAAWJQFJUiTwAAABpUlEQVQ4y5VT2YrCQBCcX/cz/AAfRR888IomnoiKD0pAUPAA8b7vo6RaJmRdN7ANncz0ZKq7qjvq+Xzi8XhAv7UvFgtMJhMcj0c5u9/vzhnXjNH2+z2m0ylut5vsFf6wTqcDy7JwOp3gZd1uF8lkEofD4Q3IC4PBAOPxGMPhEJVKBcViEYVCQQBLpRLy+Tyq1arjpmnKt9frFbvdDsvlUpjQFTe1Wg3tdhu2bSObzQoQLxmGgVwuh0QigUwmI85EpLharYT2+XwW2jSuFTUhfx5ut1sBZEUEJaBlWkin0wLMagOBAC6Xi6M5qyQg14wrPvr9vtCmHtFoFJFIRKqix2IxhMNhebNCv98vNLW21M/n82Gz2bwBiUxB6dSAVNhhgrdaLVnP53Os12uphsk0XXa72WxKjPeFslcHmezTSH82m/2IuSdBMdM316b3rIaWSqWEiTZSbTQaTpJfFWowN7AbMBgMIhQKSfPi8bjIwlGq1+vynSflb4nYUc4sR4f6lctliY9GI9FY/QfMLYU2ziWngfPs+et9An5KoRvG7vd6PRkZ2gttRtDCoiqUIQAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/ee61d0c59f726ea40d30d8449fda6bdf/8ac56/subquery-cache.webp 240w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/d3be9/subquery-cache.webp 480w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/e46b2/subquery-cache.webp 960w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/f992d/subquery-cache.webp 1440w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/9bf70/subquery-cache.webp 1478w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/ee61d0c59f726ea40d30d8449fda6bdf/8ff5a/subquery-cache.png 240w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/e85cb/subquery-cache.png 480w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/d9199/subquery-cache.png 960w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/07a9c/subquery-cache.png 1440w,
+/static/ee61d0c59f726ea40d30d8449fda6bdf/07d7d/subquery-cache.png 1478w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/ee61d0c59f726ea40d30d8449fda6bdf/d9199/subquery-cache.png&quot;
+          alt=&quot;subquery-cache&quot;
+          title=&quot;subquery-cache&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;SUBQUERY의 경우 위와같이 캐시를 사용한다. 하지만 DEPENDENT SUBQUERY는 서브 쿼리 결과가 딱 한번만 캐시되는것이 아니라 외부쿼리의 값 단위로 캐시가 만들어지는 방식으로 처리된다. 즉, 위의 그림이 차례대로 반복되는 구조다.&lt;/p&gt;
+&lt;p&gt;하지만 아래와 같은 경우 캐시를 사용하지 못하기 때문에 “UNCACHEABLE SUBQUERY”가 나타나게 된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;사용자 변수가 서브 쿼리에 사용된 경우&lt;/li&gt;
+&lt;li&gt;NOT-DETERMINISTIC 속성의 스토어드 루틴이 서브 쿼리 내에 사용된 경우&lt;/li&gt;
+&lt;li&gt;UUID()나 RAND()와 같이 결과값이 호출할 때마다 달라지는 함수가 서브 쿼리에 사용된 경우&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;UNCACHEABLE UNION&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;UNCACHEABLE 과 UNION 키워드는 위에서 살펴보았다. UNCACHEABLE UNION은 두 속성이 혼합된 select_type을 의미한다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;table&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#table&quot; aria-label=&quot;table permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;table&lt;/h3&gt;
+&lt;p&gt;쿼리 문장에 에 사용한 테이블을 기준으로 표시된다.&lt;/p&gt;
+&lt;p&gt;별칭이 부여된 경우에는 별칭이 표시된다.   &lt;/p&gt;
+&lt;p&gt;&amp;#x3C;&gt;로 둘러쌓였을 경우에는 임시테이블을 사용한 경우다.   &lt;/p&gt;
+&lt;h3 id=&quot;type&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#type&quot; aria-label=&quot;type permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;type&lt;/h3&gt;
+&lt;p&gt;MySQL 서버가 각 테이블의 레코드를 어떤 방식으로 읽었는지를 의미한다.
+방식이라 함은 인덱스를 사용해 레코드를 읽었는지 테이블을 처음부터 끝까지 읽는 풀 테이블 스캔으로 레코드를 읽었는지 등을 말한다.
+일반적으로 쿼리를 튜닝할 때 인덱스를 효율적으로 사용하는 것이 중요하므로 실행 계획에서 type칼럼은 반드시 체크해야 할 중요한 정보다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;system&lt;/li&gt;
+&lt;li&gt;ref&lt;/li&gt;
+&lt;li&gt;unique_subquery &lt;/li&gt;
+&lt;li&gt;index_merge&lt;/li&gt;
+&lt;li&gt;const&lt;/li&gt;
+&lt;li&gt;fulltext&lt;/li&gt;
+&lt;li&gt;index_subquery&lt;/li&gt;
+&lt;li&gt;index&lt;/li&gt;
+&lt;li&gt;eq_ref&lt;/li&gt;
+&lt;li&gt;ref&lt;em&gt;or&lt;/em&gt;null&lt;/li&gt;
+&lt;li&gt;range&lt;/li&gt;
+&lt;li&gt;ALL&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위 타입들은 성능이 빠른 순서대로 나열된 것이다. MySQL 옵티마이저는 이런 접근 방식과 비용을 함께 계산해서 최소의 비용이 필요한 접근 방식을 선택한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;system&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;레코드가 1건만 존재하는 테이블 또는 한 건도 존재하지 않는 테이블을 참조하는 형태의 접근 방법이다. system은 테이블에 레코드가 1건 이하인 경우에만 사용할 수 있는 접근 방법이므로 실제 애플리케이션에서 사용되는 쿼리의 실행 계획에서는 거의 보이지 않는다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT * FROM tb_dual;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;tb_dual&lt;/td&gt;
+&lt;td&gt;system&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;const&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;테이블 레코드 건수에 관계 없이 쿼리가 프라이머리 키나 유니크 키 칼럼을 이용하는 WHERE 조건절을 가지고 있으며, 반드시 1건을 반환하는 쿼리의 처리 방식
+const type인 실행 계획은 MySQL의 옵티마이저가 쿼리를 최적화하는 단계에서 쿼리를 상수화 하기 때문에 const라고 표시되는 것이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT * FROM employees WHERE emp_no=10001;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;employees&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;​		프라이머리키의 일부만 조건으로 사용할 때는 접근 방식이 const가 아닌 ref로 표시된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;eq_ref&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인덱스가 UNIQUE이거나 PRIMARY KEY인 경우의 조인으로 const를 제외한 조인 중 가장 좋은 형태이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;조인에서 첫번째 읽은 테이블의 칼럼 값을 이용해 두번째 테이블을 프라이머리키나 유니크키로 동등조건 검색할 때&lt;/strong&gt;를 eq_ref 라고 한다.(두번째 테이블은 반드시 1건의 레코드만 반환)&lt;/p&gt;
+&lt;p&gt;두번째 이후에 읽히는 테이블을 유니크로 검색할 때 그 유니크 인덱스는 &lt;strong&gt;NOT NULL&lt;/strong&gt;이어야 하며, 다중 칼럼으로 만들어진 프라이머리키나 유니크키라면 &lt;strong&gt;모든 칼럼이 비교조건에 사용되어야 eq_ref 접근 방법이 사용될 수 있다.&lt;/strong&gt; 즉, 조인에서 두 번째 이후에 읽는 테이블에서 반드시 1건만 존재한다는 보장이 있어야 사용할 수 있는 접근 방법이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT * FROM dept_emp de, employees e
+WHERE e.emp_no=de.emp_no AND de.dept_no=&amp;#39;d005&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select-type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;de&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;53288&lt;/td&gt;
+&lt;td&gt;Using where&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;e&lt;/td&gt;
+&lt;td&gt;eq_ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;employees.de.emp_no&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;조인 순서와 인덱스 종류에 관계 없이 동등 조건으로 검색(1건의 레코드만 반환된다는 보장이 없어도 됨)&lt;/p&gt;
+&lt;p&gt;프라이머리 키나 유니크 키에 대한 제약 조건도 없다.&lt;/p&gt;
+&lt;p&gt;인덱스 종류와 관계없이 동등 조건으로 검색할 때는 ref 접근 방법이 사용된다.&lt;/p&gt;
+&lt;p&gt;반드시 1건이라는 보장이 없기 때문에 const나 eq_ref보다는 빠르지 않지만 동등조건으로만 비교되므로 매우 빠른 레코드 조회 방법중 하나다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+
+SELECT * FROM dept_emp WHERE dept_no=&amp;#39;d005&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select-type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;dept_emp&lt;/td&gt;
+&lt;td&gt;ref&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;12&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;53288&lt;/td&gt;
+&lt;td&gt;Using where&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;dept&lt;em&gt;emp 테이블의 프라이머리 키를 구성하는 컬럼(dept&lt;/em&gt;no + emp_no) 중에 일부만 동등조건으로 WHERE절에 명시했기 때문에 조건에 일치하는 레코드가 1건이라는 보장이 없다. 그래서 const가 아닌 ref접근 방법이 사용됐으며 실행 계획의 ref칼럼 값에는 const가 명시됐다.&lt;/p&gt;
+&lt;p&gt;다시한번 type들을 비교해 보면&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;const&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;조인의 순서에 관계없이 프라이머리 키나 유니크 키의 모든 칼럼에 대해 동등(Equal) 조건으로 검색(반드시 1 건의 레 코드만 반^)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;eq_req&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;조인에서 첫 번째 읽은 테이블의 칼럼값을 이용해 두 번째 테이블을 프라이머리 키나 유니크 키로 동등(Equal) 조건 검색(두 번째 테이블은 반드시 1 건의 레코드만 반환)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;ref&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;조인의 순서와 인덱스의 종류에 관계없이 동등(Equal) 조건으로 검색(1 건의 레코드만 반환된다는 보장이 없어도 됨)&lt;/p&gt;
+&lt;p&gt;위 세가지 접근방식 모두 WHERE 조건절에 사용되는 비교 연산자는 동등 비교 연산자여야 한다는 공통점이 있다.&lt;/p&gt;
+&lt;p&gt;세가지 모두 매우 좋은 접근 방법으로 인덱스 분포도가 나쁘지 않다면 성능상의 문제를 일으키지 않는 접근 방법이다. 쿼리를 튜닝할 때도 이 세가지 접근 방법에 대해서는 크게 신경쓰지 않고 넘어가도 무방하다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;fulltext&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MySQL의 전문 검색(full text) 인덱스를 사용해 레코드를 읽는 접근 방법을 의미한다.&lt;/p&gt;
+&lt;p&gt;전문 검색은 “MATCH … AGAINST …”구문을 사용해서 실행하는데, 반드시 해당 테이블에 전문 검색용 인덱스가 준비돼 있어야 한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT *
+FROM employee_name
+WHERE emp_no=10001
+	AND emp_no BETWEEN 10001 AND 10005
+AND MATCH(first_name, last_name) A6AINST(&amp;#39;Facello&amp;#39; IN BOOLEAN MODE);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;employee_name&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;4&lt;/td&gt;
+&lt;td&gt;const&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Using where&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;위 쿼리 문장에서 최종적으로 MySQL 옵티마이저가 선택한 것은 const타입의 조건이다.&lt;/p&gt;
+&lt;p&gt;const타입의 첫번쨰 조건이 없으면 둘중 어떤것을 선택할까?&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;employee_name&lt;/td&gt;
+&lt;td&gt;fulltext&lt;/td&gt;
+&lt;td&gt;fx_name&lt;/td&gt;
+&lt;td&gt;0&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Using where&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;이번에는 range타입의 두번째 조건이 아니라 fulltext조건인 세번쨰 조건을 선택했다.&lt;/p&gt;
+&lt;p&gt;MATCH AGAINST를 사용하면 MySQL은 주저없이 fulltext 접근방식을 사용하는 경향이 있다. 하지만 전문 검색 인덱스를 이용하는 fulltext보다 일반 인덱스를 이용하는 range 접근 방법이 더 빨리 처리되는 경우가 더 많기 때문에 전문 검색 쿼리를 사용할 떄는 각 조건별로 성능을 확인해 보는 편이 좋다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;ref&lt;em&gt;or&lt;/em&gt;null&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ref 접근 방식과 같은데 NULL 비교가 추가된 형태다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;unique_subquery&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;WHERE 조건절에서 사용될 수 있는 IN (subquery) 형태의 쿼리를 위한 접근 방식이다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;서브쿼리에서 중복되지 않은 유니크한 값만 반환할 때&lt;/strong&gt; 이 접근방법을 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT FROM departments WHERE dept_no IN (
+SELECT dept_no FROM dept_emp WHERE emp_no=10001);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;departments&lt;/td&gt;
+&lt;td&gt;index&lt;/td&gt;
+&lt;td&gt;ux_deptname&lt;/td&gt;
+&lt;td&gt;123&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;9&lt;/td&gt;
+&lt;td&gt;Using where; Using index;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;2&lt;/td&gt;
+&lt;td&gt;DEPENDENT SUBQUERY&lt;/td&gt;
+&lt;td&gt;dept_emp&lt;/td&gt;
+&lt;td&gt;unique_subquery&lt;/td&gt;
+&lt;td&gt;PRIMARY&lt;/td&gt;
+&lt;td&gt;16&lt;/td&gt;
+&lt;td&gt;func, const&lt;/td&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;Using index; Using where&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;emp&lt;em&gt;no=10001인 레코드 중에 부서 번호는 중복이 없기 때문에 dept&lt;/em&gt;emp 테이블의 접근 방식은 unique_subquery로 표시된 것이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;index_subquery&lt;/strong&gt;
+In (subquery)에서 subquery가 중복된 값을 반환할 수는 있지만 중복된 값을 인덱스를 이용해 제거할 수 있을 때 index_subquery 접근 방법이 사용된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;unique_subquery&lt;/strong&gt;
+IN (subquery) 형태의 조건에서 subquery의 반환 값에는 중복이 없으므로 별도의 중복 제거 작업이 필요하지 않음&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;index_subquery&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;IN (subquery) 형태의 조건에서 subquery의 반환 값에 중복된 값이 있을 수 있지만 인덱스를 이용해 중복된 값을 제거할 수 있음&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;range&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;range는 인덱스를 하나의 값이 아니라 범위로 검색하는 경우를 의미한다.&lt;/p&gt;
+&lt;p&gt;주로 “&amp;#x3C;, &gt;, IS NULL, BETWEEN, IN, LIKE” 등의 연산자를 이용해 인덱스를 검색할 때 사용된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;index_merge&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;index_merge 접근 방식은 2개 이상의 인덱스를 이용해 각각의 검색 결과를 만들어낸 후 그 결과를 병합하는 처리 방식이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT * FROM employees
+WHERE emp_no BETWEEN 10001 AND 11000
+	OR first_name=&amp;#39;Smith&amp;#39;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;employees&lt;/td&gt;
+&lt;td&gt;index_merge&lt;/td&gt;
+&lt;td&gt;PRIMARY, ix_firstname&lt;/td&gt;
+&lt;td&gt;4,44&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;1521&lt;/td&gt;
+&lt;td&gt;Using union(PRIMARY,ix_firstname); Using where&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span style=&quot;color:red&quot;&gt;성능상 문제&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;index&lt;/strong&gt;
+인덱스를 처음부터 끝까지 읽는 풀스캔을 의미한다.&lt;/p&gt;
+&lt;p&gt;index 접근 방법 은 다음의 조건 가운데 (첫 번째+두 번째) 조건을 중족하거나 (첫 번째+세 번째) 조건을 중족하는 쿼리 에서 사용되는 읽기 방식이다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;range나 const 또는 ref와 길은 접근 방식으로 인덱스를 사용하지 못하는 경우&lt;/li&gt;
+&lt;li&gt;인덱스에 포함된 칼럼만으로 처리할 수 있는 쿼리인경우(즉, 데이터 파일을 읽지 않아도 되는 경우&lt;/li&gt;
+&lt;li&gt;인덱스를 이용해 정렬이나 그룹핑 작업이 가능한 경우(즉, 별도의 정렬 작업을 피할 수 있는 경우)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;all&lt;/strong&gt;
+조인 시 모든 테이블의 모든 row를 스캔한 경우. 성능이 가장 안좋다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;possible_key&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#possible_key&quot; aria-label=&quot;possible_key permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;possible_key&lt;/h3&gt;
+&lt;p&gt;index로 사용할 것으로 예상되는 키. 여러개가 나올 수 있다.
+옵티마이저는 쿼리를 처리하기위해 여러가지 처리 방법을 고려해 비용이 가장 낮을 것으로 예상되는 실행 계획을 선택해 쿼리를 실행한다. possible_keys 칼럼에 내용은 옵티마이저가 최적의 실행계획을 만들기 위해 후보로 선정했던 인덱스 목록이다. 이 컬럼은 무시해도 좋다.&lt;/p&gt;
+&lt;h3 id=&quot;key&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key&quot; aria-label=&quot;key permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;key&lt;/h3&gt;
+&lt;p&gt;최종 선택된 실행 계획에서 사용된 인덱스
+index_merge 실행계획이 사용될 때는 2개 이상의 인덱스가 사용된다.&lt;/p&gt;
+&lt;h3 id=&quot;key_len&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key_len&quot; aria-label=&quot;key_len permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;key_len&lt;/h3&gt;
+&lt;p&gt;MySQL이 사용한 인덱스의 길이를 나타낸다. 사용자가 쉽게 무시하는 정보지만 사실 매우 중요한 정보중에 하나다.&lt;/p&gt;
+&lt;p&gt;쿼리를 처리하기 위해 다중 칼럼으로 구성된 인덱스에서 몇개의 칼럼까지 사용했는지 알려준다.&lt;/p&gt;
+&lt;p&gt;인덱스의 각 레코드에서 몇 바이트까지 사용했는지 알려주는 값이다.&lt;/p&gt;
+&lt;p&gt;int가 기본형인데 기본형이 아닌 string을 인덱스로 쓰면 비용이 더 많이듬&lt;/p&gt;
+&lt;h3 id=&quot;ref&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ref&quot; aria-label=&quot;ref permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ref&lt;/h3&gt;
+&lt;p&gt;접근 방법이 ref 방식이면 비교 조건으로 어떤 값이 제공됐는지 보여 준다.
+func라고 표시될 경우엔 값을 그대로 사용한게 아니라 변환이나 연산을 거친 후에 값을 사용했다는 뜻이다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT ★
+FROM employees e, dept_emp de WHERE e.emp_no=(de.emp_no-1);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;rows&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rows&quot; aria-label=&quot;rows permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;rows&lt;/h3&gt;
+&lt;p&gt;실행 계획의 효율성 판단을 위해 예측했던 레코드 건수를 보여준다.&lt;/p&gt;
+&lt;p&gt;이 값은 각 스토리지 엔진별로 가지고 있는 통계 정보를 참조해 MySQL 옵티마이저가 산출해 낸 예상 값이라서 정확하지는 않다.&lt;/p&gt;
+&lt;p&gt;rows 값은 반환하는 레코드의 예측치가 아니라, 쿼리를 처리하기 위해 얼마나 많은 레코드를 디스크로부터 읽고 체크해야하는지를 의미한다.&lt;/p&gt;
+&lt;p&gt;limit가 포함된 쿼리는 오차가 너무 심해서 별로 도움이 되지 않는다.&lt;/p&gt;
+&lt;h3 id=&quot;extra&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#extra&quot; aria-label=&quot;extra permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Extra&lt;/h3&gt;
+&lt;p&gt;칼럼 이름과 달리, 쿼리를 실행하면서 처리한 주요 작업에 대한 내용이 표시된다.
+쿼리를 튜닝할 때 중요한 단서가 되는 내용이 많이 표시된다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;쿼리가 요건을 제대로 반영하고 있는지 확인해야 하는 경우&lt;/strong&gt;
+Full scan on NULL key
+Impossible HAVING(MySQL 5.1부터)
+Impossible WHERE(MySQL 5.1부터)
+Impossible WHERE noticed after reading const tables
+No matching min/max row(MySQL 5.1부터)
+No matching row in const table(MySQL 5.1부터)
+Unique row not found(MySQL 5.1부터)&lt;/p&gt;
+&lt;p&gt;쿼리가 요건을 제대로 반영해서 작성됐거나 버그가 생길 가능성은 없는지 확인해야 한다.
+개발용 데이터베이스에 테스트용 레코드가 제대로 준비돼 있는지 확인해보는 것도 좋다.
+쿼리가 업무적인 요건을 제대로 반영하고 있다면 무시해도 된다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;쿼리의 실행 계획이 좋지 않을 경우&lt;/strong&gt;
+Range checked for each record (index map: N)
+&lt;strong&gt;Using filesort&lt;/strong&gt;
+Using join buffer (MySQL 5.1부터)
+&lt;strong&gt;Using temporary&lt;/strong&gt;
+&lt;strong&gt;Using where&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;먼저 쿼리를 더 최적화할 수 있는지 검토해보는 것이 좋다.
+성능상 허용 가능하다면 넘어가도 좋다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;쿼리의 실행 계획이 좋은 경우&lt;/strong&gt;
+Distinct
+Using index
+Using index for group-by&lt;/p&gt;
+&lt;p&gt;최적화 되어 처리되고 있음을 알려주는 지표 정도로 생각하면 된다.
+특히 Using index는 쿼리가 커버링 인덱스(인덱스만으로 쿼리를 처리)로 처리되고 있음을 알려주는 것인데, MySQL에서 제공하는 최고 성능을 보여준다.
+쿼리를 아무리 최적화해도 성능 요건에 미치지 못한다면 커버링 인덱스되는 형태로 유도해보는 것도 좋다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using filesort, Using temporary, Using where 세가지가 가장 많이 나오므로 왜 사용되는지 알아둔다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Using filesort&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;​	ORDER BY 처리가 &lt;strong&gt;인덱스를 사용하지 못할 때&lt;/strong&gt;만 실행계획의 Extra칼럼에 ‘Using filesort’ 코멘트가 표시된다.&lt;/p&gt;
+&lt;p&gt;​	이럴 경우에 MySQL 옵티마이저는 레코드를 읽어서 Sort buffer에 복사하고, 정렬해서 그 결과를 클라이언트에 보낸다.&lt;/p&gt;
+&lt;p&gt;​	정렬 작업이 쿼리 실행시 처리되므로 레코드 대상 건수가 많아질 수록 쿼리 응답 속도가 느려진다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Using temporary&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;MySQL이 쿼리를 처리하는 동안 중간 결과를 담아두기 위해 임시테이블을 사용한다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT * FROM employees GROUP BY gender ORDER BY MIN(emp_no);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 쿼리는 &lt;strong&gt;GROUP BY&lt;/strong&gt;칼럼과 ORDER BY 칼럼이 다르기 때문에 임시 테이블이 필요한 작업이다.&lt;/p&gt;
+&lt;p&gt;인덱스를 사용하지 못하는 &lt;strong&gt;GROUP BY&lt;/strong&gt; 쿼리는 실행 계획에서 Using temporary 메세지가 표시되는 가장 대표적인 형태의 쿼리다.&lt;/p&gt;
+&lt;p&gt;Extra에 Using Temporary가 표시되지 않아도 실제 내부적으로는 임시테이블을 사용할 때도 많다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;id&lt;/th&gt;
+&lt;th&gt;select_type&lt;/th&gt;
+&lt;th&gt;table&lt;/th&gt;
+&lt;th&gt;type&lt;/th&gt;
+&lt;th&gt;key&lt;/th&gt;
+&lt;th&gt;key_len&lt;/th&gt;
+&lt;th&gt;ref&lt;/th&gt;
+&lt;th&gt;rows&lt;/th&gt;
+&lt;th&gt;Extra&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;1&lt;/td&gt;
+&lt;td&gt;SIMPLE&lt;/td&gt;
+&lt;td&gt;employees&lt;/td&gt;
+&lt;td&gt;ALL&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;td&gt;300584&lt;/td&gt;
+&lt;td&gt;Using temporary; Using filesort&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;Using where&lt;/strong&gt; &lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 952px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/14310ad387b380b9446f8aee9d97f66f/7e4a6/mysql-engine.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAABb0lEQVQoz31SvarCYAz1yXwAX8DR0cXFRV/A7bp3cdNFcFChULo6VHQVFBSrTuIPVltt/anncnL5erVUAyH0NDlfkpPU8/kEjfGbq5y4nc9nOI6D+/0u36k42Wsh4+PxEA/DULAgCLBarXA4HHA8HlGpVFAqlWAYxjshC5K6ejXmsKPT6YTr9YrNZoNsNotMJoN6vf5HmFSo7HK5wLIsNJtN2LYddaiMY/Z6PbRaLUyn0/8OOVK73cZ4PBZwuVzKSIPBAPl8HtWfKnRdj3ammvA8D/P5HKPRSGJEyFfT6TRqtZqArutK7HQ6KBQKKJfL0qUi/CQQsWhkdqmUUlij0YCmaTBNU5Sk+b4vuSqPU/X7fez3+3dRXl9R37vdDovFQvbD8WhUlhgJttutrCSXy8njEWHSHdK4l8lkIs69KiFut5sozq6LxaIQdrvdzyorjKehikkUzyU2HA5FsNlslnzY3+4w/o9nxbHp6/VasF+ZmjbSlJk1MAAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/14310ad387b380b9446f8aee9d97f66f/8ac56/mysql-engine.webp 240w,
+/static/14310ad387b380b9446f8aee9d97f66f/d3be9/mysql-engine.webp 480w,
+/static/14310ad387b380b9446f8aee9d97f66f/60b07/mysql-engine.webp 952w&quot;
+          sizes=&quot;(max-width: 952px) 100vw, 952px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/14310ad387b380b9446f8aee9d97f66f/8ff5a/mysql-engine.png 240w,
+/static/14310ad387b380b9446f8aee9d97f66f/e85cb/mysql-engine.png 480w,
+/static/14310ad387b380b9446f8aee9d97f66f/7e4a6/mysql-engine.png 952w&quot;
+          sizes=&quot;(max-width: 952px) 100vw, 952px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/14310ad387b380b9446f8aee9d97f66f/7e4a6/mysql-engine.png&quot;
+          alt=&quot;mysql-engine&quot;
+          title=&quot;mysql-engine&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;MySQL엔진 레이어에서 별도의 가공을 해서 필터링 작업을 처리한 경우에 Extra칼럼에 Using where가 표시된다.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;EXPLAIN
+SELECT * FROM employees WHERE emp_no BETWEEN 10001 AND 10100 AND gender=‘F’;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;위 쿼리에서 BETWEEN은 작업범위제한조건 gender는 체크조건이다.&lt;/p&gt;
+&lt;p&gt;작업범위제한조건은 스토리지엔진에서 처리되지만 체크조건은 MySQL엔진에서 처리된다. (5.1 InnoDB 플러그인버전부터 체크조건까지 스토리지엔진으로 전달된다.)&lt;/p&gt;
+&lt;p&gt;이 쿼리에서 작업 범위 제한 조건은 “emp&lt;em&gt;no BETWEEN 10001 AND 10100”이며 “gender=‘F”’는 체 크 조건임을 쉽게 알 수 있다. 그런데 처음의 emp&lt;/em&gt;no 조건만을 만족하는 레코드 건수는 100건이지만 두 조건을 모두 만족하는 레코드는 37건밖에 안 된다. 이는 스토리지 엔진은 100개를 읽어서 MySQL 엔진에 넘겨줬지만 MySQL 엔진은 그중에서 63건의 레코드를 그냥 필터링해서 버렸다는 의미다. 여기 서 “Using where”는 63건의 레코드를 버리는 처리를 의미한다.&lt;/p&gt;
+&lt;h3 id=&quot;explain-extendedfiltered-칼럼&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#explain-extendedfiltered-%EC%B9%BC%EB%9F%BC&quot; aria-label=&quot;explain extendedfiltered 칼럼 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXPLAIN EXTENDED(Filtered 칼럼)&lt;/h3&gt;
+&lt;h3 id=&quot;explain-extended추가-옵티마이저-정보&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#explain-extended%EC%B6%94%EA%B0%80-%EC%98%B5%ED%8B%B0%EB%A7%88%EC%9D%B4%EC%A0%80-%EC%A0%95%EB%B3%B4&quot; aria-label=&quot;explain extended추가 옵티마이저 정보 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXPLAIN EXTENDED(추가 옵티마이저 정보)&lt;/h3&gt;
+&lt;h3 id=&quot;explain-partitionspartitions-칼럼&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#explain-partitionspartitions-%EC%B9%BC%EB%9F%BC&quot; aria-label=&quot;explain partitionspartitions 칼럼 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXPLAIN PARTITIONS(Partitions 칼럼)&lt;/h3&gt;
+&lt;h2 id=&quot;mysql의-주요-처리-방식&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql%EC%9D%98-%EC%A3%BC%EC%9A%94-%EC%B2%98%EB%A6%AC-%EB%B0%A9%EC%8B%9D&quot; aria-label=&quot;mysql의 주요 처리 방식 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL의 주요 처리 방식&lt;/h2&gt;
+&lt;p&gt;성능에 미치는 영향이 큰 실행 계획과 연관이 있는 단위 작업에 대해 살펴보자&lt;/p&gt;
+&lt;p&gt;풀 테이블 스캔을 제외한 나머지는 모두 스토리지 엔진이 아니라 MySQL 엔진에서 처리되는 내용이다. MySQL에서 부가적으로 처리하는 작업은 대부분 성능에 미치는 영향이 큰데, 안타깝게도 모두 쿼리의 성능을 저하시키는 요인들이다. MySQL엔진에서 처리하는 데 시간이 오래 걸리는 작업의 원리를 알아둔다면 쿼리를 튜닝하는데 상당한 도움이 될 것이다.&lt;/p&gt;
+&lt;h3 id=&quot;풀-테이블-스캔&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%92%80-%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%8A%A4%EC%BA%94&quot; aria-label=&quot;풀 테이블 스캔 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;풀 테이블 스캔&lt;/h3&gt;
+&lt;p&gt;인덱스를 사용하지 않고 테이블의 데이터를 처음부터 끝까지 읽어서 요청된 작업을 처리하는 작업을 의미한다.&lt;/p&gt;
+&lt;p&gt;풀 테이블 스캔을 선택하는 조건은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;테이블의 레코드 건수가 너무 작아서 인덱스를 통해 읽는 것보다 풀테이블스캔을 하는 편이 더 빠른 경우 (일반적으로 테이블이 페이지 1개로 구성된 경우)&lt;/li&gt;
+&lt;li&gt;WHERE나 ON절에 인덱스를 이용할 수 있는 적절한 조건이 없는 경우&lt;/li&gt;
+&lt;li&gt;인덱스 레인지 스캔을 사용할 수 있는 쿼리라 하더라도 옵티마이저가 판단한 조건 일치 레코드 건수가 너무 많은 경우&lt;/li&gt;
+&lt;li&gt;반대로, max&lt;em&gt;seek&lt;/em&gt;for_key 변수를 특정 값으로 설정하면 MySQL 옵티마이저는 인덱스의 Cardinality나 Selectivity를 무시하고, 최대 N건만 읽으면 된다고 판단하게 한다. 이 값을 작게 설정할 수록 MySQL 서버가 인덱스를 더 사용하도록 유도한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;order-by-처리using-filesort&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#order-by-%EC%B2%98%EB%A6%ACusing-filesort&quot; aria-label=&quot;order by 처리using filesort permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ORDER BY 처리(Using filesort)&lt;/h3&gt;
+&lt;p&gt;레코드 1~2건을 가져오는 쿼리를 제외하면 대부분의 SELECT 쿼리에서 정렬은 필수적으로 사용된다.&lt;/p&gt;
+&lt;p&gt;정렬을 처리하기 위해서는 인덱스를 이용하는 방법과 쿼리가 실행될 때 Filesort라는 별도의 처리를 이용하는 방법으로 나눌 수 있다.&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;장점&lt;/th&gt;
+&lt;th&gt;단점&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;인덱스를 이용&lt;/td&gt;
+&lt;td&gt;INSERT, UPDATE, DELETE 쿼리가 실행될 때 이미 인덱스가 정렬돼 있어서 순서대로 읽기만 하면 되므로 매우 빠르다.&lt;/td&gt;
+&lt;td&gt;INSERT, UPDATE, DELETE 작업 시 부가적인 인덱스 추가/삭제 작업이 필요하므로 느리다. 인덱스 때문에 디스크 공간이 더 많이 필요하다. 인덱스 개수가 늘어날 수록 InnoDB의 버퍼 풀이나 MyISAM의 키 캐시용 메모리가 많이 필요하다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Filesort 이용&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;인덱스를 생성하지 않아도 되므로&lt;/strong&gt; 인덱스를 이용할 때의 단점이 장점으로 바뀐다. 정렬해야 할 레코드가 많지 않으면 메모리에서 Filesort가 처리되므로 충분히 빠르다.&lt;/td&gt;
+&lt;td&gt;&lt;strong&gt;정렬 작업이 쿼리 실행 시 처리&lt;/strong&gt;되므로 레코드 대상 건수가 많아질 수록 응답 속도가 느리다.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;MySQL이 인덱스를 이용하지 않고 별도의 정렬 처리를 수행했는지는 실행 계획의 Extra 칼럼에 “Using filesort”라는 코멘트가 표시되는지로 판단할 수 있다&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Sort buffer&lt;/strong&gt;(인덱스를 사용하지 않을 때?)&lt;/p&gt;
+&lt;p&gt;MySQL은 정렬을 수행하기 위해 별도의 메모리 공간을 할당받아서 사용하는데, 이 메모리 공간을 소트버퍼라고 한다.&lt;/p&gt;
+&lt;p&gt;소트 버퍼는 정렬이 필요한 경우에만 할당된다.&lt;/p&gt;
+&lt;p&gt;정렬이 문제가 되는 이유는?&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/790d4cf03edd535f4de4376df3713bec/f43e4/sortbuffer.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.083333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAICAYAAAD5nd/tAAAACXBIWXMAABYlAAAWJQFJUiTwAAABaElEQVQoz31Sza7BYBD9FtbSTRfiGXRj0QfxEF7AY0h3tn0DbKz6AFIE6cLfAkEIQWkRP8G5OZN87o3FPUnTmabnzMyZUa/XC5vNBqvVCrvdTp79fo/z+YxOpwOlFMrlsuT9fh+tVgvH4xEaz+cTcRx/cuV5HgqFAhzHwWKxwGAwEKHD4YBmswnDMFCpVHC9XlGv1xEEAe73O5bLJXK5HDKZDNLpNLLZLGq1GpTrusjn8ygWi1JpOp0KiWg0Gkgmk6hWq5L3ej2s12uJSTZNE4lEAqlUCpZlySSq2+2iVCqh3W5/Rng8HhJTWI+83W7h+z74Py1h8dFohPl8jsvl8jsy/oB+vt9vEdWCtm1LMfpGMr2m4DfIIV/hH5BIT9ndN3RxdjeZTGSZ0iFJ/BCGoSyFMX0cDofSEePxeCxLmM1mUkD7SEE9Ed8iyHOg+u12w+l0kvOIokgEmLMD5vSMY/PE9JloEQ3mP5VYMfdwjwBtAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/790d4cf03edd535f4de4376df3713bec/8ac56/sortbuffer.webp 240w,
+/static/790d4cf03edd535f4de4376df3713bec/d3be9/sortbuffer.webp 480w,
+/static/790d4cf03edd535f4de4376df3713bec/e46b2/sortbuffer.webp 960w,
+/static/790d4cf03edd535f4de4376df3713bec/928c4/sortbuffer.webp 1120w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/790d4cf03edd535f4de4376df3713bec/8ff5a/sortbuffer.png 240w,
+/static/790d4cf03edd535f4de4376df3713bec/e85cb/sortbuffer.png 480w,
+/static/790d4cf03edd535f4de4376df3713bec/d9199/sortbuffer.png 960w,
+/static/790d4cf03edd535f4de4376df3713bec/f43e4/sortbuffer.png 1120w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/790d4cf03edd535f4de4376df3713bec/d9199/sortbuffer.png&quot;
+          alt=&quot;sortbuffer&quot;
+          title=&quot;sortbuffer&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;정렬할 레코드가 소량이어서 메모리에 할당된 소트버퍼만으로 정렬할 수 있으면 아주 빠르게 정렬할 수 있다. 하지만 정렬할 레코드 건수가 소트버퍼로 할당된 공간보다 크다면 정렬할 레코드를 여러 조각으로 나눠서 처리하는데, 이 과정에서 임시저장을 위해 디스크를 사용한다.&lt;/p&gt;
+&lt;p&gt;이 과정에서 디스크의 쓰기와 읽기를 유발하기 떄문에 성능이 저하된다.&lt;/p&gt;
+&lt;h3 id=&quot;group-by-처리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#group-by-%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;group by 처리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;GROUP BY 처리&lt;/h3&gt;
+&lt;p&gt;GROUP BY 또한 ORDER BY와 같이 쿼리가 스트리밍된 처리를 할 수 없게 하는 요소 중 하나다.&lt;/p&gt;
+&lt;p&gt;GROUP BY 절이 있는 쿼리에서는 HAVING절을 사용할 수 있는데, HAVING절은 GROUP BY 결과에 대해 필터링 역할을 수행한다. GROUP BY에 사용된 조건은 인덱스를 사용해서 처리될 수 없으므로 HAVING절을 튜닝하려고 인덱스를 생성하거나 다른 방법을 고민할 필요는 없다.&lt;/p&gt;
+&lt;p&gt;GROUP BY 작업도 인덱스를 사용하는 경우와 그렇지 못한 경우로 나뉜다.&lt;/p&gt;
+&lt;p&gt;인덱스를 이용할 때는 &lt;strong&gt;인덱스 스캔&lt;/strong&gt; 방법과 인덱스를 건너뛰면서 읽는 &lt;strong&gt;루스 인덱스 스캔&lt;/strong&gt;이라는 방법으로 나뉜다.&lt;/p&gt;
+&lt;p&gt;그리고 인덱스를 사용하지 못하는 쿼리에서 GROUP BY 작업은 임시 테이블을 사용한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;인덱스 스캔&lt;/li&gt;
+&lt;li&gt;루스 인덱스 스캔&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;distinct-처리&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#distinct-%EC%B2%98%EB%A6%AC&quot; aria-label=&quot;distinct 처리 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;DISTINCT 처리&lt;/h3&gt;
+&lt;p&gt;특정 칼럼의 유니크한 값만 조회하려면 SELECT 쿼리에 DISTINCT를 사용한다.&lt;/p&gt;
+&lt;p&gt;Dis&lt;/p&gt;
+&lt;h3 id=&quot;임시-테이블using-temporary&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%84%EC%8B%9C-%ED%85%8C%EC%9D%B4%EB%B8%94using-temporary&quot; aria-label=&quot;임시 테이블using temporary permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;임시 테이블(Using temporary)&lt;/h3&gt;
+&lt;p&gt;MySQL 엔진이 스토리지 엔진으로부터 받아온 레코드를 정렬하거나 그룹핑할 때는 내부적인 임시 테이블을 사용한다.&lt;/p&gt;
+&lt;h3 id=&quot;테이블-조인&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%85%8C%EC%9D%B4%EB%B8%94-%EC%A1%B0%EC%9D%B8&quot; aria-label=&quot;테이블 조인 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;테이블 조인&lt;/h3&gt;
+&lt;p&gt;MySQL은 다른 DBMS보다 조인을 처리하는 방식이 단순하다. 현재 릴리즈된 MySQL의 모든 버전에서 조인 바잇ㄱ은 네스티드-루프로 알려진 중첩된 루프와 같은 형태만 지원한다. 그리고 조인되는 각 테이블 간의 레코드를 어떻게 연결할 지에 따라 여러 가지 종류의 조인으로 나뉜다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;조인의 종류&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;INNER JOIN&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;OUTER JOIN&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;LEFT OUTER JOIN&lt;/li&gt;
+&lt;li&gt;RIGHT OUTER JOIN&lt;/li&gt;
+&lt;li&gt;FULL OUTER JOIN&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;조인의 조건을 어떻게 명시하느냐에 따라 NATURAL JOIN과 CROSS JOIN(FULL JOIN, CARTESIAN JOIN)으로 구분할 수 있다.&lt;/p&gt;
+&lt;h2 id=&quot;mysql-실행-계획-분석-시-주의사항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#mysql-%EC%8B%A4%ED%96%89-%EA%B3%84%ED%9A%8D-%EB%B6%84%EC%84%9D-%EC%8B%9C-%EC%A3%BC%EC%9D%98%EC%82%AC%ED%95%AD&quot; aria-label=&quot;mysql 실행 계획 분석 시 주의사항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;MySQL 실행 계획 분석 시 주의사항&lt;/h2&gt;
+&lt;p&gt;쿼리의 실행계획을 확인할 때 각 칼럼에 표시되는 값 중에서 특별히 주의해서 확인해야 하는 항목&lt;/p&gt;
+&lt;h3 id=&quot;select_type-칼럼의-주의대상&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#select_type-%EC%B9%BC%EB%9F%BC%EC%9D%98-%EC%A3%BC%EC%9D%98%EB%8C%80%EC%83%81&quot; aria-label=&quot;select_type 칼럼의 주의대상 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Select_type 칼럼의 주의대상&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;DERIVED&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;DERIVED는 FROM절에서 사용된 서브쿼리로부터 발생한 임시 테이블을 의미한다.&lt;/p&gt;
+&lt;p&gt;임시 테이블은 메모리나 디스크에 저장된다. 일반적으로 메모리에 저장하는 경우에는 성능에 영향을 미치지 않지만&lt;/p&gt;
+&lt;p&gt;데이터 크기가 클 경우에는 임시테이블을 디스크에 저장한다. 디스크에 저장하는 경우에 성능이 떨어진다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;UNCACHEABLE SUBQUERY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;FROM절 이외의 부분에서 사용하는 서브쿼리는 MySQL옵티마이저가 최대한 캐시되어 재사용될 수 있게 유도한다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;하지만 사용자 변수나 일부 함수가 사용된 경우에는 이러한 캐시 기능을 사용할 수 없게 만든다.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;이런 경우에는 사용자 변수를 제거하거나 다른 함수로 대체해서 사용 가능할지 검토해보는 것이 좋다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;DEPENDENT SUBQUERY&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;FROM절 이외의 부분에서 사용하는 서브쿼리가 자체적으로 실행되지 못하고, &lt;strong&gt;외부 쿼리에서 값을 전달받아 실행되는 경우&lt;/strong&gt; 발생한다. 이러한 경우에는 서브쿼리가 외부쿼리에 의존적이기 때문에 전체 쿼리 성능을 느리게 만든다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;가능하다면 외부 쿼리와의 의존도를 제거하는 것이 좋다.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&quot;key-칼럼의-주의-대상&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#key-%EC%B9%BC%EB%9F%BC%EC%9D%98-%EC%A3%BC%EC%9D%98-%EB%8C%80%EC%83%81&quot; aria-label=&quot;key 칼럼의 주의 대상 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Key 칼럼의 주의 대상&lt;/h3&gt;
+&lt;p&gt;쿼리가 인덱스를 사용하지 못할 때 Key칼럼에 아무것도 표시되지 않는다. 쿼리가 인덱스를 사용할 수 있게 인덱스를 추가하거나, WHERE 조건을 변경하는 것이 좋다.&lt;/p&gt;
+&lt;h3 id=&quot;rows-칼럼의-주의-대상&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#rows-%EC%B9%BC%EB%9F%BC%EC%9D%98-%EC%A3%BC%EC%9D%98-%EB%8C%80%EC%83%81&quot; aria-label=&quot;rows 칼럼의 주의 대상 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Rows 칼럼의 주의 대상&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;쿼리가 실제 가져오는 레코드 수보다 훨씬 더 큰 값이 Rows 칼럼에 표시되는 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;쿼리가 인덱스를 정상적으로 사용하고 있는지 확인하고, 충분히 식별성을 가지고 있는 칼럼을 선정해 인덱스를 다시 생성하거나 쿼리의 요건을 변경하는 것이 좋다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;LIMIT가 포함된 쿼리라 하더라도 LIMIT의 제한은 Rows칼럼의 고려 대상에서 제외된다.&lt;/p&gt;
+&lt;p&gt;즉, ‘LIMIT 1’로 1건만 SELECT하는 쿼리가 하더라도 Rows 칼럼에는 훨씬 큰 수치가 표현될 수도 있으며, 성능상 아무런 문제가 없고 최적화된 쿼리일 수도 있다는 것이다.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;extra-칼럼의-주의-대상&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#extra-%EC%B9%BC%EB%9F%BC%EC%9D%98-%EC%A3%BC%EC%9D%98-%EB%8C%80%EC%83%81&quot; aria-label=&quot;extra 칼럼의 주의 대상 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Extra 칼럼의 주의 대상&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;쿼리가 요건을 제대로 반영하고 있는지 확인해야 하는 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RJ scan on NULL key&lt;/li&gt;
+&lt;li&gt;Impossible HAVING(MySQL 5.1 부터)&lt;/li&gt;
+&lt;li&gt;Impossible WHERE(MySQL 5.1 부터)&lt;/li&gt;
+&lt;li&gt;Impossible WHERE noticed after reading const tables&lt;/li&gt;
+&lt;li&gt;No matching min/max row(MySQL 5.1 부터)&lt;/li&gt;
+&lt;li&gt;No matching row in const table(MySQL 5.1 부터)&lt;/li&gt;
+&lt;li&gt;Uniquerownotfound(MySQL5.1 부터)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위와 갈은 코멘트가 Extra 칼럼에 표시된다면 우선 쿼리가 요건을 제대로 반영해서 작성됐거나 버그가 생길 가능성은 없는지 확인해야 한다. &lt;strong&gt;성능과 관계가 깊지 않고&lt;/strong&gt; 쿼리가 업무적인 요건을 제대로 반영하고 있다면 무시해도 된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;쿼리의 실행 계획이 좋지 않은 경우&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Range checked for each record (index map: N)&lt;/li&gt;
+&lt;li&gt;Using filesort&lt;/li&gt;
+&lt;li&gt;Using join buffer (MySQL 5.1 부터)&lt;/li&gt;
+&lt;li&gt;Using temporary&lt;/li&gt;
+&lt;li&gt;Using where&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;위와 같은 코멘트가 Extra 칼럼에 표시된다면 먼저 쿼리를 더 최적화할 수 있는지 검토해보는 것이 좋다.&lt;/p&gt;
+&lt;p&gt;Using where가 표시될 때 Rows 컬럼이 실제 SELECT되는 레코드 건수보다 상당히 높은 경우는 반드시 보완해서 레코드 수의 차이를 줄이는 것이 중요하다. &lt;/p&gt;
+&lt;p&gt;**쿼리의 실행 계획이 좋은 경우 **&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distinct&lt;/li&gt;
+&lt;li&gt;Using index&lt;/li&gt;
+&lt;li&gt;Using index for group-by&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;최적화되어 처리되고 있음을 알려주는 지표 정도로 생각하자.&lt;/p&gt;
+&lt;p&gt;두번 째의 Using index는 쿼리가 커버링 인덱스로 처리되고 있음을 알려주는 것인데, MySQL에서 제공할 수 있는 최고의 성능을 보여줄 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://12bme.tistory.com/168&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://12bme.tistory.com/168&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day77]]></title><description><![CDATA[TIL_Day77 | Brandi_Day22 ]]></description><link>https://dansjkim.github.io//posts/til-200413</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200413</guid><pubDate>Mon, 13 Apr 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-77일차--브랜디-기업-협업-19일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-77%EC%9D%BC%EC%B0%A8--%EB%B8%8C%EB%9E%9C%EB%94%94-%EA%B8%B0%EC%97%85-%ED%98%91%EC%97%85-19%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 77일차  브랜디 기업 협업 19일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 77일차 | 브랜디 기업 협업 19일차&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;셀러 리스트&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;리스트 GET&lt;/li&gt;
+&lt;li&gt;검색 필터&lt;/li&gt;
+&lt;li&gt;페이징&lt;/li&gt;
+&lt;li&gt;엑셀 다운로드&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;셀러 정보 관리&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;회원별 정보 GET&lt;/li&gt;
+&lt;li&gt;이미지 업로드&lt;/li&gt;
+&lt;li&gt;validation&lt;/li&gt;
+&lt;li&gt;-&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;상품 리스트&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;리스트 GET API&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;보완할 부분&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;token 전역관리&lt;/li&gt;
+&lt;li&gt;fetch 예외 처리&lt;/li&gt;
+&lt;li&gt;input password type 설정하기&lt;/li&gt;
+&lt;li&gt;pagination 버튼 사라지는 대신 disabled 처리 하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;! Fetch API 통신 실패&lt;/p&gt;
+&lt;p&gt;즉 catch()는 정상 통신 실패하여 에러가 발생되었을 때 어떻게 처리할 것인지를 수행하는 메소드입니다. 콘솔로 에러를 출력하거나 토스트 등의 메시지를 보내서 처리할 수 있습니다.
+then에서 정의한 함수에서 에러가 날 때도 catch메소드가 발동 된다.&lt;/p&gt;
+&lt;p&gt;로딩 아이콘 순수 css 로더
+&lt;a href=&quot;https://loading.io/css/&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://loading.io/css/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day74]]></title><description><![CDATA[TIL_Day74 | Brandi_Day19 ]]></description><link>https://dansjkim.github.io//posts/til-200410</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200410</guid><pubDate>Fri, 10 Apr 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-74일차--브랜디-기업-협업-19일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-74%EC%9D%BC%EC%B0%A8--%EB%B8%8C%EB%9E%9C%EB%94%94-%EA%B8%B0%EC%97%85-%ED%98%91%EC%97%85-19%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 74일차  브랜디 기업 협업 19일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 74일차 | 브랜디 기업 협업 19일차&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;오늘 한 일&lt;/p&gt;
@@ -2603,7 +4048,7 @@ ex) &lt;code class=&quot;language-text&quot;&gt;&amp;lt;Profile imgsrc=&amp;quot
 &lt;h3 id=&quot;코딩은-계속-해서-복습할-수-있지만-packagejson-dependencies-가-뭔지는-혼자서-공부해서-알아두자&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BD%94%EB%94%A9%EC%9D%80-%EA%B3%84%EC%86%8D-%ED%95%B4%EC%84%9C-%EB%B3%B5%EC%8A%B5%ED%95%A0-%EC%88%98-%EC%9E%88%EC%A7%80%EB%A7%8C-packagejson-dependencies-%EA%B0%80-%EB%AD%94%EC%A7%80%EB%8A%94-%ED%98%BC%EC%9E%90%EC%84%9C-%EA%B3%B5%EB%B6%80%ED%95%B4%EC%84%9C-%EC%95%8C%EC%95%84%EB%91%90%EC%9E%90&quot; aria-label=&quot;코딩은 계속 해서 복습할 수 있지만 packagejson dependencies 가 뭔지는 혼자서 공부해서 알아두자 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;코딩은 계속 해서 복습할 수 있지만 package.json dependencies 가 뭔지는 혼자서 공부해서 알아두자!!!!&lt;/h3&gt;
 &lt;p&gt;Git에 대한 글은 따로 정리해서 작성 할 예정이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React 개요]]></title><description><![CDATA[React에 대해 알아보자]]></description><link>https://dansjkim.github.io//posts/react-foundation</link><guid isPermaLink="false">https://dansjkim.github.io//posts/react-foundation</guid><pubDate>Mon, 10 Feb 2020 22:40:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2720,7 +4165,7 @@ DOM은 웹의 핵심으로써, &lt;code class=&quot;language-text&quot;&gt;브�
 &lt;h2 id=&quot;브라우저-통신-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%B8%8C%EB%9D%BC%EC%9A%B0%EC%A0%80-%ED%86%B5%EC%8B%A0-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;브라우저 통신 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;브라우저 통신 방법&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 728px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 728px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2731,7 +4176,7 @@ DOM은 웹의 핵심으로써, &lt;code class=&quot;language-text&quot;&gt;브�
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 53.57142857142857%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB3ElEQVQoz41SW4vTUBDu3/RBWEFQ2AcVEYqguLq4yvrg/pXeLAVLX1vYpmna0gWbJk3imvSSS3Pp/dtzpj1x67448DEnM5nvzMx3MuVyGblcDvlCAfl8HoWD5ygWiyiVSuR5/K8vsHiRvPhXIIODeX6Ef22z2WA2myEMw6P4jkEzJ9juHpTsCW1nClnpI4oieJ4HXdfhOA6dbdsm0iDwIDWvoaoDaMYtfvxsQNV/E8l6vabLOYjQ9wPoI5OSy+USi8UCruvCNAwM1SHzI/zS/sC6nSJJIvhByM5juF6A7XZLoM53uz3harUiIhHk1m63cfH5Alffr/Dt8hIfP3yBJHUpF/g+NH1Ek8RxfFSbuU/Cvbit37/B65cv8C77Bp/OzvD1/D3azQbl4jhCt29iONRpTXxkXpsS8tlFQBB2Ol28zWbx6vQ5nj1+hKdPTqAoSkrYuzFhGBbVPiA8UvDQLRek0+3huimhKclo1OsYM6H2e17AGU8xGOiYTMa083RkvgNezJWcz+epWvvO1whZLAzn92KsI7Zz1wuh9HSYpkF7FOJkLMtiN7GnoGlMwQT/a0mygqrZrBn3+B3WajVUKhVUq1XydTYa3xVXmUOWZYL45mi1WgxSmuPfIncHsI0looU47y0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 53.75%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAB3ElEQVQoz41SW4vTUBDu3/RBWEFQ2AcVEYqguLq4yvrg/pXeLAVLX1vYpmna0gWbJk3imvSSS3Pp/dtzpj1x67448DEnM5nvzMx3MuVyGblcDvlCAfl8HoWD5ygWiyiVSuR5/K8vsHiRvPhXIIODeX6Ef22z2WA2myEMw6P4jkEzJ9juHpTsCW1nClnpI4oieJ4HXdfhOA6dbdsm0iDwIDWvoaoDaMYtfvxsQNV/E8l6vabLOYjQ9wPoI5OSy+USi8UCruvCNAwM1SHzI/zS/sC6nSJJIvhByM5juF6A7XZLoM53uz3harUiIhHk1m63cfH5Alffr/Dt8hIfP3yBJHUpF/g+NH1Ek8RxfFSbuU/Cvbit37/B65cv8C77Bp/OzvD1/D3azQbl4jhCt29iONRpTXxkXpsS8tlFQBB2Ol28zWbx6vQ5nj1+hKdPTqAoSkrYuzFhGBbVPiA8UvDQLRek0+3huimhKclo1OsYM6H2e17AGU8xGOiYTMa083RkvgNezJWcz+epWvvO1whZLAzn92KsI7Zz1wuh9HSYpkF7FOJkLMtiN7GnoGlMwQT/a0mygqrZrBn3+B3WajVUKhVUq1XydTYa3xVXmUOWZYL45mi1WgxSmuPfIncHsI0looU47y0AAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
@@ -2769,7 +4214,7 @@ DOM은 웹의 핵심으로써, &lt;code class=&quot;language-text&quot;&gt;브�
 &lt;h3 id=&quot;ip&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#ip&quot; aria-label=&quot;ip permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;IP&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 800px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2814,7 +4259,7 @@ DOM은 웹의 핵심으로써, &lt;code class=&quot;language-text&quot;&gt;브�
 &lt;h3 id=&quot;domain&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#domain&quot; aria-label=&quot;domain permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Domain&lt;/h3&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2825,7 +4270,7 @@ DOM은 웹의 핵심으로써, &lt;code class=&quot;language-text&quot;&gt;브�
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 18.38862559241706%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAtElEQVQY0z1P2wqFMAzb//+eKAoK4gU376hTp9McUvA8hDVtmqVq33cQ27ZhnmdYawXk7KdpiiiKEAQB6rrGeZ5/DfHtL8uC4zignHO47xvrukJrLSLy53nwvi+u60LbtqiqSj7x3kuPGoL7NBzHUUwVRdM0Ic9zSciXww9d10n/S2CMkaQMwJpmnNMnjmMokrIs0TSNCJIkQZZlYswzKaIZa86ZdBgG9H0vF7GmpigKhGGIH/HOLhFpVh7CAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 18.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAECAYAAACOXx+WAAAACXBIWXMAAAsSAAALEgHS3X78AAAAtElEQVQY0z1P2wqFMAzb//+eKAoK4gU376hTp9McUvA8hDVtmqVq33cQ27ZhnmdYawXk7KdpiiiKEAQB6rrGeZ5/DfHtL8uC4zignHO47xvrukJrLSLy53nwvi+u60LbtqiqSj7x3kuPGoL7NBzHUUwVRdM0Ic9zSciXww9d10n/S2CMkaQMwJpmnNMnjmMokrIs0TSNCJIkQZZlYswzKaIZa86ZdBgG9H0vF7GmpigKhGGIH/HOLhFpVh7CAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
@@ -2862,7 +4307,7 @@ ex) www.wecode.com, www.google.com&lt;/p&gt;
 DNS 요청 세부 과정은 다음과 같다.
 &lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 960px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2873,7 +4318,7 @@ DNS 요청 세부 과정은 다음과 같다.
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 47.043363994743764%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABfUlEQVQoz32S227bMBBE/f+f1D41L22APiRBiyK1jcSyLIW6UKJIUbIk6nQlt0YKJCEwXF4Hszu74Z0xz/Nbh8u04vX1fD2HzbJ5E8uTELCuJassunEUZiCrR4kjru3ZJw7rxyvpgg0fjDANdN6hyoqntCTJDS9lw0liZSyfv+1IC/dfRpsgixBmhmmJgWGcOQuW2HWe1ll81xNlRtT0tN24onEd0THGWrsSTfJ3Jbzbam7uFV/uXjimmjhr2Z0cedXxeNB8/akwzaKsEqWGY+aJlBe1LTcPBdpeUh6nsNZ1k2tHrAzbpxO6qoVoSakShWcOUczt9wchs+xTz/ZUy7qmaR3T2HP/41H+mH8Fuij8qIbn3tO3ZjWmMJ6iFpiJys4ofWZ7NJSNmNQgZgUa/47LYb60xRwmjPXs4pLntOKoNL8OOfuTXpV9ut0TPdcUe0P6W9Pmw0Xha7Jru/3ttaIJxOVIqidR0ZFK+qqSFioKkiQhU4reizQxVlzlD7IEtuWQ3fUnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 47.08333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABYlAAAWJQFJUiTwAAABfUlEQVQoz32S227bMBBE/f+f1D41L22APiRBiyK1jcSyLIW6UKJIUbIk6nQlt0YKJCEwXF4Hszu74Z0xz/Nbh8u04vX1fD2HzbJ5E8uTELCuJassunEUZiCrR4kjru3ZJw7rxyvpgg0fjDANdN6hyoqntCTJDS9lw0liZSyfv+1IC/dfRpsgixBmhmmJgWGcOQuW2HWe1ll81xNlRtT0tN24onEd0THGWrsSTfJ3Jbzbam7uFV/uXjimmjhr2Z0cedXxeNB8/akwzaKsEqWGY+aJlBe1LTcPBdpeUh6nsNZ1k2tHrAzbpxO6qoVoSakShWcOUczt9wchs+xTz/ZUy7qmaR3T2HP/41H+mH8Fuij8qIbn3tO3ZjWmMJ6iFpiJys4ofWZ7NJSNmNQgZgUa/47LYb60xRwmjPXs4pLntOKoNL8OOfuTXpV9ut0TPdcUe0P6W9Pmw0Xha7Jru/3ttaIJxOVIqidR0ZFK+qqSFioKkiQhU4reizQxVlzlD7IEtuWQ3fUnAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
@@ -2921,7 +4366,7 @@ DNS 요청 세부 과정은 다음과 같다.
 &lt;h2 id=&quot;전체-통신-과정&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%84%EC%B2%B4-%ED%86%B5%EC%8B%A0-%EA%B3%BC%EC%A0%95&quot; aria-label=&quot;전체 통신 과정 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;전체 통신 과정&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 558px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 558px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2932,7 +4377,7 @@ DNS 요청 세부 과정은 다음과 같다.
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 51.4336917562724%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABr0lEQVQoz41T0W7aMBTNj1bqOqmV9hFVpU59aT8F7ROgIKqtrUoJhIQIRAMdOEtCgkNCSEI4u3YKQ1On9UhXjmPf43PutRW8Ybvd/jP+h7nP4XiB3KsUxRZZnu9J30NRFFitVoiiCHEcy1HMsyyVZHcPOmrNNgIeQfGDEF19uE/OskwSiNhsNvA8D9bYwmQ8xmQwhOu6MAwDpmnCsl7AbAfN+54kdLwFlBlzcP/YRppmCEMuT59OpxgTAecctm2DMSYjSRLal0p1IhKKcBnhZWJjMPqJecCh8DCCYY5ITYHlcimTfN+XysRcKGLMxmLB8REoIlEnCzsIm8LuvlkUSbIi1a+kPkZO9f5TkpzW1ujoIzypJpJ1KppS1uqw0wJCZU/roW/oaHf6eGULss+kasuyoKoqqQ7gzQP8eDLQ+K7SN1k+vDY7hQKtVgsX5+e4ub7B1eVX3NUb8n8YUhO7XWiaRnW24Lg+EfapMRp+uQGUQ1Vi3Nl9bqs4+/wJX06OcHp8hGajXh74dsV2yElAFK+pOXFp+XCxJCzJZ7MZard13Far+FapYDgYvPsA/sZv76jzUdB8QrEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 51.25000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAAAsSAAALEgHS3X78AAABr0lEQVQoz41T0W7aMBTNj1bqOqmV9hFVpU59aT8F7ROgIKqtrUoJhIQIRAMdOEtCgkNCSEI4u3YKQ1On9UhXjmPf43PutRW8Ybvd/jP+h7nP4XiB3KsUxRZZnu9J30NRFFitVoiiCHEcy1HMsyyVZHcPOmrNNgIeQfGDEF19uE/OskwSiNhsNvA8D9bYwmQ8xmQwhOu6MAwDpmnCsl7AbAfN+54kdLwFlBlzcP/YRppmCEMuT59OpxgTAecctm2DMSYjSRLal0p1IhKKcBnhZWJjMPqJecCh8DCCYY5ITYHlcimTfN+XysRcKGLMxmLB8REoIlEnCzsIm8LuvlkUSbIi1a+kPkZO9f5TkpzW1ujoIzypJpJ1KppS1uqw0wJCZU/roW/oaHf6eGULss+kasuyoKoqqQ7gzQP8eDLQ+K7SN1k+vDY7hQKtVgsX5+e4ub7B1eVX3NUb8n8YUhO7XWiaRnW24Lg+EfapMRp+uQGUQ1Vi3Nl9bqs4+/wJX06OcHp8hGajXh74dsV2yElAFK+pOXFp+XCxJCzJZ7MZard13Far+FapYDgYvPsA/sZv76jzUdB8QrEAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
@@ -2967,7 +4412,7 @@ DNS 요청 세부 과정은 다음과 같다.
 배포란, 그동안 개발하던 것을 인터넷에 공개하고 모든 사람들이 볼 수 있게 하는 것을 의미한다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Git 명령어 정리]]></title><description><![CDATA[Git의 주요 명령어를 정리해 보았다.]]></description><link>https://dansjkim.github.io//posts/git-command-list-post</link><guid isPermaLink="false">https://dansjkim.github.io//posts/git-command-list-post</guid><pubDate>Thu, 06 Feb 2020 22:40:32 GMT</pubDate><content:encoded>&lt;h2 id=&quot;git-작업의-흐름&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#git-%EC%9E%91%EC%97%85%EC%9D%98-%ED%9D%90%EB%A6%84&quot; aria-label=&quot;git 작업의 흐름 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Git 작업의 흐름&lt;/h2&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 900px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 900px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
@@ -2978,7 +4423,7 @@ DNS 요청 세부 과정은 다음과 같다.
   &gt;
     &lt;span
     class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.111111111111114%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAChklEQVQoz41RbUhTURg+d7vTMLBhkiQkBJpGRPQB/gkJIrIU/xiSPyISKiIIGgQ2P7bpPu52d7/v1e2KbpMZEw3KwqKvH0EEqx99mQpZSF9SuZla+cNxes+aQwijA8993nPf8z7vc86LFo+Wxr43Vr5Mnjn8JNl0MD5fv2tioabUj2BRQqDXIOrjBVoonq/2xZEQnDRIukZyX2Y/RpLJz6+npyfjBHNzM+OJxCcVLdZue/Gr6QBOnD2Smj1Xm8KnqvB8TdkIKaKFwGNaj+Itej8uCfZjSh/AJkm/T3IzX98/TaV+4Kk3r/DbqbHl5eVFDIK30UJdRcnPuu2lMw17K74d212OC1EBRiiXFKFLV3ORM2pGVnETuswVIXbIjJpHc0gKY7wOsAFQvLQ0Vw5uywDFaPVqVqStbs5zgvV19sqcSwqrXGu/wraERI8tInntYZGx9ilsuyZ6nayztY3psLZ57M0WcpmsyIeGfRQ+tJm6ZTlJy4ytSmTsPoGxjymc+25PQB4E3NBkdrRb5W4GNGGkp1saCSj+a6Kv47rgdYwCR4Kq30y0Hj28Y0A8Y08LK5zLdOF0o2m14+r9O3LRfyzBa6czTD4Oimwc1osbofPz3oA80S2zz3RNeAdNUtBwGFxUd0m+vOHBAToWDeX06SoNdTTkjMDrgdNG0ubgR7qLt9Oap/CeehCqU3lPbZfoPS6xned5j60SBM1ru3NQAFMmRtkry36Xca0iv6utEESDQZUP6xrfI/g6hqDuAQi0AO/kGYfhL4fENsT5sWiYkv1OoyYwRhBJvw3nbi+CWIGBBOFJVIivwPl7cN4CvIdcPSu44hDYsPotVvBnYG7DP4eSESRD+Q2C7U7gsraligAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+    style=&quot;padding-bottom: 55.00000000000001%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAAAsSAAALEgHS3X78AAAChklEQVQoz41RbUhTURg+d7vTMLBhkiQkBJpGRPQB/gkJIrIU/xiSPyISKiIIGgQ2P7bpPu52d7/v1e2KbpMZEw3KwqKvH0EEqx99mQpZSF9SuZla+cNxes+aQwijA8993nPf8z7vc86LFo+Wxr43Vr5Mnjn8JNl0MD5fv2tioabUj2BRQqDXIOrjBVoonq/2xZEQnDRIukZyX2Y/RpLJz6+npyfjBHNzM+OJxCcVLdZue/Gr6QBOnD2Smj1Xm8KnqvB8TdkIKaKFwGNaj+Itej8uCfZjSh/AJkm/T3IzX98/TaV+4Kk3r/DbqbHl5eVFDIK30UJdRcnPuu2lMw17K74d212OC1EBRiiXFKFLV3ORM2pGVnETuswVIXbIjJpHc0gKY7wOsAFQvLQ0Vw5uywDFaPVqVqStbs5zgvV19sqcSwqrXGu/wraERI8tInntYZGx9ilsuyZ6nayztY3psLZ57M0WcpmsyIeGfRQ+tJm6ZTlJy4ytSmTsPoGxjymc+25PQB4E3NBkdrRb5W4GNGGkp1saCSj+a6Kv47rgdYwCR4Kq30y0Hj28Y0A8Y08LK5zLdOF0o2m14+r9O3LRfyzBa6czTD4Oimwc1osbofPz3oA80S2zz3RNeAdNUtBwGFxUd0m+vOHBAToWDeX06SoNdTTkjMDrgdNG0ubgR7qLt9Oap/CeehCqU3lPbZfoPS6xned5j60SBM1ru3NQAFMmRtkry36Xca0iv6utEESDQZUP6xrfI/g6hqDuAQi0AO/kGYfhL4fENsT5sWiYkv1OoyYwRhBJvw3nbi+CWIGBBOFJVIivwPl7cN4CvIdcPSu44hDYsPotVvBnYG7DP4eSESRD+Q2C7U7gsraligAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
   &gt;&lt;/span&gt;
   &lt;picture&gt;
         &lt;source
@@ -3034,7 +4479,7 @@ origin	https://github.com/DanSJKim/DanSJKim.github.io.git (push)&lt;/code&gt;&lt
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$ git remote add origin https://github.com/DanSJKim/DanSJKim.github.io.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto;  max-width: 492px;&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 492px; &quot;
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
