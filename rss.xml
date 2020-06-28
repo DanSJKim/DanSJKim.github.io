@@ -1,254 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Jun 2020 06:12:46 GMT</lastBuildDate><item><title><![CDATA[No title]]></title><description><![CDATA[AWS 네트워크 구성하기]]></description><link>https://dansjkim.github.io//posts/aws-network-configuration</link><guid isPermaLink="false">https://dansjkim.github.io//posts/aws-network-configuration</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;aws-네트워크-구성하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aws-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;aws 네트워크 구성하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS 네트워크 구성하기&lt;/h1&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/42b11/network-config.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 55.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7klEQVQoz32SXW/TMBSG+///CDfcIQGDalWbtomTOI6dxPlq0jQRYwVpbalgHQheTrx0MKRycWTr2Od5z9doU3hY+D5mrouJbZtzGQSIq8pYUtdQRYEg0U++f02v15g6Dq4XFkZV5sPyXMw5hx0KBDoFkxK6XpuPadPAIcGr9+8QpinytjP+s/WCCZ2B8sCDOUZR3VDQBnnXIkgzvJlNERYZ/CQ2xlNNgh5eXV2b7KcuA1MSXCfmPSARkyUxdNNilPxVmkhyvJi8xCS0EOYZRK4hy4wACm/HSyyFgOUz+DqmtxQ8i+EogXhF8QNn1IPOwDAjSKERVSsqozZBoqRAlWD82sE84PDTiN5LqqKgmAosCh+BA+cZUFDJPKNSdAhbMPCchtNo2MqBKyxYkmFsjxGWCs3H1oizSCK6CKQMPR0hXZf4dNPi4bDF/bcDpJaQNLCszrHtKtzvb/H9x4nAqQFezLAv2U0kalL/RaDTbY395wJc0CbMI1S1wM99h9O2wfHrgYDZ/4HnDOubDXb7O3TdBnfHAxT1NK5qlB9a7L8c0LYNdscd1Co3PYxWq8s9ZHEIJ+ZYUN+m4YzuHolIM1EWB1hGbPD7xm8yHOJ7ewbslbjWww4mT7vm6z/3fgf7NXo8pfknaeIyz6HKEr8BGc4C8S0EI0cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/8ac56/network-config.webp 240w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/d3be9/network-config.webp 480w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/e46b2/network-config.webp 960w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/f992d/network-config.webp 1440w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/882b9/network-config.webp 1920w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/42e4d/network-config.webp 2364w&quot;
-          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/8ff5a/network-config.png 240w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/e85cb/network-config.png 480w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/d9199/network-config.png 960w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/07a9c/network-config.png 1440w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/29114/network-config.png 1920w,
-/static/6c9feff39bf2bacb9317ab0098f2e0f9/42b11/network-config.png 2364w&quot;
-          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/d9199/network-config.png&quot;
-          alt=&quot;network-config&quot;
-          title=&quot;network-config&quot;
-          loading=&quot;lazy&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;기본적인 네트워크 구성 순서는 크게 다음과 같다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;VPC 생성&lt;/li&gt;
-&lt;li&gt;서브넷 생성&lt;/li&gt;
-&lt;li&gt;인터넷 게이트웨이 생성&lt;/li&gt;
-&lt;li&gt;인터넷 게이트웨이 VPC 연결&lt;/li&gt;
-&lt;li&gt;라우팅 테이블 구성&lt;/li&gt;
-&lt;li&gt;보안 그룹 생성&lt;/li&gt;
-&lt;li&gt;웹 서버 1 생성&lt;/li&gt;
-&lt;li&gt;웹 서버 1의 AMI 생성&lt;/li&gt;
-&lt;li&gt;AMI 기반 웹 서버 2 생성&lt;/li&gt;
-&lt;li&gt;로드밸런서 구성&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;vpc-생성&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vpc-%EC%83%9D%EC%84%B1&quot; aria-label=&quot;vpc 생성 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VPC 생성&lt;/h2&gt;
-&lt;h3 id=&quot;vpc-이해하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#vpc-%EC%9D%B4%ED%95%B4%ED%95%98%EA%B8%B0&quot; aria-label=&quot;vpc 이해하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;VPC 이해하기&lt;/h3&gt;
-&lt;p&gt;VPC를 이해하기 전에 VPN(Virtual Private Network)먼저 이해해야 한다.&lt;/p&gt;
-&lt;p&gt;VPC는 AWS 클라우드의 격리된 부분으로서, Amazon EC2 인스턴스와 같은 AWS 객체로 채워진다. &lt;/p&gt;
-&lt;p&gt;나만의 데이터센터를 만든다.&lt;/p&gt;
-&lt;p&gt;VPC에 대한 IPv4 주소 범위를 지정해야 합니다. IPv4 주소 범위를 CIDR(Classless Inter-Domain Routing) 블록으로 지정합니다(예: 10.0.0.0/16). /16보다 큰 IPv4 CIDR 블록은 지정할 수 없습니다. 또는 Amazon 제공 IPv6 CIDR 블록을 VPC에 연결할 수 있습니다.&lt;/p&gt;
-&lt;p&gt;CIDR블록&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[데이터 암호화, 복호화]]></description><link>https://dansjkim.github.io//posts/encryption-decryption</link><guid isPermaLink="false">https://dansjkim.github.io//posts/encryption-decryption</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;암호란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8%EB%9E%80&quot; aria-label=&quot;암호란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호란?&lt;/h1&gt;
-&lt;h2 id=&quot;cryptography&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cryptography&quot; aria-label=&quot;cryptography permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cryptography&lt;/h2&gt;
-&lt;p&gt;평문을 암호문으로 변환하거나 암호문을 평문으로 변환하는 기술&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Plaintext&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;해독 가능한 형태의 텍스트&lt;/p&gt;
-&lt;p&gt;ex) (“123456”)&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Ciphertext&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;해독 불가능한 형태의 텍스트&lt;/p&gt;
-&lt;p&gt;ex(“aBD#fefa$fae!“)&lt;/p&gt;
-&lt;h2 id=&quot;encryptiondecryption&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#encryptiondecryption&quot; aria-label=&quot;encryptiondecryption permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Encryption&amp;#x26;Decryption&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Encryption&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;평문을 암호문으로 변환하는 과정&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Decryption&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;암호문을 평문으로 변환하는 과정&lt;/p&gt;
-&lt;h2 id=&quot;암호화의-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8%ED%99%94%EC%9D%98-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;암호화의 종류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호화의 종류&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;단방향&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;암호화 후 복호화할 수 없다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;양방향&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;암호화와 복호화 모두 가능하다.&lt;/p&gt;
-&lt;p&gt;ex) 사용자 주소, 이메일, 번호 또는 전자서명 같이 재사용성이 있는 정보는 암호화 복호화 모두 이루어져야 한다.&lt;/p&gt;
-&lt;h2 id=&quot;암호-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;암호 알고리즘 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호 알고리즘&lt;/h2&gt;
-&lt;h3 id=&quot;단방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EB%B0%A9%ED%96%A5&quot; aria-label=&quot;단방향 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단방향&lt;/h3&gt;
-&lt;p&gt;PBKDF2&lt;/p&gt;
-&lt;p&gt;bcrypt&lt;/p&gt;
-&lt;p&gt;scrypt&lt;/p&gt;
-&lt;h3 id=&quot;양방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%96%91%EB%B0%A9%ED%96%A5&quot; aria-label=&quot;양방향 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;양방향&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;대칭형(비밀키 암호) 알고리즘&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;AES&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;고급 암호화 표준(Advanced Encryption Standard)이라고 불리는 AES 암호 알고리즘은 DES를 대체한 암호 알고리즘이며 암호화와 복호화 과정에서 동일한 키를 사용하는 &lt;strong&gt;대칭 키 알고리즘&lt;/strong&gt;이다.&lt;/p&gt;
-&lt;p&gt;현재 가장 보편적으로 쓰이는 암호화 방식이며 현 미국 표준 방식인 AES.128~256비트 키를 적용할 수 있어 보안성이 뛰어나며 공개된 알고리즘이라 누구나 사용할 수 있디.&lt;/p&gt;
-&lt;p&gt;Rijmen과 Daemen이 개발한 Rijndael 알고리즘이 AES 공모에서 선정되면서 AES로 암호화 표준이 되었다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;AES는 SPN(Substituion-Permutation Network)라는 구조를 사용&lt;/strong&gt;한다. &lt;/p&gt;
-&lt;p&gt;SPN구조는 암호화와 복호화 과정이 서로 다르다.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Feistel 구조와 SPN 구조의 차이&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Feistel 구조&lt;/strong&gt;는 암복호화 과정에서 &lt;strong&gt;역함수가 필요 없다는 장점&lt;/strong&gt;이 있지만 구현시 스왑(Swap)단계 때문에 &lt;strong&gt;연산량이 많이 소요 되며 암호에 사용되는 라운드 함수를 안전하게 설계해야 한다는 단점&lt;/strong&gt;이 있다. &lt;/p&gt;
-&lt;p&gt;대표적인 암호로는 &lt;strong&gt;DES&lt;/strong&gt;가 있으며 Single DES는 &lt;strong&gt;안전성 문제&lt;/strong&gt;로 현재 사용하고 있지 않다.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SPN 구조&lt;/strong&gt;는 암복호화 과정에서 &lt;strong&gt;역함수가 필요하도록 설계되어야 한다는 단점&lt;/strong&gt;이 있지만 중간에 비트의 이동없이 한번에 암복호화가 가능하기 때문에 &lt;strong&gt;페스탈 구조에 비해 효율적으로 설&lt;/strong&gt;계할 수 있다. 대표적인 암호로는 &lt;strong&gt;AES&lt;/strong&gt;가 있으며 AES는 현재 널리 상용되고 있다.&lt;/p&gt;
-&lt;p&gt;출처: &lt;a href=&quot;https://www.crocus.co.kr/1230&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.crocus.co.kr/1230&lt;/a&gt; [Crocus]&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;비대칭형(공개키 암호) 알고리즘&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;RSA&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;공개키 암호시스템의 하나로 암호화뿐만 아니라 전자서명이 가능한 최초의 알고리즘&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[ISMS란?]]></description><link>https://dansjkim.github.io//posts/isms</link><guid isPermaLink="false">https://dansjkim.github.io//posts/isms</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;isms란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#isms%EB%9E%80&quot; aria-label=&quot;isms란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ISMS란?&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;ISMS&lt;/strong&gt;란 &lt;strong&gt;정보보호관리체계(Information Security Management System)&lt;/strong&gt;를 의미하며, ISMS 솔루션은 기업이 주요 정보자산을 보호하기 위한 수립, 관리, 운영을 지원해주는 보안 통합 솔루션이다.&lt;/p&gt;
-&lt;p&gt;제3의 인증기관이 객관적, 독립적으로 관리체계를 평가하여, 관련 기준에 대한 적합 여부를 보증한다.&lt;/p&gt;
-&lt;p&gt;기업 및 조직이 보유하고 있는 기업정보, 산업기밀, 개인정보 등의 중요한 정보자산이 안전하고 신뢰성 있게 관리되고 있음을 국가로부터 인증 받는 국가 공인 제도다.&lt;/p&gt;
-&lt;h4 id=&quot;isms인증-의무대상자정보통신망법-제47조-2항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#isms%EC%9D%B8%EC%A6%9D-%EC%9D%98%EB%AC%B4%EB%8C%80%EC%83%81%EC%9E%90%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%A7%9D%EB%B2%95-%EC%A0%9C47%EC%A1%B0-2%ED%95%AD&quot; aria-label=&quot;isms인증 의무대상자정보통신망법 제47조 2항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ISMS인증 의무대상자(정보통신망법 제47조 2항)&lt;/h4&gt;
-&lt;p&gt;인증 의무대상자 확인 및 책임은 기업(기관)에 있으므로 스스로 의무대상 여부를 확인하여 인증 취득 필요&lt;/p&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 46.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABR0lEQVQoz12RycoCQQyE+/0fYwRHES+ONxUX8KR48AEEUXDf93Ep+QKR+f+Goro7lUo6HYbDoer1utrttrrdrnGz2VSr1fpxv99Xr9f7c+fc6XSM8RgMBgoY5HI5lUolJUlinM/nVSwWbV+tVk1cq9VUqVTsHsRxrEKhoHK5bBxFkRqNhsLpdNJ8PtdqtTJeLpfa7XZ6PB4idj6fdTwetd/vdb1exTocDqbfbDamJ07s9XopkEBgu91aEmYIbrebLpeLCQFnEj6fj8XRU5A97BozJLher80Q3O9369BFMHe+MKBwmqamcz3nkL34DzeDfU+XvGixWPzGNJvN7OkUCgRHo5Emk4nG47FhOp3a7LKGzu/327pjjnTkMUAT4fl8/jqEPQn4CNBkF2b+gYAzDZghQ2ZlGfA0jGAKkeCf5J/H6wCGNILuCwv+mlL+qxrXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/8ac56/isms.webp 240w,
-/static/caa8c1bbdd610deb59f5bf87a9fc8f98/d3be9/isms.webp 480w,
-/static/caa8c1bbdd610deb59f5bf87a9fc8f98/08b4d/isms.webp 750w&quot;
-          sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/8ff5a/isms.png 240w,
-/static/caa8c1bbdd610deb59f5bf87a9fc8f98/e85cb/isms.png 480w,
-/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png 750w&quot;
-          sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png&quot;
-          alt=&quot;isms&quot;
-          title=&quot;isms&quot;
-          loading=&quot;lazy&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;h4 id=&quot;정보보호관리체계-인증-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EA%B4%80%EB%A6%AC%EC%B2%B4%EA%B3%84-%EC%9D%B8%EC%A6%9D-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;정보보호관리체계 인증 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정보보호관리체계 인증 구성 요소&lt;/h4&gt;
-&lt;p&gt;&lt;span
-      class=&quot;gatsby-resp-image-wrapper&quot;
-      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 753px; &quot;
-    &gt;
-      &lt;a
-    class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png&quot;
-    style=&quot;display: block&quot;
-    target=&quot;_blank&quot;
-    rel=&quot;noopener&quot;
-  &gt;
-    &lt;span
-    class=&quot;gatsby-resp-image-background-image&quot;
-    style=&quot;padding-bottom: 66.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACIElEQVQ4y41TTU/jMBDN//8LPSAOrZAooiqo9II4cOO+Wm3FLpQ2aULSOonz4cRO3/q5eLd7W0sjezzjN28+HByPR1C4uk6hKAqn98YgKiv8OhR4EyV+crfCO9oHa8+FsG8699bjBDhbbasgRA7da+jhiG0hscoEVukBPz4PeLXn0AKegvcQeYG6ac8hEJhBo+0lapWj7oSTti8tQ3WKPAzolHLstdZgLkbVME2JobbB5R66ElaX1tcgULqG0hKpfEdSvCIS31GpDLI5WMYtmrZxQH3fo2kaKNWhKzMMTYE2XKH5+AYtYhgLPvSKDA2SNMQmfMcu2SKKN/jMdtDG1uaIP/X1dXKlqUrsPt6QxSHyLEG8XbuzsYEDOqWfKbI0Q1XVlkWLM4x/Cu4B6bOLE5RSoiglwmiHXptTDQdboyiKEMcx6roG9XOAc6GNS5YlNpsN0jS1TTxgvV4jz/O/XfYg/7tY2zAMHQGOTZZlKG0Qx5CH/X5vIwln8EKd9xQfkCwotBOQO+eWwvuqqhC8vLzg5uYGy+USs9kM8/kcd3d3eHp6wsPDA+7v721nTyMzmUxwcXGBy8tL94Y23lEfjUZ4fHxEwHEgmyRJXCSmQGE6TM3/BPrd3t7i6uoK0+kUi8XCkWDw6+trjMdjPD8/n7pMZ2k75gb3qwHGfi2m6tPlTjuFvj59kmFw+tPmukyFbDyQD+JBz0fGs/Xiy+HH6zfDANtJpOv7IgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
-  &gt;&lt;/span&gt;
-  &lt;picture&gt;
-        &lt;source
-          srcset=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/8ac56/isms-cert.webp 240w,
-/static/1efed49d785fd7b7ebc38c499369aa90/d3be9/isms-cert.webp 480w,
-/static/1efed49d785fd7b7ebc38c499369aa90/67c6f/isms-cert.webp 753w&quot;
-          sizes=&quot;(max-width: 753px) 100vw, 753px&quot;
-          type=&quot;image/webp&quot;
-        /&gt;
-        &lt;source
-          srcset=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/8ff5a/isms-cert.png 240w,
-/static/1efed49d785fd7b7ebc38c499369aa90/e85cb/isms-cert.png 480w,
-/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png 753w&quot;
-          sizes=&quot;(max-width: 753px) 100vw, 753px&quot;
-          type=&quot;image/png&quot;
-        /&gt;
-        &lt;img
-          class=&quot;gatsby-resp-image-image&quot;
-          src=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png&quot;
-          alt=&quot;isms-cert&quot;
-          title=&quot;isms-cert&quot;
-          loading=&quot;lazy&quot;
-          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
-        /&gt;
-      &lt;/picture&gt;
-  &lt;/a&gt;
-    &lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;13개분야의 104개 항목을 만족시키고 이에 대한 증빙 및 문서를 가지고 있어야 인증이 가능하다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[No title]]></title><description><![CDATA[개인 정보란?]]></description><link>https://dansjkim.github.io//posts/what-is-personal-information</link><guid isPermaLink="false">https://dansjkim.github.io//posts/what-is-personal-information</guid><pubDate>Invalid Date</pubDate><content:encoded>&lt;h1 id=&quot;개인-정보&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9D%B8-%EC%A0%95%EB%B3%B4&quot; aria-label=&quot;개인 정보 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개인 정보&lt;/h1&gt;
-&lt;ul&gt;
-&lt;li&gt;살아있는 개인을 알아볼 수 있는 정보&lt;/li&gt;
-&lt;li&gt;그 정보만으로 특정 개인을 알아볼 수 없더라도, 다른 정보와 쉽게 결합하여 개인을 알아볼 수 있다면 개인정보에 해당된다.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;개인정보의-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EC%9D%98-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;개인정보의 종류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개인정보의 종류&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;개인정보의 유형과 종류&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;유형 1 - 인적사항&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;성명, 주민등록번호, 주소, 본적지, 생년월일, 출생지&lt;/li&gt;
-&lt;li&gt;전화번호 등 연락처&lt;/li&gt;
-&lt;li&gt;이메일, 주소&lt;/li&gt;
-&lt;li&gt;가족관계 및 가족구성원 정보 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;유형 2 - 신체적 정보&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;신체정보: 얼굴, 음성, 키, 몸무게, 지문, 홍채, 유전자 정보&lt;/li&gt;
-&lt;li&gt;의료/건강정보: 건강상태, 진료기록, 신체장애, 장애등급, 병력 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;유형 3 - 정신적 정보&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;도서 및 비디오 등 대여기록, 잡지구동정보, 물품구매내역, 웹사이트 검색 내역 등&lt;/li&gt;
-&lt;li&gt;사상, 신조, 종교, 가치관, 정당 노조가입여부 및 활동내역 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;유형 4 - 사회적 정보&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;학력, 성적, 출성상황, 자격증 보유내역, 상벌기록, 생활기록부 등&lt;/li&gt;
-&lt;li&gt;병역여부, 군번, 계급, 근무부대 등&lt;/li&gt;
-&lt;li&gt;직장, 고용주, 근무처, 근로경력, 상벌기록, 직무평가기록 등&lt;/li&gt;
-&lt;li&gt;전과 범죄기록, 재판 기록, 과태료 납부내역 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;유형 5 - 재산적 정보&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;소득, 신용카드번호, 통장계좌번호, 동산 부동산 보유내역, 저축내역 등&lt;/li&gt;
-&lt;li&gt;신용평가정보, 대출 또는 담보설정 내역, 신용카드 사용내역 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;유형 6 - 기타&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;전화통화내역, 웹사이트 접속내역, 이메일 또는 전화메세지, 기타 GPS 등에 의한 위치정보 등&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;참고 사이트&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.i-privacy.kr/jsp/user4/intro/define1.jsp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;개인정보보호포털&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;http://seller.11st.co.kr/tpost/FrontTPostAction.tmall?method=getTPostBoard&amp;#x26;unityBrdNo=43&amp;#x26;sellGroupCode=CM024&amp;#x26;brdInfoNo=101571066&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;판매자 개인정보 팁&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Database] 실행 계획 - Execution Plan]]></title><description><![CDATA[실행 계획의 사용법과 필드의 의미]]></description><link>https://dansjkim.github.io//posts/database-execution-plan</link><guid isPermaLink="false">https://dansjkim.github.io//posts/database-execution-plan</guid><pubDate>Mon, 04 May 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;database-실행-계획---execution-plan&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#database-%EC%8B%A4%ED%96%89-%EA%B3%84%ED%9A%8D---execution-plan&quot; aria-label=&quot;database 실행 계획   execution plan permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;[Database] 실행 계획 - Execution Plan&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 28 Jun 2020 06:35:33 GMT</lastBuildDate><item><title><![CDATA[[Database] 실행 계획 - Execution Plan]]></title><description><![CDATA[실행 계획의 사용법과 필드의 의미]]></description><link>https://dansjkim.github.io//posts/database-execution-plan</link><guid isPermaLink="false">https://dansjkim.github.io//posts/database-execution-plan</guid><pubDate>Tue, 26 May 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;database-실행-계획---execution-plan&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#database-%EC%8B%A4%ED%96%89-%EA%B3%84%ED%9A%8D---execution-plan&quot; aria-label=&quot;database 실행 계획   execution plan permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;[Database] 실행 계획 - Execution Plan&lt;/h1&gt;
 &lt;p&gt;DBMS에서는 쿼리를 최적으로 실행하기 위해 각 테이블의 데이터가 어떤 분포로 저장돼 있는지 통계 정보를 참조하며, 그러한 기본 데이터를 비교해 최적의 실행 계획을 수립하는 작업이 필요하다. DBMS에서는 &lt;strong&gt;옵티마이저&lt;/strong&gt;가 이러한 기능을 담당한다.&lt;/p&gt;
 &lt;p&gt;쿼리 비용 판단 기준에 대해 물어보면 많은 사람들이 실행 시간을 이야기 한다.&lt;br&gt;
 아주 틀린 이야기는 아니지만 기기의 상황과 데이터의 분포에 따라 실행 시간은 천차만별로 달라진다.&lt;br&gt;
@@ -1395,7 +1145,7 @@ SELECT * FROM employees WHERE emp_no BETWEEN 10001 AND 10100 AND gender=‘F’;
 &lt;/ul&gt;
 &lt;p&gt;위와 같은 코멘트가 Extra 칼럼에 표시된다면 먼저 쿼리를 더 최적화할 수 있는지 검토해보는 것이 좋다.&lt;/p&gt;
 &lt;p&gt;Using where가 표시될 때 Rows 컬럼이 실제 SELECT되는 레코드 건수보다 상당히 높은 경우는 반드시 보완해서 레코드 수의 차이를 줄이는 것이 중요하다. &lt;/p&gt;
-&lt;p&gt;**쿼리의 실행 계획이 좋은 경우 **&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;쿼리의 실행 계획이 좋은 경우&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Distinct&lt;/li&gt;
 &lt;li&gt;Using index&lt;/li&gt;
@@ -1403,7 +1153,250 @@ SELECT * FROM employees WHERE emp_no BETWEEN 10001 AND 10100 AND gender=‘F’;
 &lt;/ul&gt;
 &lt;p&gt;최적화되어 처리되고 있음을 알려주는 지표 정도로 생각하자.&lt;/p&gt;
 &lt;p&gt;두번 째의 Using index는 쿼리가 커버링 인덱스로 처리되고 있음을 알려주는 것인데, MySQL에서 제공할 수 있는 최고의 성능을 보여줄 것이다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://12bme.tistory.com/168&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://12bme.tistory.com/168&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day77]]></title><description><![CDATA[TIL_Day77 | Brandi_Day22 ]]></description><link>https://dansjkim.github.io//posts/til-200413</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200413</guid><pubDate>Mon, 13 Apr 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-77일차--브랜디-기업-협업-19일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-77%EC%9D%BC%EC%B0%A8--%EB%B8%8C%EB%9E%9C%EB%94%94-%EA%B8%B0%EC%97%85-%ED%98%91%EC%97%85-19%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 77일차  브랜디 기업 협업 19일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 77일차 | 브랜디 기업 협업 19일차&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://12bme.tistory.com/168&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://12bme.tistory.com/168&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AWS 네트워크 구성하기]]></title><link>https://dansjkim.github.io//posts/aws-network-configuration</link><guid isPermaLink="false">https://dansjkim.github.io//posts/aws-network-configuration</guid><pubDate>Mon, 25 May 2020 15:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;aws-네트워크-구성하기&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#aws-%EB%84%A4%ED%8A%B8%EC%9B%8C%ED%81%AC-%EA%B5%AC%EC%84%B1%ED%95%98%EA%B8%B0&quot; aria-label=&quot;aws 네트워크 구성하기 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;AWS 네트워크 구성하기&lt;/h1&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/42b11/network-config.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 55.41666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAALCAYAAAB/Ca1DAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB7klEQVQoz32SXW/TMBSG+///CDfcIQGDalWbtomTOI6dxPlq0jQRYwVpbalgHQheTrx0MKRycWTr2Od5z9doU3hY+D5mrouJbZtzGQSIq8pYUtdQRYEg0U++f02v15g6Dq4XFkZV5sPyXMw5hx0KBDoFkxK6XpuPadPAIcGr9+8QpinytjP+s/WCCZ2B8sCDOUZR3VDQBnnXIkgzvJlNERYZ/CQ2xlNNgh5eXV2b7KcuA1MSXCfmPSARkyUxdNNilPxVmkhyvJi8xCS0EOYZRK4hy4wACm/HSyyFgOUz+DqmtxQ8i+EogXhF8QNn1IPOwDAjSKERVSsqozZBoqRAlWD82sE84PDTiN5LqqKgmAosCh+BA+cZUFDJPKNSdAhbMPCchtNo2MqBKyxYkmFsjxGWCs3H1oizSCK6CKQMPR0hXZf4dNPi4bDF/bcDpJaQNLCszrHtKtzvb/H9x4nAqQFezLAv2U0kalL/RaDTbY395wJc0CbMI1S1wM99h9O2wfHrgYDZ/4HnDOubDXb7O3TdBnfHAxT1NK5qlB9a7L8c0LYNdscd1Co3PYxWq8s9ZHEIJ+ZYUN+m4YzuHolIM1EWB1hGbPD7xm8yHOJ7ewbslbjWww4mT7vm6z/3fgf7NXo8pfknaeIyz6HKEr8BGc4C8S0EI0cAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/8ac56/network-config.webp 240w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/d3be9/network-config.webp 480w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/e46b2/network-config.webp 960w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/f992d/network-config.webp 1440w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/882b9/network-config.webp 1920w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/42e4d/network-config.webp 2364w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/8ff5a/network-config.png 240w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/e85cb/network-config.png 480w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/d9199/network-config.png 960w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/07a9c/network-config.png 1440w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/29114/network-config.png 1920w,
+/static/6c9feff39bf2bacb9317ab0098f2e0f9/42b11/network-config.png 2364w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/6c9feff39bf2bacb9317ab0098f2e0f9/d9199/network-config.png&quot;
+          alt=&quot;network-config&quot;
+          title=&quot;network-config&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;기본적인 네트워크 구성 순서는 크게 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;VPC 생성&lt;/li&gt;
+&lt;li&gt;서브넷 생성&lt;/li&gt;
+&lt;li&gt;인터넷 게이트웨이 생성&lt;/li&gt;
+&lt;li&gt;인터넷 게이트웨이 VPC 연결&lt;/li&gt;
+&lt;li&gt;라우팅 테이블 구성&lt;/li&gt;
+&lt;li&gt;보안 그룹 생성&lt;/li&gt;
+&lt;li&gt;웹 서버 1 생성&lt;/li&gt;
+&lt;li&gt;웹 서버 1의 AMI 생성&lt;/li&gt;
+&lt;li&gt;AMI 기반 웹 서버 2 생성&lt;/li&gt;
+&lt;li&gt;로드밸런서 구성&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[데이터 암호화 및 복호화]]></title><description><![CDATA[데이터 암호화, 복호화]]></description><link>https://dansjkim.github.io//posts/encryption-decryption</link><guid isPermaLink="false">https://dansjkim.github.io//posts/encryption-decryption</guid><pubDate>Tue, 12 May 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;암호란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8%EB%9E%80&quot; aria-label=&quot;암호란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호란?&lt;/h1&gt;
+&lt;h2 id=&quot;cryptography&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#cryptography&quot; aria-label=&quot;cryptography permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Cryptography&lt;/h2&gt;
+&lt;p&gt;평문을 암호문으로 변환하거나 암호문을 평문으로 변환하는 기술&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Plaintext&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;해독 가능한 형태의 텍스트&lt;/p&gt;
+&lt;p&gt;ex) (“123456”)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ciphertext&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;해독 불가능한 형태의 텍스트&lt;/p&gt;
+&lt;p&gt;ex(“aBD#fefa$fae!“)&lt;/p&gt;
+&lt;h2 id=&quot;encryptiondecryption&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#encryptiondecryption&quot; aria-label=&quot;encryptiondecryption permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Encryption&amp;#x26;Decryption&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Encryption&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;평문을 암호문으로 변환하는 과정&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Decryption&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;암호문을 평문으로 변환하는 과정&lt;/p&gt;
+&lt;h2 id=&quot;암호화의-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8%ED%99%94%EC%9D%98-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;암호화의 종류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호화의 종류&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;단방향&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;암호화 후 복호화할 수 없다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;양방향&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;암호화와 복호화 모두 가능하다.&lt;/p&gt;
+&lt;p&gt;ex) 사용자 주소, 이메일, 번호 또는 전자서명 같이 재사용성이 있는 정보는 암호화 복호화 모두 이루어져야 한다.&lt;/p&gt;
+&lt;h2 id=&quot;암호-알고리즘&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%94%ED%98%B8-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98&quot; aria-label=&quot;암호 알고리즘 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;암호 알고리즘&lt;/h2&gt;
+&lt;h3 id=&quot;단방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%8B%A8%EB%B0%A9%ED%96%A5&quot; aria-label=&quot;단방향 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;단방향&lt;/h3&gt;
+&lt;p&gt;PBKDF2&lt;/p&gt;
+&lt;p&gt;bcrypt&lt;/p&gt;
+&lt;p&gt;scrypt&lt;/p&gt;
+&lt;h3 id=&quot;양방향&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%96%91%EB%B0%A9%ED%96%A5&quot; aria-label=&quot;양방향 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;양방향&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;대칭형(비밀키 암호) 알고리즘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AES&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;고급 암호화 표준(Advanced Encryption Standard)이라고 불리는 AES 암호 알고리즘은 DES를 대체한 암호 알고리즘이며 암호화와 복호화 과정에서 동일한 키를 사용하는 &lt;strong&gt;대칭 키 알고리즘&lt;/strong&gt;이다.&lt;/p&gt;
+&lt;p&gt;현재 가장 보편적으로 쓰이는 암호화 방식이며 현 미국 표준 방식인 AES.128~256비트 키를 적용할 수 있어 보안성이 뛰어나며 공개된 알고리즘이라 누구나 사용할 수 있디.&lt;/p&gt;
+&lt;p&gt;Rijmen과 Daemen이 개발한 Rijndael 알고리즘이 AES 공모에서 선정되면서 AES로 암호화 표준이 되었다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AES는 SPN(Substituion-Permutation Network)라는 구조를 사용&lt;/strong&gt;한다. &lt;/p&gt;
+&lt;p&gt;SPN구조는 암호화와 복호화 과정이 서로 다르다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Feistel 구조와 SPN 구조의 차이&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Feistel 구조&lt;/strong&gt;는 암복호화 과정에서 &lt;strong&gt;역함수가 필요 없다는 장점&lt;/strong&gt;이 있지만 구현시 스왑(Swap)단계 때문에 &lt;strong&gt;연산량이 많이 소요 되며 암호에 사용되는 라운드 함수를 안전하게 설계해야 한다는 단점&lt;/strong&gt;이 있다. &lt;/p&gt;
+&lt;p&gt;대표적인 암호로는 &lt;strong&gt;DES&lt;/strong&gt;가 있으며 Single DES는 &lt;strong&gt;안전성 문제&lt;/strong&gt;로 현재 사용하고 있지 않다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;SPN 구조&lt;/strong&gt;는 암복호화 과정에서 &lt;strong&gt;역함수가 필요하도록 설계되어야 한다는 단점&lt;/strong&gt;이 있지만 중간에 비트의 이동없이 한번에 암복호화가 가능하기 때문에 &lt;strong&gt;페스탈 구조에 비해 효율적으로 설&lt;/strong&gt;계할 수 있다. 대표적인 암호로는 &lt;strong&gt;AES&lt;/strong&gt;가 있으며 AES는 현재 널리 상용되고 있다.&lt;/p&gt;
+&lt;p&gt;출처: &lt;a href=&quot;https://www.crocus.co.kr/1230&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://www.crocus.co.kr/1230&lt;/a&gt; [Crocus]&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;비대칭형(공개키 암호) 알고리즘&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;RSA&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;공개키 암호시스템의 하나로 암호화뿐만 아니라 전자서명이 가능한 최초의 알고리즘&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[ISMS의 정의]]></title><description><![CDATA[ISMS란?]]></description><link>https://dansjkim.github.io//posts/isms</link><guid isPermaLink="false">https://dansjkim.github.io//posts/isms</guid><pubDate>Tue, 12 May 2020 15:10:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;isms란&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#isms%EB%9E%80&quot; aria-label=&quot;isms란 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ISMS란?&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;ISMS&lt;/strong&gt;란 &lt;strong&gt;정보보호관리체계(Information Security Management System)&lt;/strong&gt;를 의미하며, ISMS 솔루션은 기업이 주요 정보자산을 보호하기 위한 수립, 관리, 운영을 지원해주는 보안 통합 솔루션이다.&lt;/p&gt;
+&lt;p&gt;제3의 인증기관이 객관적, 독립적으로 관리체계를 평가하여, 관련 기준에 대한 적합 여부를 보증한다.&lt;/p&gt;
+&lt;p&gt;기업 및 조직이 보유하고 있는 기업정보, 산업기밀, 개인정보 등의 중요한 정보자산이 안전하고 신뢰성 있게 관리되고 있음을 국가로부터 인증 받는 국가 공인 제도다.&lt;/p&gt;
+&lt;h4 id=&quot;isms인증-의무대상자정보통신망법-제47조-2항&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#isms%EC%9D%B8%EC%A6%9D-%EC%9D%98%EB%AC%B4%EB%8C%80%EC%83%81%EC%9E%90%EC%A0%95%EB%B3%B4%ED%86%B5%EC%8B%A0%EB%A7%9D%EB%B2%95-%EC%A0%9C47%EC%A1%B0-2%ED%95%AD&quot; aria-label=&quot;isms인증 의무대상자정보통신망법 제47조 2항 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ISMS인증 의무대상자(정보통신망법 제47조 2항)&lt;/h4&gt;
+&lt;p&gt;인증 의무대상자 확인 및 책임은 기업(기관)에 있으므로 스스로 의무대상 여부를 확인하여 인증 취득 필요&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 750px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 46.666666666666664%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAAAsSAAALEgHS3X78AAABR0lEQVQoz12RycoCQQyE+/0fYwRHES+ONxUX8KR48AEEUXDf93Ep+QKR+f+Goro7lUo6HYbDoer1utrttrrdrnGz2VSr1fpxv99Xr9f7c+fc6XSM8RgMBgoY5HI5lUolJUlinM/nVSwWbV+tVk1cq9VUqVTsHsRxrEKhoHK5bBxFkRqNhsLpdNJ8PtdqtTJeLpfa7XZ6PB4idj6fdTwetd/vdb1exTocDqbfbDamJ07s9XopkEBgu91aEmYIbrebLpeLCQFnEj6fj8XRU5A97BozJLher80Q3O9369BFMHe+MKBwmqamcz3nkL34DzeDfU+XvGixWPzGNJvN7OkUCgRHo5Emk4nG47FhOp3a7LKGzu/327pjjnTkMUAT4fl8/jqEPQn4CNBkF2b+gYAzDZghQ2ZlGfA0jGAKkeCf5J/H6wCGNILuCwv+mlL+qxrXAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/8ac56/isms.webp 240w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/d3be9/isms.webp 480w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/08b4d/isms.webp 750w&quot;
+          sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/8ff5a/isms.png 240w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/e85cb/isms.png 480w,
+/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png 750w&quot;
+          sizes=&quot;(max-width: 750px) 100vw, 750px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/caa8c1bbdd610deb59f5bf87a9fc8f98/1d69c/isms.png&quot;
+          alt=&quot;isms&quot;
+          title=&quot;isms&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h4 id=&quot;정보보호관리체계-인증-구성-요소&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EB%B3%B4%EB%B3%B4%ED%98%B8%EA%B4%80%EB%A6%AC%EC%B2%B4%EA%B3%84-%EC%9D%B8%EC%A6%9D-%EA%B5%AC%EC%84%B1-%EC%9A%94%EC%86%8C&quot; aria-label=&quot;정보보호관리체계 인증 구성 요소 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정보보호관리체계 인증 구성 요소&lt;/h4&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 753px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 66.25%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAACXBIWXMAAAsSAAALEgHS3X78AAACIElEQVQ4y41TTU/jMBDN//8LPSAOrZAooiqo9II4cOO+Wm3FLpQ2aULSOonz4cRO3/q5eLd7W0sjezzjN28+HByPR1C4uk6hKAqn98YgKiv8OhR4EyV+crfCO9oHa8+FsG8699bjBDhbbasgRA7da+jhiG0hscoEVukBPz4PeLXn0AKegvcQeYG6ac8hEJhBo+0lapWj7oSTti8tQ3WKPAzolHLstdZgLkbVME2JobbB5R66ElaX1tcgULqG0hKpfEdSvCIS31GpDLI5WMYtmrZxQH3fo2kaKNWhKzMMTYE2XKH5+AYtYhgLPvSKDA2SNMQmfMcu2SKKN/jMdtDG1uaIP/X1dXKlqUrsPt6QxSHyLEG8XbuzsYEDOqWfKbI0Q1XVlkWLM4x/Cu4B6bOLE5RSoiglwmiHXptTDQdboyiKEMcx6roG9XOAc6GNS5YlNpsN0jS1TTxgvV4jz/O/XfYg/7tY2zAMHQGOTZZlKG0Qx5CH/X5vIwln8EKd9xQfkCwotBOQO+eWwvuqqhC8vLzg5uYGy+USs9kM8/kcd3d3eHp6wsPDA+7v721nTyMzmUxwcXGBy8tL94Y23lEfjUZ4fHxEwHEgmyRJXCSmQGE6TM3/BPrd3t7i6uoK0+kUi8XCkWDw6+trjMdjPD8/n7pMZ2k75gb3qwHGfi2m6tPlTjuFvj59kmFw+tPmukyFbDyQD+JBz0fGs/Xiy+HH6zfDANtJpOv7IgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/8ac56/isms-cert.webp 240w,
+/static/1efed49d785fd7b7ebc38c499369aa90/d3be9/isms-cert.webp 480w,
+/static/1efed49d785fd7b7ebc38c499369aa90/67c6f/isms-cert.webp 753w&quot;
+          sizes=&quot;(max-width: 753px) 100vw, 753px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/8ff5a/isms-cert.png 240w,
+/static/1efed49d785fd7b7ebc38c499369aa90/e85cb/isms-cert.png 480w,
+/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png 753w&quot;
+          sizes=&quot;(max-width: 753px) 100vw, 753px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/1efed49d785fd7b7ebc38c499369aa90/17a7a/isms-cert.png&quot;
+          alt=&quot;isms-cert&quot;
+          title=&quot;isms-cert&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;13개분야의 104개 항목을 만족시키고 이에 대한 증빙 및 문서를 가지고 있어야 인증이 가능하다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[개인정보의 정의 및 종류]]></title><description><![CDATA[개인 정보]]></description><link>https://dansjkim.github.io//posts/what-is-personal-information</link><guid isPermaLink="false">https://dansjkim.github.io//posts/what-is-personal-information</guid><pubDate>Mon, 11 May 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;개인-정보&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9D%B8-%EC%A0%95%EB%B3%B4&quot; aria-label=&quot;개인 정보 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개인 정보&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;살아있는 개인을 알아볼 수 있는 정보&lt;/li&gt;
+&lt;li&gt;그 정보만으로 특정 개인을 알아볼 수 없더라도, 다른 정보와 쉽게 결합하여 개인을 알아볼 수 있다면 개인정보에 해당된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;개인정보의-종류&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%9C%EC%9D%B8%EC%A0%95%EB%B3%B4%EC%9D%98-%EC%A2%85%EB%A5%98&quot; aria-label=&quot;개인정보의 종류 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;개인정보의 종류&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;개인정보의 유형과 종류&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;유형 1 - 인적사항&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;성명, 주민등록번호, 주소, 본적지, 생년월일, 출생지&lt;/li&gt;
+&lt;li&gt;전화번호 등 연락처&lt;/li&gt;
+&lt;li&gt;이메일, 주소&lt;/li&gt;
+&lt;li&gt;가족관계 및 가족구성원 정보 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 2 - 신체적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;신체정보: 얼굴, 음성, 키, 몸무게, 지문, 홍채, 유전자 정보&lt;/li&gt;
+&lt;li&gt;의료/건강정보: 건강상태, 진료기록, 신체장애, 장애등급, 병력 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 3 - 정신적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;도서 및 비디오 등 대여기록, 잡지구동정보, 물품구매내역, 웹사이트 검색 내역 등&lt;/li&gt;
+&lt;li&gt;사상, 신조, 종교, 가치관, 정당 노조가입여부 및 활동내역 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 4 - 사회적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;학력, 성적, 출성상황, 자격증 보유내역, 상벌기록, 생활기록부 등&lt;/li&gt;
+&lt;li&gt;병역여부, 군번, 계급, 근무부대 등&lt;/li&gt;
+&lt;li&gt;직장, 고용주, 근무처, 근로경력, 상벌기록, 직무평가기록 등&lt;/li&gt;
+&lt;li&gt;전과 범죄기록, 재판 기록, 과태료 납부내역 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 5 - 재산적 정보&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;소득, 신용카드번호, 통장계좌번호, 동산 부동산 보유내역, 저축내역 등&lt;/li&gt;
+&lt;li&gt;신용평가정보, 대출 또는 담보설정 내역, 신용카드 사용내역 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;유형 6 - 기타&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;전화통화내역, 웹사이트 접속내역, 이메일 또는 전화메세지, 기타 GPS 등에 의한 위치정보 등&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;참고 사이트&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.i-privacy.kr/jsp/user4/intro/define1.jsp&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;개인정보보호포털&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://seller.11st.co.kr/tpost/FrontTPostAction.tmall?method=getTPostBoard&amp;#x26;unityBrdNo=43&amp;#x26;sellGroupCode=CM024&amp;#x26;brdInfoNo=101571066&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;판매자 개인정보 팁&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day77]]></title><description><![CDATA[TIL_Day77 | Brandi_Day22 ]]></description><link>https://dansjkim.github.io//posts/til-200413</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200413</guid><pubDate>Mon, 13 Apr 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-77일차--브랜디-기업-협업-19일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-77%EC%9D%BC%EC%B0%A8--%EB%B8%8C%EB%9E%9C%EB%94%94-%EA%B8%B0%EC%97%85-%ED%98%91%EC%97%85-19%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 77일차  브랜디 기업 협업 19일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 77일차 | 브랜디 기업 협업 19일차&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;셀러 리스트&lt;/p&gt;
@@ -2286,30 +2279,7 @@ action 생성함수 action타입 reducer를 한 파일에 몰아놓은 것&lt;/p
 &lt;ul&gt;
 &lt;li&gt;CoinOne사이트 클론&lt;/li&gt;
 &lt;li&gt;React Native 초기 세팅&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] 중간 회고록]]></title><description><![CDATA[위코드 시작부터 1차 프로젝트까지]]></description><link>https://dansjkim.github.io//posts/memories1</link><guid isPermaLink="false">https://dansjkim.github.io//posts/memories1</guid><pubDate>Sun, 08 Mar 2020 16:09:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/logo/title_img1.png&quot;&gt;&lt;/p&gt;
-&lt;h1 id=&quot;위코드에-오기-전&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9C%84%EC%BD%94%EB%93%9C%EC%97%90-%EC%98%A4%EA%B8%B0-%EC%A0%84&quot; aria-label=&quot;위코드에 오기 전 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;위코드에 오기 전&lt;/h1&gt;
-&lt;p&gt;나는 대학에서 컴퓨터 관련 학과를 졸업했지만, 학점을 따기 위한 공부와 개발만을 하고 졸업했기 때문에 내가 주도적으로 무언가를 개발해본 경험이 없었다.&lt;/p&gt;
-&lt;p&gt;이대로 취업을 하면 내가 뭘 하고싶은지 모른 채 수동적으로 회사를 다니게될 것 같아서 부트캠프 학원을 알아봤다.&lt;/p&gt;
-&lt;p&gt;처음엔 위코드가 아닌 다른 학원을 다녔었는데, 그곳에서 무려 1년가까이 다니다가 여러 사정으로 그만두고 위코드를 오게 되었다.&lt;/p&gt;
-&lt;h1 id=&quot;지금까지-내가-느낀-위코드의-장점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80-%EB%82%B4%EA%B0%80-%EB%8A%90%EB%82%80-%EC%9C%84%EC%BD%94%EB%93%9C%EC%9D%98-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;지금까지 내가 느낀 위코드의 장점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;지금까지 내가 느낀 위코드의 장점&lt;/h1&gt;
-&lt;h3 id=&quot;교육-기간&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%90%EC%9C%A1-%EA%B8%B0%EA%B0%84&quot; aria-label=&quot;교육 기간 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;교육 기간&lt;/h3&gt;
-&lt;p&gt;위코드를 다니면서 3개월이라는 짧은 과정이 오히려 장점이라는 생각이 들었다.&lt;/p&gt;
-&lt;p&gt;이전 학원에서는 교육과정이 길어서 스스로 텐션을 유지하지 않으면 중간중간 늘어지기 쉬웠기 때문에 중간에 허비한 시간이 많았다. (물론 꾸준히 텐션을 유지하면서 열심히 하는 사람들도 있다.)&lt;/p&gt;
-&lt;p&gt;그에 반해 위코드는 과정이 짧기 때문에 그 시간 안에 많은것을 얻어가야 한다는 생각을 가지고 학원을 다니게 된다. 실제로 단기간에 많은 성장을 했다고 생각한다.&lt;/p&gt;
-&lt;h3 id=&quot;맞춤-진도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%9E%EC%B6%A4-%EC%A7%84%EB%8F%84&quot; aria-label=&quot;맞춤 진도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;맞춤 진도&lt;/h3&gt;
-&lt;p&gt;기본적으로 커리큘럼은 개발이 처음인 사람도 따라올 수 있도록 구성되어 있다.&lt;/p&gt;
-&lt;p&gt;하지만 위코드에는 전공자, 다른 학원을 다니다가 온 사람, 개발이 완전 처음인 사람 등 다양한 수강생들이 있기 때문에&lt;/p&gt;
-&lt;p&gt;빠르게 과정을 소화하는 수강생들에게는 멘토님이 별도의 과제를 더 내주신다.&lt;/p&gt;
-&lt;p&gt;나는 이전 부트캠프 학원을 오래 다녀서 진도가 빠른 편이었기 때문에 리액트를 배우고 나서 별도로 리액트 네이티브까지 해볼 수 있었다.&lt;/p&gt;
-&lt;h3 id=&quot;환경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD&quot; aria-label=&quot;환경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경&lt;/h3&gt;
-&lt;p&gt;위코드를 다니면서 다시금 공부 환경의 중요성을 깨달았다. 항상 옆에서 방향을 잡아주시는 멘토분들, 위워크의 쾌적한 시설 그리고 열심히하는 동기들이 있어서 내가 의식하지 않아도 자연스럽게 동기부여가 됐다.&lt;/p&gt;
-&lt;h1 id=&quot;1차-프로젝트를-마치며&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1%EC%B0%A8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC-%EB%A7%88%EC%B9%98%EB%A9%B0&quot; aria-label=&quot;1차 프로젝트를 마치며 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1차 프로젝트를 마치며&lt;/h1&gt;
-&lt;p&gt;프로젝트를 통해서 실제 현업 개발 프로세스를 경험해볼 수 있었다.&lt;/p&gt;
-&lt;p&gt;SCRUM 개발 방법론, 팀원간 커뮤니케이션의 중요성, 일정 관리, git을 이용한 협업 등 개발자로서 필요한 역량들을 알게 되었다.&lt;/p&gt;
-&lt;p&gt;그리고 프로젝트를 진행하면서 대화의 중요성을 많이 느꼈다. 우리팀은 서로의 진행상황과 의견을 그때그때 물어보면서 진행했는데,&lt;/p&gt;
-&lt;p&gt;지속적인 커뮤니케이션 덕분에 중간에 설계나 코드를 엎어야 하는 등의 큰 문제가 발생하지 않았고 git을 이용해 팀원의 코드를 병합하는 과정에서도 충돌이나 코드가 꼬이는 문제도 없어서 신속하게 개발을 진행할 수 있었다.&lt;/p&gt;
-&lt;p&gt;프로젝트 발표가 끝나고 멘토님이 ‘개발은 시간투자를 많이 하면 누구나 잘하게 된다.’ 하지만 개발 실력보다 중요한 것은 ‘같이 일하고 싶은 사람이 되는 것’이라고 하셨다.&lt;/p&gt;
-&lt;p&gt;앞으로 위코드의 남은 기간과 취업 이후에도 ‘같이 일하고 싶은 사람’이 될 수 있도록 계속해서 노력 할 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] 1차 프로젝트 후기]]></title><description><![CDATA[1차 그룹 프로젝트를 마치며]]></description><link>https://dansjkim.github.io//posts/1stproject</link><guid isPermaLink="false">https://dansjkim.github.io//posts/1stproject</guid><pubDate>Sun, 08 Mar 2020 16:09:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=U8hu7C2NRjE&amp;feature=youtu.be&quot;&gt; &lt;img src=&quot;https://1000logos.net/wp-content/uploads/2016/10/Baskin-Robbins-symbol.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[Wecode] 1차 프로젝트 후기]]></title><description><![CDATA[1차 그룹 프로젝트를 마치며]]></description><link>https://dansjkim.github.io//posts/1stproject</link><guid isPermaLink="false">https://dansjkim.github.io//posts/1stproject</guid><pubDate>Sun, 08 Mar 2020 16:09:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=U8hu7C2NRjE&amp;feature=youtu.be&quot;&gt; &lt;img src=&quot;https://1000logos.net/wp-content/uploads/2016/10/Baskin-Robbins-symbol.jpg&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;br-sariwon&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#br-sariwon&quot; aria-label=&quot;br sariwon permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;BR-Sariwon&lt;/h1&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/wecode-bootcamp-korea/BR-Sariwon-frontend&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Front-end Github&lt;/a&gt;&lt;br&gt;
 &lt;a href=&quot;https://github.com/wecode-bootcamp-korea/BR-Sariwon-backend&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;Back-end Github&lt;/a&gt;&lt;br&gt;
@@ -2392,7 +2362,30 @@ action 생성함수 action타입 reducer를 한 파일에 몰아놓은 것&lt;/p
 &lt;/li&gt;
 &lt;li&gt;전체적으로 팀원들과 호흡이 잘 맞았던 점이 매우 좋았다. 하지만 개인적으로는 아쉬움이 많이 남는다. 코드의 품질이나 기능 구현에 아쉬움이 많았던 프로젝트였다. 2차 코인원 프로젝트에서는 더 성장한 모습을 보여주자~!!&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- - ## 기록하고 싶은 코드 --&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day39 Code Kata | Group Project_Day12]]></title><description><![CDATA[Code Kata, Group Project Day12]]></description><link>https://dansjkim.github.io//posts/til-200306</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200306</guid><pubDate>Fri, 06 Mar 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-39일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-39%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 39일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 39일차&lt;/h1&gt;
+&lt;!-- - ## 기록하고 싶은 코드 --&gt;</content:encoded></item><item><title><![CDATA[[Wecode] 중간 회고록]]></title><description><![CDATA[위코드 시작부터 1차 프로젝트까지]]></description><link>https://dansjkim.github.io//posts/memories1</link><guid isPermaLink="false">https://dansjkim.github.io//posts/memories1</guid><pubDate>Sun, 08 Mar 2020 16:09:32 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/logo/title_img1.png&quot;&gt;&lt;/p&gt;
+&lt;h1 id=&quot;위코드에-오기-전&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9C%84%EC%BD%94%EB%93%9C%EC%97%90-%EC%98%A4%EA%B8%B0-%EC%A0%84&quot; aria-label=&quot;위코드에 오기 전 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;위코드에 오기 전&lt;/h1&gt;
+&lt;p&gt;나는 대학에서 컴퓨터 관련 학과를 졸업했지만, 학점을 따기 위한 공부와 개발만을 하고 졸업했기 때문에 내가 주도적으로 무언가를 개발해본 경험이 없었다.&lt;/p&gt;
+&lt;p&gt;이대로 취업을 하면 내가 뭘 하고싶은지 모른 채 수동적으로 회사를 다니게될 것 같아서 부트캠프 학원을 알아봤다.&lt;/p&gt;
+&lt;p&gt;처음엔 위코드가 아닌 다른 학원을 다녔었는데, 그곳에서 무려 1년가까이 다니다가 여러 사정으로 그만두고 위코드를 오게 되었다.&lt;/p&gt;
+&lt;h1 id=&quot;지금까지-내가-느낀-위코드의-장점&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A7%80%EA%B8%88%EA%B9%8C%EC%A7%80-%EB%82%B4%EA%B0%80-%EB%8A%90%EB%82%80-%EC%9C%84%EC%BD%94%EB%93%9C%EC%9D%98-%EC%9E%A5%EC%A0%90&quot; aria-label=&quot;지금까지 내가 느낀 위코드의 장점 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;지금까지 내가 느낀 위코드의 장점&lt;/h1&gt;
+&lt;h3 id=&quot;교육-기간&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%90%EC%9C%A1-%EA%B8%B0%EA%B0%84&quot; aria-label=&quot;교육 기간 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;교육 기간&lt;/h3&gt;
+&lt;p&gt;위코드를 다니면서 3개월이라는 짧은 과정이 오히려 장점이라는 생각이 들었다.&lt;/p&gt;
+&lt;p&gt;이전 학원에서는 교육과정이 길어서 스스로 텐션을 유지하지 않으면 중간중간 늘어지기 쉬웠기 때문에 중간에 허비한 시간이 많았다. (물론 꾸준히 텐션을 유지하면서 열심히 하는 사람들도 있다.)&lt;/p&gt;
+&lt;p&gt;그에 반해 위코드는 과정이 짧기 때문에 그 시간 안에 많은것을 얻어가야 한다는 생각을 가지고 학원을 다니게 된다. 실제로 단기간에 많은 성장을 했다고 생각한다.&lt;/p&gt;
+&lt;h3 id=&quot;맞춤-진도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A7%9E%EC%B6%A4-%EC%A7%84%EB%8F%84&quot; aria-label=&quot;맞춤 진도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;맞춤 진도&lt;/h3&gt;
+&lt;p&gt;기본적으로 커리큘럼은 개발이 처음인 사람도 따라올 수 있도록 구성되어 있다.&lt;/p&gt;
+&lt;p&gt;하지만 위코드에는 전공자, 다른 학원을 다니다가 온 사람, 개발이 완전 처음인 사람 등 다양한 수강생들이 있기 때문에&lt;/p&gt;
+&lt;p&gt;빠르게 과정을 소화하는 수강생들에게는 멘토님이 별도의 과제를 더 내주신다.&lt;/p&gt;
+&lt;p&gt;나는 이전 부트캠프 학원을 오래 다녀서 진도가 빠른 편이었기 때문에 리액트를 배우고 나서 별도로 리액트 네이티브까지 해볼 수 있었다.&lt;/p&gt;
+&lt;h3 id=&quot;환경&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%99%98%EA%B2%BD&quot; aria-label=&quot;환경 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;환경&lt;/h3&gt;
+&lt;p&gt;위코드를 다니면서 다시금 공부 환경의 중요성을 깨달았다. 항상 옆에서 방향을 잡아주시는 멘토분들, 위워크의 쾌적한 시설 그리고 열심히하는 동기들이 있어서 내가 의식하지 않아도 자연스럽게 동기부여가 됐다.&lt;/p&gt;
+&lt;h1 id=&quot;1차-프로젝트를-마치며&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#1%EC%B0%A8-%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8%EB%A5%BC-%EB%A7%88%EC%B9%98%EB%A9%B0&quot; aria-label=&quot;1차 프로젝트를 마치며 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;1차 프로젝트를 마치며&lt;/h1&gt;
+&lt;p&gt;프로젝트를 통해서 실제 현업 개발 프로세스를 경험해볼 수 있었다.&lt;/p&gt;
+&lt;p&gt;SCRUM 개발 방법론, 팀원간 커뮤니케이션의 중요성, 일정 관리, git을 이용한 협업 등 개발자로서 필요한 역량들을 알게 되었다.&lt;/p&gt;
+&lt;p&gt;그리고 프로젝트를 진행하면서 대화의 중요성을 많이 느꼈다. 우리팀은 서로의 진행상황과 의견을 그때그때 물어보면서 진행했는데,&lt;/p&gt;
+&lt;p&gt;지속적인 커뮤니케이션 덕분에 중간에 설계나 코드를 엎어야 하는 등의 큰 문제가 발생하지 않았고 git을 이용해 팀원의 코드를 병합하는 과정에서도 충돌이나 코드가 꼬이는 문제도 없어서 신속하게 개발을 진행할 수 있었다.&lt;/p&gt;
+&lt;p&gt;프로젝트 발표가 끝나고 멘토님이 ‘개발은 시간투자를 많이 하면 누구나 잘하게 된다.’ 하지만 개발 실력보다 중요한 것은 ‘같이 일하고 싶은 사람이 되는 것’이라고 하셨다.&lt;/p&gt;
+&lt;p&gt;앞으로 위코드의 남은 기간과 취업 이후에도 ‘같이 일하고 싶은 사람’이 될 수 있도록 계속해서 노력 할 것이다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[Wecode] TIL_Day39 Code Kata | Group Project_Day12]]></title><description><![CDATA[Code Kata, Group Project Day12]]></description><link>https://dansjkim.github.io//posts/til-200306</link><guid isPermaLink="false">https://dansjkim.github.io//posts/til-200306</guid><pubDate>Fri, 06 Mar 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;til-39일차&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#til-39%EC%9D%BC%EC%B0%A8&quot; aria-label=&quot;til 39일차 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;TIL 39일차&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;16:00 | 1st Group Project 작품 발표&lt;/li&gt;
 &lt;li&gt;18:30 | 이력서 1차 세션&lt;/li&gt;
