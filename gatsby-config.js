@@ -204,5 +204,13 @@ module.exports = {
     },
     'gatsby-plugin-flow',
     'gatsby-plugin-optimize-svgs',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://dansjkim.github.io/',
+        sitemap: 'https://dansjkim.github.io/sitemap.xml',
+        policy: [{userAgent: '*', allow: '/'}]
+      }
+    }
   ]
 };
