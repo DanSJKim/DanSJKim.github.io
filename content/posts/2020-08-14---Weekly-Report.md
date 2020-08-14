@@ -25,10 +25,6 @@ socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 
 # Tips
 
-기본적인 내용들도 있지만 사수분이 팁으로 알려주시거나 직접 깨달은것들은 따로 정리해두지 않으면 결국 다 까먹는다는것을 깨달았다..
-
-앞으로 사소한것들이라도 주단위로 기록할 계획이다. 기록하고싶은 코드는 별도 작성 예정
-
 ## General
 
 - UI, API 동시에 구현할 때 UI쪽부터 개발하는게 낫다. DB 값을 바꾸면서 화면의 변경사항을 확인 하고 값이 잘 나타나면 그 구조에 맞춰서 API를 개발하자.
@@ -60,8 +56,6 @@ socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
   **컴포넌트화 해야 하는 덩어리(chunk)를 굳이 세분화해서 나눌 필요는 없다.**
 
   우리는 컴포넌트를 작성할 때 과감하게 큰 chunk 단위로 나눌 필요도 있다.
-
-  [Form Input Bindings - Vue.js
 
 ## Python
 

@@ -1,6 +1,6 @@
 ---
 title: 'MySQL Index'
-date: '2020-08-10T16:09:32.169Z'
+date: '2020-08-11T16:09:32.169Z'
 template: 'post'
 draft: false
 slug: 'mysql-index'
