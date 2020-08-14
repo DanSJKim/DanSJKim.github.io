@@ -1,6 +1,6 @@
 ---
 title: '200810-200814 | 8월 둘째주 Report'
-date: '2020-08-10T16:09:32.169Z'
+date: '2020-08-14T16:09:32.169Z'
 template: 'post'
 draft: false
 slug: '20081014-weekly-report'
