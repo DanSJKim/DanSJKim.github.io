@@ -3,7 +3,7 @@ title: 'Pagination'
 date: '2020-07-05T16:09:32.169Z'
 template: 'post'
 draft: false
-slug: 'tomorrow-coding-test-05'
+slug: 'pagination'
 category: 'algorithm'
 tags:
   - 'dfs'
