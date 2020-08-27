@@ -12,6 +12,7 @@ tags:
 description: '8월 둘째주 정리'
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 
+
 ---
 
 # Weekly
@@ -23,7 +24,7 @@ socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 
 
 
-# Tips
+# Tips 2020-08-14---Weekly-Report
 
 ## General
 
