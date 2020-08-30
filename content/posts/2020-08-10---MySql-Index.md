@@ -1,5 +1,5 @@
 ---
-title: 'MySQL Index'
+title: '[MySQL] Index'
 date: '2020-08-11T16:09:32.169Z'
 template: 'post'
 draft: false

@@ -1,5 +1,5 @@
 ---
-title: '[Database] 실행 계획 - Execution Plan'
+title: '[MySQL] 실행 계획'
 date: '2020-08-20T16:09:32.169Z'
 template: 'post'
 draft: false
@@ -12,7 +12,7 @@ description: '실행 계획의 사용법과 필드의 의미'
 socialImage: 'https://i.kym-cdn.com/entries/icons/facebook/000/019/513/til.jpg'
 ---
 
-# [Database] 실행 계획 - Execution Plan
+# [MySQL] 실행 계획
 ## 옵티마이저
 사용자가 질의한 SQL문에 대해 최적의 실행 방법을 결정하는 역할을 수행한다.
 DBMS에서는 쿼리를 최적으로 실행하기 위해 각 테이블의 데이터가 어떤 분포로 저장돼 있는지 통계 정보를 참조하며, 그러한 기본 데이터를 비교해 최적의 실행 계획을 수립하는 작업이 필요하다. DBMS에서는 **옵티마이저**가 이러한 기능을 담당한다.
