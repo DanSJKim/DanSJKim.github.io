@@ -258,7 +258,7 @@ InnoDB의 모든 페이지 크기는 16KB 고정이다.
 
 두번째 칼럼은 첫번쨰 칼럼에 의존해서 정렬된다.
 
-<img align="left" src="/Users/seungjune/blog/DanSJKim.github.io/static/media/multi-column-index.png" alt="multi-column-index" style="zoom:50%;" />
+<img align="left" src="/Users/seungjune/blog/DanSJKim.github.io/static/media/multi-column-index.png" alt="multi-column-index" style="zoom:50%;" />![multi-column-index](/Users/seungjune/blog/DanSJKim.github.io/static/media/multi-column-index.png)
 
 ## B-Tree 인덱스의 정렬 및 스캔 방향
 
