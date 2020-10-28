@@ -1,5 +1,5 @@
 ---
-title: '버블정렬, 선택정렬, 삽입정렬'
+title: '[알고리즘]버블정렬, 선택정렬, 삽입정렬'
 date: '2020-09-22T16:09:32.169Z'
 template: 'post'
 draft: false
