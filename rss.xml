@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 16 Oct 2020 09:23:14 GMT</lastBuildDate><item><title><![CDATA[[MySQL] EXISTS]]></title><description><![CDATA[EXISTS 쿼리문 이용하기]]></description><link>https://dansjkim.github.io//posts/mysql-exists</link><guid isPermaLink="false">https://dansjkim.github.io//posts/mysql-exists</guid><pubDate>Fri, 16 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exists&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#exists&quot; aria-label=&quot;exists permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXISTS&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 28 Oct 2020 12:53:15 GMT</lastBuildDate><item><title><![CDATA[[MySQL] EXISTS]]></title><description><![CDATA[EXISTS 쿼리문 이용하기]]></description><link>https://dansjkim.github.io//posts/mysql-exists</link><guid isPermaLink="false">https://dansjkim.github.io//posts/mysql-exists</guid><pubDate>Fri, 16 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exists&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#exists&quot; aria-label=&quot;exists permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXISTS&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터의 유무만 조회하고 싶을 땐 EXISTS 쿼리를 이용한다.&lt;/li&gt;
 &lt;li&gt;중간에 하나의 데이터라도 조회되면 쿼리를 종료시키기 때문에 비용을 절약할 수 있다.&lt;/li&gt;
@@ -11,10 +11,445 @@
   	AND C_MD_NO = ?
   LIMIT 1)
   AS isExistingHelpi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;SELECT 1 &amp;#x3C; 데이터 유무만 알면 되므로 의미없는 1을 넣어 준다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[재귀 호출 이해하기]]></title><description><![CDATA[재귀호출 알고리즘 기초]]></description><link>https://dansjkim.github.io//posts/recursive-call-basic</link><guid isPermaLink="false">https://dansjkim.github.io//posts/recursive-call-basic</guid><pubDate>Tue, 29 Sep 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;정렬-sorting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EB%A0%AC-sorting&quot; aria-label=&quot;정렬 sorting permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정렬 (sorting)&lt;/h1&gt;
+&lt;p&gt;SELECT 1 &amp;#x3C; 데이터 유무만 알면 되므로 의미없는 1을 넣어 준다.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[알고리즘]BFS, DFS]]></title><description><![CDATA[BFS 이해하기]]></description><link>https://dansjkim.github.io//posts/bfs</link><guid isPermaLink="false">https://dansjkim.github.io//posts/bfs</guid><pubDate>Sat, 10 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;bfs-breadth-first-search&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bfs-breadth-first-search&quot; aria-label=&quot;bfs breadth first search permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;BFS (Breadth-first search)&lt;/h1&gt;
 &lt;ul&gt;
-&lt;li&gt;어떤 데이터들이 주어졌을 때 이를 정해진 순서대로 나열하는 것&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[버블정렬, 선택정렬, 삽입정렬]]></title><description><![CDATA[기본 정렬 알고리즘]]></description><link>https://dansjkim.github.io//posts/basic-sort</link><guid isPermaLink="false">https://dansjkim.github.io//posts/basic-sort</guid><pubDate>Tue, 22 Sep 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;정렬-sorting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EB%A0%AC-sorting&quot; aria-label=&quot;정렬 sorting permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정렬 (sorting)&lt;/h1&gt;
+&lt;li&gt;대표적인 그래프 &lt;strong&gt;탐색&lt;/strong&gt; 알고리즘&lt;/li&gt;
+&lt;li&gt;정점들과 같은 레벨에 있는 노드들을 먼저 탐색하는 방식&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;BFS 방식: A - B - C - D - G - H - I - E - F - J&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;한 단계씩 내려가면서, 해당 노드와 같은 레벨에 있는 노드들 (형제 노드들)을 먼저 순회&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;DFS 방식: A - B - D - E - F - C - G - H - I - J&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;한 노드의 자식을 타고 끝까지 순회한 후, 다시 돌아와서 다른 형제들의 자식을 타고 내려가며 순회&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 908px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/f89b486130d66a43ebfe8758ff3343c9/a2b88/BFSDFS.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 58.333333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABcSAAAXEgFnn9JSAAACPklEQVQoz21Ta3eaQBT0//+Z9kOT9KRNq0maNtGqOVEjkIVFHstDHgFRENjpAtbE095zlsfdvcPMvUOPAyW64Ns0w5PiIYiyLsH56Trk2qhraGYIxYia7HGvJy4d4Dbjnuniww3BUg8ONfwAfAreROF5GAwJLu+UY64DbBjWFXLGuPlCsXFcWIqGbbo5YYl37HiawLMchI4PfynDXcf/As5lxvtDrWEKSbJwPaL/lYyqhEsMfBmt4FILaRDj6ucLnKAj0MOhh5OlzR8eZNSvMeaqj29jHXlZnTCrm3u4xsoKcDNZIaAmfMvD1W8dxArfAA0Wwh4/8orZYKoBbUnEUqEsCOJ014E2gEnSyjT815ZpMFtAnc6hKiuozwSGHaInqJYf+zJMO+KJKD4bSDjrL3Hx9QmfB0tMJQ9VVbegZZahacvdjIEXBQbfH/FpIONcnLu4lnA7tdAr9lUp5EI1fM73e0hzCnlBQRUTsubB9lP8jTIIoOo+RlOCIk1hqRaI/YoXM4Iim5A0t5Osaza0XyOujefImNP2CZsEJrURvZcchfDDBHQmgYxniKLN8WOpJTB0t5N8/oOA0DUfiOZOn1nbnyrPcSvehwtH+LGTnAvv9e8JJrKHheLi8p4izYp2T6ZikGLyvbwoS82OESY7Lulr6Cxup7vJi/bZDd78CF7D8pK2DWydYkE8JNkOebFHlOxABc7RNnG65TpbiwIxcT+GZvnY5cU72xx8KGJflmjOMmFo0w2xcgIU++6H+wPV3ohPT4AMHgAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/f89b486130d66a43ebfe8758ff3343c9/8ac56/BFSDFS.webp 240w,
+/static/f89b486130d66a43ebfe8758ff3343c9/d3be9/BFSDFS.webp 480w,
+/static/f89b486130d66a43ebfe8758ff3343c9/1f8a9/BFSDFS.webp 908w&quot;
+          sizes=&quot;(max-width: 908px) 100vw, 908px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/f89b486130d66a43ebfe8758ff3343c9/8ff5a/BFSDFS.png 240w,
+/static/f89b486130d66a43ebfe8758ff3343c9/e85cb/BFSDFS.png 480w,
+/static/f89b486130d66a43ebfe8758ff3343c9/a2b88/BFSDFS.png 908w&quot;
+          sizes=&quot;(max-width: 908px) 100vw, 908px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/f89b486130d66a43ebfe8758ff3343c9/a2b88/BFSDFS.png&quot;
+          alt=&quot;BFSDFS&quot;
+          title=&quot;BFSDFS&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;파이썬으로-그래프를-표현하는-법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9C%BC%EB%A1%9C-%EA%B7%B8%EB%9E%98%ED%94%84%EB%A5%BC-%ED%91%9C%ED%98%84%ED%95%98%EB%8A%94-%EB%B2%95&quot; aria-label=&quot;파이썬으로 그래프를 표현하는 법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;파이썬으로 그래프를 표현하는 법&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 960px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/1766175a3468085c27dce6cd7c91370c/cec12/bfsgraph.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 42.91666666666667%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAJCAYAAAAywQxIAAAACXBIWXMAABcSAAAXEgFnn9JSAAAB30lEQVQoz1WSfXOaQBDG+f7fqOo0JrVJWmvVZNQkIiggx93xDnIIeE/vsGZaZnae2z92+T27awCoO1GLxRsRHiuEyoWUUqkUbdeJyXwt7qYr8dsMVFAx3zGxsLgYPr2I0fOrWNqhytnf4MJA16HhHNOXPawDw7/f5dKC2A/wtiPwkIJQjihOQHnYa5ykyIsTylOFNCsg6jMMkeZYvtqyZKH0TFeaNpWql4KE7Nqz5Id7GeyGMuJEUsokY1QS35dZlsksTa+aXbUWQhpRVmHw/V0WYYytE+LrzP4kbNsz2P4eZDcEDY44+gSMMfi+D65cBUGAPM+RpmkfVVXBMN/2qA6OZA7Bh3pvNzZM00PdXqAIEdhjHLcDBMSF47h9YZIou3EMRdXnWnV+Op1gjH5aUB7l0+KAwcMGd5MNxj8sHHmhGDtE7gSRM0YcUVBFpyl0FIWamRAoy/Izb5oGxnplIXE8mRwDhAcfBYvgkgjnpsOla0A14ccXhJwoixSFsqiLNZlWTXfLe8vTmYnV0pS/5pY6IIG2KPE4s0DjSq25Rex+Q+KOwRmBWkpfqO3p2Wm6m+rGdV3D2HoJeFbLdye+noryv7Y4klyos2nAncd+MSEP1CJCNb/4vxnq9+0nuvEfLiOgYhA4ShYAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/1766175a3468085c27dce6cd7c91370c/8ac56/bfsgraph.webp 240w,
+/static/1766175a3468085c27dce6cd7c91370c/d3be9/bfsgraph.webp 480w,
+/static/1766175a3468085c27dce6cd7c91370c/e46b2/bfsgraph.webp 960w,
+/static/1766175a3468085c27dce6cd7c91370c/ffd55/bfsgraph.webp 1187w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/1766175a3468085c27dce6cd7c91370c/8ff5a/bfsgraph.png 240w,
+/static/1766175a3468085c27dce6cd7c91370c/e85cb/bfsgraph.png 480w,
+/static/1766175a3468085c27dce6cd7c91370c/d9199/bfsgraph.png 960w,
+/static/1766175a3468085c27dce6cd7c91370c/cec12/bfsgraph.png 1187w&quot;
+          sizes=&quot;(max-width: 960px) 100vw, 960px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/1766175a3468085c27dce6cd7c91370c/d9199/bfsgraph.png&quot;
+          alt=&quot;bfsgraph&quot;
+          title=&quot;bfsgraph&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3 id=&quot;bfs-알고리즘-구현&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#bfs-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EA%B5%AC%ED%98%84&quot; aria-label=&quot;bfs 알고리즘 구현 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;BFS 알고리즘 구현&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;두개의 자료구조 큐를 활용한다!&lt;/li&gt;
+&lt;li&gt;need_visit, visited 두개의 큐를 생성&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 800px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/e158a404f448c7232befe7d8f83b5369/5a190/bfsqueue.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 50.83333333333333%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAKCAYAAAC0VX7mAAAACXBIWXMAABcSAAAXEgFnn9JSAAACNklEQVQoz2WQy3PSUBjF+ZedqW7VjpuOj0V9rOuo48JWq7QjRQIpJC0CLa9qp0Ba4CbhmUCSBgoJ9/hxcbSOmTnzOzeLc8+5kTAMXc4Xi9l8Hmwly8HG51ywsZsTfBLNB89I996pwZ3XmWDtjSL83bd/ufJKsEZc384GEc65D/qCMMR7pYjN2DFexbN4eXBMOsIL4vPYETa/qngcVXB/W8b6ThqPPil48EHGw53DlT5m8DSqIjKZTvyb2RQ3sxnfzRb4lqRyucq4VGI8WenxRMngqapJZ53HThjfLzAezbX5Xp7xvaXPr/wX+hcvMh4pXRb8XE1B1zb4ebuEckPGvJ/B3Cph5hkIpmNgESKgS0MSeIjFnBhMwecTLGY+kURc+shp47t/dC6jY+vc1E/RaCRRqcnQtBS6jRgsIw+rc4aBUcbQrGDcP4M9aGLsOHAc91+6LiJFLednL9LoWDq3zQKYlsBpXUX9Mo1hMwG7LWHMJPS0GOxWAlbrABZTMepW4bm2CHFv6VZDg/9oVXBSO4TNZApKoqvFhR+2Uhg0kxjpy0u+YdT7Cd+fwPNWIZ7n/aFomKsrMC3GdXaCWkNClUIvNVk0HLEUxu0U+lfS73AJln5MoWdwHVvMdd3lbGfVUEyuZcQbNlkRF/R2/baMAYUMmxJMate8SlJgnKYTtX3YnYpo53nO/w3LVwU/r6li8tjMi0nLuTY1G1FAl+bplgG7X4cz1OBZGtxRF/7kBtfX1yLkNn8BMPLBH0d2CHQAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/e158a404f448c7232befe7d8f83b5369/8ac56/bfsqueue.webp 240w,
+/static/e158a404f448c7232befe7d8f83b5369/d3be9/bfsqueue.webp 480w,
+/static/e158a404f448c7232befe7d8f83b5369/d00b9/bfsqueue.webp 800w&quot;
+          sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/e158a404f448c7232befe7d8f83b5369/8ff5a/bfsqueue.png 240w,
+/static/e158a404f448c7232befe7d8f83b5369/e85cb/bfsqueue.png 480w,
+/static/e158a404f448c7232befe7d8f83b5369/5a190/bfsqueue.png 800w&quot;
+          sizes=&quot;(max-width: 800px) 100vw, 800px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/e158a404f448c7232befe7d8f83b5369/5a190/bfsqueue.png&quot;
+          alt=&quot;bfsqueue&quot;
+          title=&quot;bfsqueue&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;파이썬에서는 다음과 같이 간단하게 구현할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;bfs&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;graph&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; start_node&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    visited &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    need_visit &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    need_visit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;start_node&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;while&lt;/span&gt; need_visit&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        node &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; need_visit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;pop&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; node &lt;span class=&quot;token keyword&quot;&gt;not&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; visited&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            visited&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+            need_visit&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;extend&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;graph&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;node&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; visited&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;bfs&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;graph&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;시간-복잡도&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%8B%9C%EA%B0%84-%EB%B3%B5%EC%9E%A1%EB%8F%84&quot; aria-label=&quot;시간 복잡도 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;시간 복잡도&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;노드 수 : V&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;간선 수 : E&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;위 코드에서 while need_visit은 V+E 번 만큼 코드를 수행한다. (총 19번)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;시간 복잡도 : O(V+E)&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[MySQL] 쿼리 최적화]]></title><description><![CDATA[쿼리 최적화 알아보기]]></description><link>https://dansjkim.github.io//posts/quick-sort</link><guid isPermaLink="false">https://dansjkim.github.io//posts/quick-sort</guid><pubDate>Mon, 05 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;쿼리-최적화&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%BF%BC%EB%A6%AC-%EC%B5%9C%EC%A0%81%ED%99%94&quot; aria-label=&quot;쿼리 최적화 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;쿼리 최적화&lt;/h1&gt;
+&lt;p&gt;애플리케이션에서 데이터를 저장, 조회하기 위해 데이터베이스와 통신할 때 데이터베이스 서버로 전달되는 것은 SQL 뿐이다. SQL은 &lt;strong&gt;어떠한(What)&lt;/strong&gt; 데이터를 요청하기 위한 언어지, &lt;strong&gt;어떻게(How)&lt;/strong&gt; 데이터를 읽을지 표현하는 언어는 아니므로 C, 자바와 같은 언어와 비교했을 때 상당히 제한적으로 느껴질 수 있다.&lt;/p&gt;
+&lt;p&gt;하지만 쿼리가 빠르게 수행되게 하려면 쿼리가 어떻게 데이터를 가져올 지 예측할 수 있어야 한다.&lt;/p&gt;
+&lt;p&gt;그래서 SQL을 작성하는 방법과 규칙은 물론, 내부적인 처리 방식&lt;strong&gt;(옵티마이저)&lt;/strong&gt; 에 어느정도 지식이 필요하다.&lt;/p&gt;
+&lt;p&gt;애플리케이션 코드를 튜닝해서 성능을 2배 개선하는 것은 쉽지 않은 일이지만, DBMS에서 몇십 배 몇백 배 성능 향상은 상당히 흔한 일이다.&lt;/p&gt;
+&lt;p&gt;SQL 처리에서 “어떻게(How)” 를 이해하고 쿼리를 작성하는 것이 그만큼 중요하다는 의미다.&lt;/p&gt;
+&lt;h3 id=&quot;select-시-꼭-필요한-컬럼만-불러-온다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#select-%EC%8B%9C-%EA%BC%AD-%ED%95%84%EC%9A%94%ED%95%9C-%EC%BB%AC%EB%9F%BC%EB%A7%8C-%EB%B6%88%EB%9F%AC-%EC%98%A8%EB%8B%A4&quot; aria-label=&quot;select 시 꼭 필요한 컬럼만 불러 온다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SELECT 시 꼭 필요한 컬럼만 불러 온다.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- X
+SELECT * FROM movie; 
+-- O
+SELECT id FROM movie;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;많은 필드 값을 불러올 수록 데이터베이스는 더 많은 로드를 부담하기 때문에 꼭 필요한 컬럼만 불러오는 것이 좋다.&lt;/p&gt;
+&lt;h3 id=&quot;조건-부여-시-가급적이면-기존-db-값에-별도의-연산을-걸지-않는다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A1%B0%EA%B1%B4-%EB%B6%80%EC%97%AC-%EC%8B%9C-%EA%B0%80%EA%B8%89%EC%A0%81%EC%9D%B4%EB%A9%B4-%EA%B8%B0%EC%A1%B4-db-%EA%B0%92%EC%97%90-%EB%B3%84%EB%8F%84%EC%9D%98-%EC%97%B0%EC%82%B0%EC%9D%84-%EA%B1%B8%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4&quot; aria-label=&quot;조건 부여 시 가급적이면 기존 db 값에 별도의 연산을 걸지 않는다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;조건 부여 시, 가급적이면 기존 DB 값에 별도의 연산을 걸지 않는다.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- X
+SELECT m.id, ANY_VALUE(m.title) title, COUNT(r.id) r_count 
+FROM movie m 
+INNER JOIN rating r 
+ON m.id = r.movie_id 
+WHERE FLOOR(r.value/2) = 2 
+GROUP BY m.id;
+-- O
+SELECT m.id, ANY_VALUE(m.title) title, COUNT(r.id) r_count 
+FROM movie m 
+INNER JOIN rating r 
+ON m.id = r.movie_id 
+WHERE r.value BETWEEN 4 AND 5 
+GROUP BY m.id;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;상단의 쿼리는 Full Table Scan을 하면서 모든 셀을 탐색하고 수식을 건 뒤에 조건 충족 여부를 판단해야 한다.&lt;/p&gt;
+&lt;h3 id=&quot;like사용-시-와일드카드-문자열을-string-앞부분에는-배치하지-않는-것이-좋다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#like%EC%82%AC%EC%9A%A9-%EC%8B%9C-%EC%99%80%EC%9D%BC%EB%93%9C%EC%B9%B4%EB%93%9C-%EB%AC%B8%EC%9E%90%EC%97%B4%EC%9D%84-string-%EC%95%9E%EB%B6%80%EB%B6%84%EC%97%90%EB%8A%94-%EB%B0%B0%EC%B9%98%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%A2%8B%EB%8B%A4&quot; aria-label=&quot;like사용 시 와일드카드 문자열을 string 앞부분에는 배치하지 않는 것이 좋다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LIKE사용 시 와일드카드 문자열(%)을 String 앞부분에는 배치하지 않는 것이 좋다.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- Inefficient
+SELECT g.value genre, COUNT(r.movie_id) r_cnt 
+FROM rating r 
+INNER JOIN genre g 
+ON r.movie_id = g.movie_id 
+WHERE g.value LIKE &amp;quot;%Comedy&amp;quot;  
+GROUP BY g.value;
+-- Improved(1): value IN (...)
+SELECT g.value genre, COUNT(r.movie_id) r_cnt 
+FROM rating r 
+INNER JOIN genre g 
+ON r.movie_id = g.movie_id 
+WHERE g.value IN (&amp;quot;Romantic Comedy&amp;quot;, &amp;quot;Comedy&amp;quot;) 
+GROUP BY g.value;
+-- Improved(2): value = &amp;quot;...&amp;quot;
+SELECT g.value genre, COUNT(r.movie_id) r_cnt 
+FROM rating r 
+INNER JOIN genre g 
+ON r.movie_id = g.movie_id 
+WHERE g.value = &amp;quot;Romantic Comedy&amp;quot; OR g.value = &amp;quot;Comedy&amp;quot;
+GROUP BY g.value;
+-- Improved(3): value LIKE &amp;quot;...%&amp;quot;
+-- 모든 문자열을 탐색할 필요가 없어, 가장 좋은 성능을 내었습니다
+SELECT g.value genre, COUNT(r.movie_id) r_cnt 
+FROM rating r 
+INNER JOIN genre g 
+ON r.movie_id = g.movie_id 
+WHERE g.value LIKE &amp;quot;Romantic%&amp;quot; OR g.value LIKE &amp;quot;Comed%&amp;quot;
+GROUP BY g.value;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;이전 예시와 마찬가지로 &lt;code class=&quot;language-text&quot;&gt;value LIKE &amp;quot;%...&amp;quot;&lt;/code&gt; 는 Full Table Scan으로 조건 충족 여부를 판단해야 한다.&lt;/p&gt;
+&lt;h3 id=&quot;select-distinct-union-distinct와-같이-중복-값을-제거하는-연산은-최대한-사용하지-않아야-한다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#select-distinct-union-distinct%EC%99%80-%EA%B0%99%EC%9D%B4-%EC%A4%91%EB%B3%B5-%EA%B0%92%EC%9D%84-%EC%A0%9C%EA%B1%B0%ED%95%98%EB%8A%94-%EC%97%B0%EC%82%B0%EC%9D%80-%EC%B5%9C%EB%8C%80%ED%95%9C-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EC%95%84%EC%95%BC-%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;select distinct union distinct와 같이 중복 값을 제거하는 연산은 최대한 사용하지 않아야 한다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;SELECT DISTINCT, UNION DISTINCT와 같이 중복 값을 제거하는 연산은 최대한 사용하지 않아야 한다.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- Inefficient
+SELECT DISTINCT m.id, title 
+FROM movie m  
+INNER JOIN genre g 
+ON m.id = g.movie_id;
+-- Improved
+SELECT m.id, title 
+FROM movie m  
+WHERE EXISTS (SELECT &amp;#39;X&amp;#39; FROM rating r WHERE m.id = r.movie_id);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;같은-내용의-조건이라면-group-by-연산-시에는-가급적-having보다는-where-절을-사용하는-것이-좋다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B0%99%EC%9D%80-%EB%82%B4%EC%9A%A9%EC%9D%98-%EC%A1%B0%EA%B1%B4%EC%9D%B4%EB%9D%BC%EB%A9%B4-group-by-%EC%97%B0%EC%82%B0-%EC%8B%9C%EC%97%90%EB%8A%94-%EA%B0%80%EA%B8%89%EC%A0%81-having%EB%B3%B4%EB%8B%A4%EB%8A%94-where-%EC%A0%88%EC%9D%84-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%A2%8B%EB%8B%A4&quot; aria-label=&quot;같은 내용의 조건이라면 group by 연산 시에는 가급적 having보다는 where 절을 사용하는 것이 좋다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;같은 내용의 조건이라면, GROUP BY 연산 시에는 가급적 HAVING보다는 WHERE 절을 사용하는 것이 좋다.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- Inefficient
+SELECT m.id, COUNT(r.id) AS rating_cnt, AVG(r.value) AS avg_rating 
+FROM movie m  
+INNER JOIN rating r 
+ON m.id = r.movie_id 
+GROUP BY id 
+HAVING m.id &amp;gt; 1000;
+-- Improved
+SELECT m.id, COUNT(r.id) AS rating_cnt, AVG(r.value) AS avg_rating 
+FROM movie m  
+INNER JOIN rating r 
+ON m.id = r.movie_id 
+WHERE m.id &amp;gt; 1000
+GROUP BY id ;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;3개-이상의-테이블을-inner-join-할-때는-크기가-가장-큰-테이블을-from-절에-배치하고-inner-join-절에는-남은-테이블을-작은-순서대로-배치하는-것이-좋다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#3%EA%B0%9C-%EC%9D%B4%EC%83%81%EC%9D%98-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-inner-join-%ED%95%A0-%EB%95%8C%EB%8A%94-%ED%81%AC%EA%B8%B0%EA%B0%80-%EA%B0%80%EC%9E%A5-%ED%81%B0-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-from-%EC%A0%88%EC%97%90-%EB%B0%B0%EC%B9%98%ED%95%98%EA%B3%A0-inner-join-%EC%A0%88%EC%97%90%EB%8A%94-%EB%82%A8%EC%9D%80-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%EC%9E%91%EC%9D%80-%EC%88%9C%EC%84%9C%EB%8C%80%EB%A1%9C-%EB%B0%B0%EC%B9%98%ED%95%98%EB%8A%94-%EA%B2%83%EC%9D%B4-%EC%A2%8B%EB%8B%A4&quot; aria-label=&quot;3개 이상의 테이블을 inner join 할 때는 크기가 가장 큰 테이블을 from 절에 배치하고 inner join 절에는 남은 테이블을 작은 순서대로 배치하는 것이 좋다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;3개 이상의 테이블을 INNER JOIN 할 때는, 크기가 가장 큰 테이블을 FROM 절에 배치하고, INNER JOIN 절에는 남은 테이블을 작은 순서대로 배치하는 것이 좋다.&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;mysql&quot;&gt;&lt;pre class=&quot;language-mysql&quot;&gt;&lt;code class=&quot;language-mysql&quot;&gt;-- Query (A)
+SELECT m.title, r.value rating, g.value genre 
+FROM rating r 
+INNER JOIN genre g 
+ON g.movie_id = r.movie_id  
+INNER JOIN movie m 
+ON m.id = r.movie_id;
+-- Query (B)
+SELECT m.title, r.value rating, g.value genre 
+FROM rating r 
+INNER JOIN movie m
+ON r.movie_id = m.id 
+INNER JOIN genre g 
+ON r.movie_id = g.movie_id;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;자주-사용하는-데이터의-형식에-대해서는-미리-전처리된-테이블을-따로-보관관리하는-것도-좋다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%90%EC%A3%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%9D%98-%ED%98%95%EC%8B%9D%EC%97%90-%EB%8C%80%ED%95%B4%EC%84%9C%EB%8A%94-%EB%AF%B8%EB%A6%AC-%EC%A0%84%EC%B2%98%EB%A6%AC%EB%90%9C-%ED%85%8C%EC%9D%B4%EB%B8%94%EC%9D%84-%EB%94%B0%EB%A1%9C-%EB%B3%B4%EA%B4%80%EA%B4%80%EB%A6%AC%ED%95%98%EB%8A%94-%EA%B2%83%EB%8F%84-%EC%A2%8B%EB%8B%A4&quot; aria-label=&quot;자주 사용하는 데이터의 형식에 대해서는 미리 전처리된 테이블을 따로 보관관리하는 것도 좋다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;자주 사용하는 데이터의 형식에 대해서는 미리 전처리된 테이블을 따로 보관/관리하는 것도 좋다.&lt;/h3&gt;
+&lt;h3 id=&quot;order-by는-연산-중간에-사용하지-않는다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#order-by%EB%8A%94-%EC%97%B0%EC%82%B0-%EC%A4%91%EA%B0%84%EC%97%90-%EC%82%AC%EC%9A%A9%ED%95%98%EC%A7%80-%EC%95%8A%EB%8A%94%EB%8B%A4&quot; aria-label=&quot;order by는 연산 중간에 사용하지 않는다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;ORDER BY는 연산 중간에 사용하지 않는다.&lt;/h3&gt;
+&lt;h3 id=&quot;limit를-활용한다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#limit%EB%A5%BC-%ED%99%9C%EC%9A%A9%ED%95%9C%EB%8B%A4&quot; aria-label=&quot;limit를 활용한다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;LIMIT를 활용한다.&lt;/h3&gt;
+&lt;p&gt;참고: &lt;a href=&quot;https://medium.com/watcha/%EC%BF%BC%EB%A6%AC-%EC%B5%9C%EC%A0%81%ED%99%94-%EC%B2%AB%EA%B1%B8%EC%9D%8C-%EB%B3%B4%EB%8B%A4-%EB%B9%A0%EB%A5%B8-%EC%BF%BC%EB%A6%AC%EB%A5%BC-%EC%9C%84%ED%95%9C-7%EA%B0%80%EC%A7%80-%EC%B2%B4%ED%81%AC-%EB%A6%AC%EC%8A%A4%ED%8A%B8-bafec9d2c073&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;링크&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[[알고리즘]퀵 정렬]]></title><description><![CDATA[퀵 정렬 이해 하기]]></description><link>https://dansjkim.github.io//posts/quick-sort</link><guid isPermaLink="false">https://dansjkim.github.io//posts/quick-sort</guid><pubDate>Fri, 02 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;퀵-정렬&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%ED%80%B5-%EC%A0%95%EB%A0%AC&quot; aria-label=&quot;퀵 정렬 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;퀵 정렬&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;분할 정복 방법을 통해 리스트를 정렬한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;구현-방법&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B5%AC%ED%98%84-%EB%B0%A9%EB%B2%95&quot; aria-label=&quot;구현 방법 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;구현 방법&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;리스트 개수가 한개면 해당 리스트를 그대로 리턴 한다.&lt;/li&gt;
+&lt;li&gt;그렇지 않으면, 리스트의 맨 앞 원소를 pivot으로 지정한다.&lt;/li&gt;
+&lt;li&gt;left, right 리스트 변수를 만든다.&lt;/li&gt;
+&lt;li&gt;맨 앞의 데이터를 제외한 나머지 데이터를 pivot과 비교한다.&lt;/li&gt;
+&lt;li&gt;pivot보다 작으면 left 리스트에 원소를 저장한다.&lt;/li&gt;
+&lt;li&gt;pivot보다 크거나 같으면 right 리스트에 원소를 저장한다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;분할된 두 개의 리스트에 대해 재귀적으로 이 과정을 반복한다.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;return quickSort(left) + [pivot] + quickSort(right)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;qsort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; data
+    
+    left&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; right &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    pivot &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; index &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; pivot &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            left&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+            right&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;append&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;index&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; qsort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;left&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;pivot&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; qsort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;right&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; random
+
+data_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; random&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sample&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+qsort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data_list&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;파이써닉하게 구현하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;qsort&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; data
+    
+    pivot &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+
+    left &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; item &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; item &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; pivot &lt;span class=&quot;token operator&quot;&gt;&gt;&lt;/span&gt; item &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    right &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt; item &lt;span class=&quot;token keyword&quot;&gt;for&lt;/span&gt; item &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; pivot &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; item &lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; qsort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;left&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;pivot&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; qsort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;right&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; random
+
+data_list &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; random&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sample&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+qsort&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data_list&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2 id=&quot;알고리즘-분석&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%B6%84%EC%84%9D&quot; aria-label=&quot;알고리즘 분석 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;알고리즘 분석&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;시간복잡도는 O(n log n)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;pivot 왼쪽 오른쪽으로 1/2씩 나눠진다고 한다면 log n 만큼의 단계가 생성 된다.&lt;/li&gt;
+&lt;li&gt;각 단계 별로 n 만큼 피벗과 비교한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;최악의 경우 O(n2)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;맨 처음 pivot이 가장 크거나 가장 작은 경우 모든 데이터를 비교하는 상황이 나온다.&lt;/li&gt;
+&lt;li&gt;독특한 경우이기 때문에 일반적으로 n log n 으로 표기한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[[알고리즘]재귀 용법]]></title><description><![CDATA[재귀 호출 이해 하기]]></description><link>https://dansjkim.github.io//posts/recursive-call-basic</link><guid isPermaLink="false">https://dansjkim.github.io//posts/recursive-call-basic</guid><pubDate>Tue, 29 Sep 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;재귀-용법-recursive-call-재귀-호출&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9E%AC%EA%B7%80-%EC%9A%A9%EB%B2%95-recursive-call-%EC%9E%AC%EA%B7%80-%ED%98%B8%EC%B6%9C&quot; aria-label=&quot;재귀 용법 recursive call 재귀 호출 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;재귀 용법 (recursive call, 재귀 호출)&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;함수 안에서 동일한 함수를 호출하는 형태&lt;/li&gt;
+&lt;li&gt;여러 알고리즘에 사용되므로, 익숙해져야 한다.&lt;/li&gt;
+&lt;li&gt;재귀함수는 내부적으로 스택처럼 관리된다.&lt;/li&gt;
+&lt;li&gt;파이썬에서 재귀함수의 깊이는 1000회 이하가 되어야 한다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&quot;https://www.globalsoftwaresupport.com/wp-content/uploads/2019/03/ezgif.com-crop-2.gif&quot; alt=&quot;recursion&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;숫자가 들어있는 리스트의 합을 재귀함수를 이용해 구현하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;sum_list&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; sum_list&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;회문 판별을 재귀함수를 이용해 구현하기&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;palindrome&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;string&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;strung&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;True&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; string&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; palindrome&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;string&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;False&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;프로그래밍 연습 문제&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;문제: 정수 4를 1, 2, 3의 조합으로 나타내는 방법은 다음과 같이 총 7가지가 있음
+1+1+1+1
+1+1+2
+1+2+1
+2+1+1
+2+2
+1+3
+3+1
+정수 n이 입력으로 주어졌을 때, n을 1, 2, 3의 합으로 나타낼 수 있는 방법의 수를 구하시오&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;힌트: 정수 n을 만들 수 있는 경우의 수를 리턴하는 함수를 f(n) 이라고 하면,
+f(n)은 f(n-1) + f(n-2) + f(n-3) 과 동일하다는 패턴을 다음과 같이 찾아나갈 수 있다.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 600px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/db51a629eed86de59676c473d8fb965a/b4294/algopractice.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 72.5%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAOABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAABAAC/8QAFQEBAQAAAAAAAAAAAAAAAAAAAQD/2gAMAwEAAhADEAAAAW6AuFWIf//EABkQAAIDAQAAAAAAAAAAAAAAAAABAhARIf/aAAgBAQABBQLSNKXUzT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAYEAADAQEAAAAAAAAAAAAAAAAAAREQIf/aAAgBAQABPyFqdEGRv//aAAwDAQACAAMAAAAQ1C//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAaEAEAAgMBAAAAAAAAAAAAAAABABEQITGR/9oACAEBAAE/ENQHybDt4MRm8a5BJc//2Q==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/db51a629eed86de59676c473d8fb965a/8ac56/algopractice.webp 240w,
+/static/db51a629eed86de59676c473d8fb965a/d3be9/algopractice.webp 480w,
+/static/db51a629eed86de59676c473d8fb965a/e88ff/algopractice.webp 600w&quot;
+          sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/db51a629eed86de59676c473d8fb965a/09b79/algopractice.jpg 240w,
+/static/db51a629eed86de59676c473d8fb965a/7cc5e/algopractice.jpg 480w,
+/static/db51a629eed86de59676c473d8fb965a/b4294/algopractice.jpg 600w&quot;
+          sizes=&quot;(max-width: 600px) 100vw, 600px&quot;
+          type=&quot;image/jpeg&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/db51a629eed86de59676c473d8fb965a/b4294/algopractice.jpg&quot;
+          alt=&quot;algopractice&quot;
+          title=&quot;algopractice&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;python&quot;&gt;&lt;pre class=&quot;language-python&quot;&gt;&lt;code class=&quot;language-python&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;func&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;if&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;
+    &lt;span class=&quot;token keyword&quot;&gt;elif&lt;/span&gt; data &lt;span class=&quot;token operator&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;
+        &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;
+    
+    &lt;span class=&quot;token keyword&quot;&gt;return&lt;/span&gt; func&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; func&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;+&lt;/span&gt; func&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;data &lt;span class=&quot;token operator&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[[알고리즘]버블정렬, 선택정렬, 삽입정렬]]></title><description><![CDATA[기본 정렬 알고리즘]]></description><link>https://dansjkim.github.io//posts/basic-sort</link><guid isPermaLink="false">https://dansjkim.github.io//posts/basic-sort</guid><pubDate>Tue, 22 Sep 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;정렬-sorting&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%A0%95%EB%A0%AC-sorting&quot; aria-label=&quot;정렬 sorting permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;정렬 (sorting)&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;어떤 데이터들이 주어졌을 때 이를 정해진 순서대로 나열하는 것&lt;/li&gt;
 &lt;/ul&gt;
@@ -1286,7 +1721,7 @@ SELECT * FROM employees WHERE emp_no BETWEEN 10001 AND 10100 AND gender=‘F’;
 &lt;/ul&gt;
 &lt;p&gt;최적화되어 처리되고 있음을 알려주는 지표 정도로 생각하자.&lt;/p&gt;
 &lt;p&gt;두번 째의 Using index는 쿼리가 커버링 인덱스로 처리되고 있음을 알려주는 것인데, MySQL에서 제공할 수 있는 최고의 성능을 보여줄 것이다.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&quot;https://12bme.tistory.com/168&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://12bme.tistory.com/168&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[linked list]]></title><description><![CDATA[Index란?]]></description><link>https://dansjkim.github.io//posts/mysql-index</link><guid isPermaLink="false">https://dansjkim.github.io//posts/mysql-index</guid><pubDate>Sat, 15 Aug 2020 16:09:32 GMT</pubDate><content:encoded></content:encoded></item><item><title><![CDATA[Tree]]></title><description><![CDATA[What is tree]]></description><link>https://dansjkim.github.io//posts/ds-tree</link><guid isPermaLink="false">https://dansjkim.github.io//posts/ds-tree</guid><pubDate>Sat, 15 Aug 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;tree&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tree&quot; aria-label=&quot;tree permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tree&lt;/h1&gt;
+&lt;p&gt;&lt;a href=&quot;https://12bme.tistory.com/168&quot; target=&quot;_blank&quot; rel=&quot;nofollow noopener noreferrer&quot;&gt;https://12bme.tistory.com/168&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Tree]]></title><description><![CDATA[What is tree]]></description><link>https://dansjkim.github.io//posts/ds-tree</link><guid isPermaLink="false">https://dansjkim.github.io//posts/ds-tree</guid><pubDate>Sat, 15 Aug 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;tree&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tree&quot; aria-label=&quot;tree permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tree&lt;/h1&gt;
 &lt;h2 id=&quot;tree의-구조&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#tree%EC%9D%98-%EA%B5%AC%EC%A1%B0&quot; aria-label=&quot;tree의 구조 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Tree의 구조&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;노드와 브랜치로 이루어져 있는 사이클이 없는 데이터 구조&lt;/li&gt;
