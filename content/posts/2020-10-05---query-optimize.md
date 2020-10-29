@@ -3,7 +3,7 @@ title: '[MySQL] 쿼리 최적화'
 date: '2020-10-05T16:09:32.169Z'
 template: 'post'
 draft: false
-slug: 'quick-sort'
+slug: 'query-optimize'
 category: '알고리즘'
 tags:
   - 'recursive'
@@ -86,7 +86,7 @@ ON r.movie_id = g.movie_id
 WHERE g.value = "Romantic Comedy" OR g.value = "Comedy"
 GROUP BY g.value;
 -- Improved(3): value LIKE "...%"
--- 모든 문자열을 탐색할 필요가 없어, 가장 좋은 성능을 내었습니다
+-- 모든 문자열을 탐색할 필요가 없어서 가장 좋은 성능을 냄
 SELECT g.value genre, COUNT(r.movie_id) r_cnt 
 FROM rating r 
 INNER JOIN genre g 
