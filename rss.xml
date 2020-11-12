@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 29 Oct 2020 03:16:59 GMT</lastBuildDate><item><title><![CDATA[[MySQL] EXISTS]]></title><description><![CDATA[EXISTS 쿼리문 이용하기]]></description><link>https://dansjkim.github.io//posts/mysql-exists</link><guid isPermaLink="false">https://dansjkim.github.io//posts/mysql-exists</guid><pubDate>Fri, 16 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exists&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#exists&quot; aria-label=&quot;exists permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXISTS&lt;/h1&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Blog by Seungjune Kim]]></title><description><![CDATA[Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu.]]></description><link>https://dansjkim.github.io/</link><generator>GatsbyJS</generator><lastBuildDate>Thu, 12 Nov 2020 08:39:27 GMT</lastBuildDate><item><title><![CDATA[[Database] Index]]></title><description><![CDATA[인덱스란?]]></description><link>https://dansjkim.github.io//posts/database-index</link><guid isPermaLink="false">https://dansjkim.github.io//posts/database-index</guid><pubDate>Thu, 12 Nov 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;index&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#index&quot; aria-label=&quot;index permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Index&lt;/h1&gt;
+&lt;h2 id=&quot;index란-무엇인가&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#index%EB%9E%80-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80&quot; aria-label=&quot;index란 무엇인가 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;Index란 무엇인가?&lt;/h2&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 512px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/acef0ac3a7acdf38728d20879ce937a1/01e7c/book_index.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 59.583333333333336%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAIAAADtbgqsAAAACXBIWXMAAAsSAAALEgHS3X78AAACOklEQVQozx2S2W7bMBBF9f8P/YaiQIG+tXHi2mnsOGlsbZYobiIpLqKoXQrc/kKZAvPGOZiZcxlIBedFV7JwLRNVHsVHRMLaQs4vh6evXz5/gvDVGLAsuu9F3zOIIoRCpUDjymCa1DBWpkbjxAmNKI3bjtoGwOKwDr9LtCHwV2/jucvXsWxbVsCL1nCalfXwsppxkkrDrmcAvLmWtB1WKuXlaekP5PpNoP3YJGOXrSOxlhAaG1Msq/6A13fT9dw2ROmC8XQYeONgJcJavvR2D7K9c/h2q/tRLrPy21ZVtq5qmmVtSTDOqpLA8yXPIY4aR51DGD27+mTENkl2Q0f+3oxzdJkrzq5FcbYWre9aGxz0o1AGeqAWz7X0D8DbAuA4tieGN1H4OHR0XaSt8TpLr0rIvB/KZVVSw8AfyatMG0jxb6vOJL8T6B4V26k9FtkGgNexZ39u1tR4GkQO3jAJ247YBnGeBd6zr5KlUXwSEuoaUrgT6PvQ7OPwTop0HPj/a2HryiR9KcvEWm+3JGUS+GxtgxEOGU+0yZXOsuzAyKPT2+iytaa4rdobqSrQWJwkJ+9s6Jn36ucFmCZedZwcETp7Uogojn7qai/ZfXjZ9S1ZF9V1TIhMVjkozsPA2pb6wEt2/ZgsFUivJ6V9DCmlb2m8s2pH4UMYPrWOvC/ax/sBy/wcPkmZ+X9mG0poEtQWQ3T2fZW8cpH4ncO3H05ts3RzOT82DV4WqTUS/FrS6PD8IGTWdqWHGc/+AcmwV+AM5QEVAAAAAElFTkSuQmCC&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;picture&gt;
+        &lt;source
+          srcset=&quot;/static/acef0ac3a7acdf38728d20879ce937a1/8ac56/book_index.webp 240w,
+/static/acef0ac3a7acdf38728d20879ce937a1/d3be9/book_index.webp 480w,
+/static/acef0ac3a7acdf38728d20879ce937a1/bd5dd/book_index.webp 512w&quot;
+          sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+          type=&quot;image/webp&quot;
+        /&gt;
+        &lt;source
+          srcset=&quot;/static/acef0ac3a7acdf38728d20879ce937a1/8ff5a/book_index.png 240w,
+/static/acef0ac3a7acdf38728d20879ce937a1/e85cb/book_index.png 480w,
+/static/acef0ac3a7acdf38728d20879ce937a1/01e7c/book_index.png 512w&quot;
+          sizes=&quot;(max-width: 512px) 100vw, 512px&quot;
+          type=&quot;image/png&quot;
+        /&gt;
+        &lt;img
+          class=&quot;gatsby-resp-image-image&quot;
+          src=&quot;/static/acef0ac3a7acdf38728d20879ce937a1/01e7c/book_index.png&quot;
+          alt=&quot;book_index&quot;
+          title=&quot;book_index&quot;
+          loading=&quot;lazy&quot;
+          style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        /&gt;
+      &lt;/picture&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;RDBMS에서 검색 속도를 높이기 위한 기술&lt;/li&gt;
+&lt;li&gt;책의 맨 마지막에 있는 색인이라고 할 수 있다.&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;데이터베이스 테이블의 모든 데이터를 검색해서 원하는 결과를 가져 오려면 시간이 오래걸린다.&lt;/p&gt;
+&lt;p&gt;그래서 &lt;strong&gt;칼럼의 값과 해당 레코드가 저장된 주소를 키 값 쌍으로 인덱스를 만들어 둔다.&lt;/strong&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;어느-경우에-효과적인가&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%96%B4%EB%8A%90-%EA%B2%BD%EC%9A%B0%EC%97%90-%ED%9A%A8%EA%B3%BC%EC%A0%81%EC%9D%B8%EA%B0%80&quot; aria-label=&quot;어느 경우에 효과적인가 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;어느 경우에 효과적인가?&lt;/h3&gt;
+&lt;p&gt;DBMS의 인덱스는 항상 정렬된 상태를 유지하기 때문에 원하는 값을 탐색하는 데는 빠르지만 새로운 값을 추가하거나 삭제, 수정하는 경우에는 쿼리문의 실행 속도가 느려진다.&lt;/p&gt;
+&lt;p&gt;결론적으로 인덱스는 데이터의 저장 성능을 희생하고 그 대신 데이터의 읽기 성능을 높이는 기능이다.&lt;/p&gt;
+&lt;p&gt;insert는 인덱스가 정렬된 상태로 저장되어야 하기 떄문에 어느자리에 insert를 할 지 찾아서 저장을 해야 한다&lt;/p&gt;
+&lt;p&gt;그리고 테이블에만 insert update하는게 아니라 인덱스에도 똑같이 해야하기 떄문에 두군데에 하니까 오히려 느려진다.&lt;/p&gt;
+&lt;h3 id=&quot;인덱스를-사용하면-빨라지는-이유&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%9D%B8%EB%8D%B1%EC%8A%A4%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EB%A9%B4-%EB%B9%A8%EB%9D%BC%EC%A7%80%EB%8A%94-%EC%9D%B4%EC%9C%A0&quot; aria-label=&quot;인덱스를 사용하면 빨라지는 이유 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;인덱스를 사용하면 빨라지는 이유?&lt;/h3&gt;
+&lt;p&gt;테이블을 생성할 떄 오브젝트를 생성한다고 말하는데&lt;/p&gt;
+&lt;p&gt;인덱스도 오브젝트의 하나이고 인덱스가 생성되면 테이블과 매핑된 또다른 테이블이 생성된다.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;테이블이 생성되는데 어떻게 속도가 빨라지나?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;인덱스는 인덱스 컬럼을 기준으로 소팅이 되어 저장되기 때문에 특정 조건의 데이터들을 검색할 때 시작점을 지정해서 거기서부터 스캔할 수 있다.&lt;/p&gt;
+&lt;p&gt;인덱스에서 먼저 데이터를 찾은 다음에 테이블로 매핑된 곳을 가서 데이터를 꺼내오는 방식이다.&lt;/p&gt;
+&lt;p&gt;인덱스가 해당 테이블 블럭의 주소를 가지고 있다. (블럭: 데이터가 저장되는 최소 단위)&lt;/p&gt;
+&lt;p&gt;테이블의 데이터들은 로우단위로 저장되어 있다.&lt;/p&gt;
+&lt;h3 id=&quot;어떤-컬럼을-인덱스로-설정해야-효율적일까&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EC%96%B4%EB%96%A4-%EC%BB%AC%EB%9F%BC%EC%9D%84-%EC%9D%B8%EB%8D%B1%EC%8A%A4%EB%A1%9C-%EC%84%A4%EC%A0%95%ED%95%B4%EC%95%BC-%ED%9A%A8%EC%9C%A8%EC%A0%81%EC%9D%BC%EA%B9%8C&quot; aria-label=&quot;어떤 컬럼을 인덱스로 설정해야 효율적일까 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;어떤 컬럼을 인덱스로 설정해야 효율적일까?&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;where절에 자주 등장하는 컬럼&lt;/li&gt;
+&lt;li&gt;order by 절에 자주 등장하는 컬럼. 인덱스는 소팅되어 저장되기 때문에 따로 orderby를 수행할 필요 없이 인덱스에서 바로바로 꺼낼 수 있다.&lt;/li&gt;
+&lt;li&gt;인덱스는 단일 컬럼으로 구성할 수 있지만 여러 컬럼을 조합해서 결합 인덱스 구성 가능&lt;/li&gt;
+&lt;li&gt;select절에 등장하는 컬럼을 잘 조합해서 인덱스로 구성해 놓으면 별도로 테이블에 가서 데이터를 꺼내올 필요 없이 인덱스만 스캔해서 출력을 하면 되니까 빠르게 된다.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;결합인덱스는-결합하는-컬럼들의-순서가-중요하다&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EA%B2%B0%ED%95%A9%EC%9D%B8%EB%8D%B1%EC%8A%A4%EB%8A%94-%EA%B2%B0%ED%95%A9%ED%95%98%EB%8A%94-%EC%BB%AC%EB%9F%BC%EB%93%A4%EC%9D%98-%EC%88%9C%EC%84%9C%EA%B0%80-%EC%A4%91%EC%9A%94%ED%95%98%EB%8B%A4&quot; aria-label=&quot;결합인덱스는 결합하는 컬럼들의 순서가 중요하다 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;결합인덱스는 결합하는 컬럼들의 순서가 중요하다&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;where절에서 equal조건으로 많이 쓰이는 컬럼이 앞으로 오는게 효율적&lt;/li&gt;
+&lt;li&gt;분별력이 높은 컬럼이 앞으로 오는게 효율적&lt;/li&gt;
+&lt;li&gt;성별같은 컬럼보단 아이디처럼 분별력이 높은 컬럼이 앞으로 와야 바로바로 인덱스를 스캔해서 찾을 수 있다.&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[React Native 초기 세팅하기]]></title><description><![CDATA[React Native 초기 세팅]]></description><link>https://dansjkim.github.io//posts/react-native-settings</link><guid isPermaLink="false">https://dansjkim.github.io//posts/react-native-settings</guid><pubDate>Sun, 01 Nov 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;리액트-네이티브-초기-세팅&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#%EB%A6%AC%EC%95%A1%ED%8A%B8-%EB%84%A4%EC%9D%B4%ED%8B%B0%EB%B8%8C-%EC%B4%88%EA%B8%B0-%EC%84%B8%ED%8C%85&quot; aria-label=&quot;리액트 네이티브 초기 세팅 permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;리액트 네이티브 초기 세팅&lt;/h1&gt;</content:encoded></item><item><title><![CDATA[[MySQL] EXISTS]]></title><description><![CDATA[EXISTS 쿼리문 이용하기]]></description><link>https://dansjkim.github.io//posts/mysql-exists</link><guid isPermaLink="false">https://dansjkim.github.io//posts/mysql-exists</guid><pubDate>Fri, 16 Oct 2020 16:09:32 GMT</pubDate><content:encoded>&lt;h1 id=&quot;exists&quot; style=&quot;position:relative;&quot;&gt;&lt;a href=&quot;#exists&quot; aria-label=&quot;exists permalink&quot; class=&quot;anchor before&quot;&gt;&lt;svg aria-hidden=&quot;true&quot; focusable=&quot;false&quot; height=&quot;16&quot; version=&quot;1.1&quot; viewBox=&quot;0 0 16 16&quot; width=&quot;16&quot;&gt;&lt;path fill-rule=&quot;evenodd&quot; d=&quot;M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z&quot;&gt;&lt;/path&gt;&lt;/svg&gt;&lt;/a&gt;EXISTS&lt;/h1&gt;
 &lt;ul&gt;
 &lt;li&gt;데이터의 유무만 조회하고 싶을 땐 EXISTS 쿼리를 이용한다.&lt;/li&gt;
 &lt;li&gt;중간에 하나의 데이터라도 조회되면 쿼리를 종료시키기 때문에 비용을 절약할 수 있다.&lt;/li&gt;
